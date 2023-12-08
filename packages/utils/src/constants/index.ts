@@ -128,6 +128,16 @@ export const DUB_DOMAINS = [
     clicks: 0,
     allowedHostnames: [],
   },
+  {
+    slug: "empty.app",
+    verified: true,
+    primary: true,
+    target: "https://empty.app",
+    type: "redirect",
+    placeholder: "https://u0.wtf/help/article/what-is-u0",
+    clicks: 0,
+    allowedHostnames: [],
+  },
 ];
 
 export const ALL_TOOLS = [
