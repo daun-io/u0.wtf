@@ -1,4 +1,5 @@
 import { inter, satoshi, suit } from "@/styles/fonts";
+import { GeistMono } from "geist/font/mono";
 import "@/styles/globals.css";
 import { cn, constructMetadata } from "@u0/utils";
 import { Analytics } from "@vercel/analytics/react";
@@ -14,7 +15,12 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className={cn(satoshi.variable, inter.variable, suit.variable)}
+      className={cn(
+        satoshi.variable,
+        inter.variable,
+        suit.variable,
+        GeistMono.variable,
+      )}
     >
       <body>
         <Toaster closeButton />

@@ -23,6 +23,7 @@ const config: Config = {
         },
       },
       fontFamily: {
+        mono: ["var(--font-geist-mono)", "system-ui", "sans-serif"],
         display: ["var(--font-satoshi)", "system-ui", "sans-serif"],
         default: [
           "var(--font-suit)",
