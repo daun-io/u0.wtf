@@ -314,6 +314,7 @@ export async function processLink({
       // coerce type with ! cause we already checked if it exists
       const { allowedHostnames } = DUB_DOMAINS.find((d) => d.slug === domain)!;
       const urlDomain = getDomainWithoutWWW(url) || "";
+      // @ts-ignore
       if (!allowedHostnames.includes(urlDomain)) {
         return {
           link: payload,
