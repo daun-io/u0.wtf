@@ -77,6 +77,7 @@ export const ADMIN_HOSTNAMES = new Set([
 export const DEFAULT_REDIRECTS = {
   home: "https://u0.wtf",
   dub: "https://u0.wtf",
+  u0: "https://u0.wtf",
   signin: "https://app.u0.wtf/login",
   login: "https://app.u0.wtf/login",
   register: "https://app.u0.wtf/register",
