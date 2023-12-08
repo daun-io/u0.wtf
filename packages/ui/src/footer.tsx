@@ -136,30 +136,6 @@ export function Footer() {
                   ))}
                 </ul>
               </div>
-
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-600">Tools</h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.tools.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={createHref(item.href)}
-                        {...(domain !== "u0.wtf" && {
-                          onClick: () => {
-                            va.track("Referred from custom domain", {
-                              domain,
-                              medium: `footer item (${item.name})`,
-                            });
-                          },
-                        })}
-                        className="text-sm text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
         </div>
