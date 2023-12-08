@@ -1,13 +1,3 @@
-const REDIRECT_SEGMENTS = [
-  "pricing",
-  "blog",
-  "help",
-  "changelog",
-  "tools",
-  "stats",
-  "_static",
-];
-
 const path = require("path");
 const { NormalModuleReplacementPlugin } = require("webpack");
 
@@ -78,70 +68,6 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: "/",
-        has: [
-          {
-            type: "host",
-            value: "app.u0.wtf",
-          },
-        ],
-        destination: "https://app.u0.wtf",
-        permanent: true,
-        statusCode: 301,
-      },
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "app.u0.wtf",
-          },
-        ],
-        destination: "https://app.u0.wtf/:path*",
-        permanent: true,
-        statusCode: 301,
-      },
-      ...REDIRECT_SEGMENTS.map(
-        (segment) => (
-          {
-            source: `/${segment}`,
-            has: [
-              {
-                type: "host",
-                value: "u0.wtf",
-              },
-            ],
-            destination: `https://u0.wtf/${segment}`,
-            permanent: true,
-            statusCode: 301,
-          },
-          {
-            source: `/${segment}/:path*`,
-            has: [
-              {
-                type: "host",
-                value: "u0.wtf",
-              },
-            ],
-            destination: `https://u0.wtf/${segment}/:path*`,
-            permanent: true,
-            statusCode: 301,
-          }
-        ),
-      ),
-      {
-        source: "/metatags",
-        has: [
-          {
-            type: "host",
-            value: "u0.wtf",
-          },
-        ],
-        destination: "https://u0.wtf/tools/metatags",
-        permanent: true,
-        statusCode: 301,
-      },
-      {
         source: "/metatags",
         has: [
           {
@@ -150,42 +76,6 @@ module.exports = {
           },
         ],
         destination: "/tools/metatags",
-        permanent: true,
-        statusCode: 301,
-      },
-      {
-        source: "/",
-        has: [
-          {
-            type: "host",
-            value: "staging.u0.wtf",
-          },
-        ],
-        destination: "https://u0.wtf",
-        permanent: true,
-        statusCode: 301,
-      },
-      {
-        source: "/",
-        has: [
-          {
-            type: "host",
-            value: "preview.u0.wtf",
-          },
-        ],
-        destination: "https://preview.u0.wtf",
-        permanent: true,
-        statusCode: 301,
-      },
-      {
-        source: "/",
-        has: [
-          {
-            type: "host",
-            value: "admin.u0.wtf",
-          },
-        ],
-        destination: "https://admin.u0.wtf",
         permanent: true,
         statusCode: 301,
       },
