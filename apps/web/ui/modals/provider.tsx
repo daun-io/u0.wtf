@@ -57,7 +57,7 @@ export default function ModalProvider({ children }: { children: ReactNode }) {
   const params = useParams() as { slug?: string };
   const { slug } = params;
 
-  const [hashes, setHashes] = useCookies<SimpleLinkProps[]>("hashes__dub", [], {
+  const [hashes, setHashes] = useCookies<SimpleLinkProps[]>("hashes__u0", [], {
     domain: !!process.env.NEXT_PUBLIC_VERCEL_URL ? ".u0.wtf" : undefined,
   });
 
