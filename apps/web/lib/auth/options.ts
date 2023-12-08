@@ -22,7 +22,7 @@ export const authOptions: NextAuthOptions = {
         } else {
           sendEmail({
             email: identifier,
-            subject: "Your Dub Login Link",
+            subject: "U0 로그인 링크",
             react: LoginLink({ url, email: identifier }),
           });
         }
@@ -174,83 +174,14 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     signIn: async ({ user, account, profile }) => {
       console.log({ user, account, profile });
-      if (!user.email || (await isBlacklistedEmail(user.email))) {
+      if (!user.email) {
         return false;
-      }
-      if (account?.provider === "google") {
-        const userExists = await prisma.user.findUnique({
-          where: { email: user.email },
-          select: { name: true },
-        });
-        // if the user already exists via email,
-        // update the user with their name and image from Google
-        if (userExists && !userExists.name) {
-          await prisma.user.update({
-            where: { email: user.email },
-            data: {
-              name: profile?.name,
-              // @ts-ignore - this is a bug in the types, `picture` is a valid on the `Profile` type
-              image: profile?.picture,
-            },
-          });
-        }
-      } else if (
-        account?.provider === "saml" ||
-        account?.provider === "saml-idp"
-      ) {
-        let samlProfile;
-
-        if (account?.provider === "saml-idp") {
-          // @ts-ignore
-          samlProfile = user.profile;
-          if (!samlProfile) {
-            return true;
-          }
-        } else {
-          samlProfile = profile;
-        }
-
-        if (!samlProfile?.requested?.tenant) {
-          return false;
-        }
-        const project = await prisma.project.findUnique({
-          where: {
-            id: samlProfile.requested.tenant,
-          },
-        });
-        if (project) {
-          await Promise.allSettled([
-            // add user to project
-            prisma.projectUsers.upsert({
-              where: {
-                userId_projectId: {
-                  projectId: project.id,
-                  userId: user.id,
-                },
-              },
-              update: {},
-              create: {
-                projectId: project.id,
-                userId: user.id,
-              },
-            }),
-            // delete any pending invites for this user
-            prisma.projectInvite.delete({
-              where: {
-                email_projectId: {
-                  email: user.email,
-                  projectId: project.id,
-                },
-              },
-            }),
-          ]);
-        }
       }
       return true;
     },
     jwt: async ({ token, account, user, trigger }) => {
       // force log out banned users
-      if (!token.email || (await isBlacklistedEmail(token.email))) {
+      if (!token.email) {
         return {};
       }
 

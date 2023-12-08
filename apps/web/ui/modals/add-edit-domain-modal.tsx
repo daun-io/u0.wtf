@@ -286,7 +286,7 @@ function AddEditDomainModal({
               content={
                 <TooltipContent
                   title="You can't configure a custom landing page on a free plan. Upgrade to a Pro plan to proceed."
-                  cta="Upgrade to Pro"
+                  cta="프로로 업그레이드"
                   onClick={() => {
                     setShowAddEditDomainModal(false);
                     setShowUpgradePlanModal(true);

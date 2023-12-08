@@ -53,7 +53,7 @@ export default function UpgradeBanner() {
           className="mb-1 ml-3 hidden sm:block"
         >
           <Badge variant="blue" className="px-3 py-1">
-            Upgrade to Pro
+            프로로 업그레이드
           </Badge>
         </button>
       )}

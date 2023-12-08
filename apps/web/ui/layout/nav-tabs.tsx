@@ -20,19 +20,19 @@ export default function NavTabs() {
   const tabs = useMemo(() => {
     if (slug) {
       return [
-        { name: "Links", href: `/${slug}` },
-        { name: "Analytics", href: `/${slug}/analytics` },
-        { name: "Domains", href: `/${slug}/domains` },
-        { name: "Settings", href: `/${slug}/settings` },
+        { name: "링크", href: `/${slug}` },
+        { name: "애널리틱스", href: `/${slug}/analytics` },
+        { name: "도메인", href: `/${slug}/domains` },
+        { name: "설정", href: `/${slug}/settings` },
       ];
     }
     if (pathname === "/analytics") {
       return [{ name: "← Back to all links", href: "/links" }];
     }
     return [
-      { name: "Projects", href: "/" },
-      { name: "Links", href: "/links" },
-      { name: "Settings", href: "/settings" },
+      { name: "프로젝트", href: "/" },
+      { name: "링크", href: "/links" },
+      { name: "설정", href: "/settings" },
     ];
   }, [pathname, slug, searchParams]);
 
@@ -89,7 +89,7 @@ const OnboardingChecklist = () => {
       className="flex items-center space-x-2 rounded-md border-b-2 border-transparent p-1 px-3 py-2 transition-all duration-75 hover:bg-gray-100 active:bg-gray-200"
     >
       <p className="whitespace-nowrap text-sm text-gray-600">
-        Onboarding Checklist
+        온보딩 체크리스트
       </p>
       <Badge variant="blue">{remainder.toString()}</Badge>
     </button>

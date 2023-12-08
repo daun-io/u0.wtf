@@ -26,17 +26,6 @@ export default function PlaceholderContent() {
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.5, type: "spring" }}
     >
-      <div
-        className={`${
-          loading ? "scale-[25%] blur-md" : "scale-100 blur-0"
-        } mt-[7vh] h-[50vh] w-screen object-cover transition-all duration-1000`}
-      >
-        <Spline
-          onLoad={onLoad}
-          style={{ opacity: opacity }}
-          scene="https://prod.spline.design/cJkq6hsiUPNRHeMf/scene.splinecode"
-        />
-      </div>
       <motion.div
         variants={{
           show: {
@@ -53,28 +42,8 @@ export default function PlaceholderContent() {
           className="font-display text-4xl font-bold text-gray-800 transition-colors sm:text-5xl"
           variants={STAGGER_CHILD_VARIANTS}
         >
-          Welcome to Dub
+          U0.WTF
         </motion.h1>
-        <motion.p
-          className="max-w-xl text-gray-600 transition-colors sm:text-lg"
-          variants={STAGGER_CHILD_VARIANTS}
-        >
-          <InlineSnippet>{domain}</InlineSnippet> is a custom domain on{" "}
-          <a
-            className="bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text font-semibold text-transparent decoration-rose-600 hover:underline"
-            href="https://u0.wtf"
-            onClick={() =>
-              va.track("Referred from custom domain", {
-                domain,
-                medium: "text",
-              })
-            }
-          >
-            Dub
-          </a>{" "}
-          - a link management tool for modern marketing teams to create, share,
-          and track short links.
-        </motion.p>
         <motion.a
           variants={STAGGER_CHILD_VARIANTS}
           href="https://u0.wtf"

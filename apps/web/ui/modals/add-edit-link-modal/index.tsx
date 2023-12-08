@@ -677,7 +677,7 @@ function AddEditLinkButton({
       content={
         <TooltipContent
           title="Your project has exceeded its usage limit. We're still collecting data on your existing links, but you need to upgrade to add more links."
-          cta="Upgrade to Pro"
+          cta="프로로 업그레이드"
           onClick={() => setShowUpgradePlanModal(true)}
         />
       }

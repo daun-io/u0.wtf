@@ -40,14 +40,6 @@ export default function UserDropdown() {
     });
   }, []);
 
-  const [unreadChangelogs, setUnreadChangelogs] = useState(0);
-  useEffect(() => {
-    const lastReadChangelog = Cookies.get("lastReadChangelog");
-    if (!lastReadChangelog) {
-      setUnreadChangelogs(2);
-    }
-  }, []);
-
   return (
     <div className="relative inline-block">
       <Popover
@@ -63,17 +55,6 @@ export default function UserDropdown() {
                 {session?.user?.email}
               </p>
             </div>
-            <Link
-              href={`${HOME_DOMAIN}/help`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full rounded-md p-2 text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200"
-            >
-              <IconMenu
-                text="Help Center"
-                icon={<HelpCircle className="h-4 w-4" />}
-              />
-            </Link>
             <button
               className="w-full rounded-md p-2 text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200"
               onClick={() => {
@@ -83,7 +64,7 @@ export default function UserDropdown() {
               }}
             >
               <IconMenu
-                text="Support"
+                text="채팅 지원"
                 icon={
                   openingSupport ? (
                     <LoadingCircle />
@@ -97,24 +78,7 @@ export default function UserDropdown() {
               href="/settings"
               className="block w-full rounded-md p-2 text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200"
             >
-              <IconMenu
-                text="Settings"
-                icon={<Settings className="h-4 w-4" />}
-              />
-            </Link>
-            <Link
-              href={`${HOME_DOMAIN}/changelog`}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() =>
-                Cookies.set("lastReadChangelog", new Date().toISOString())
-              }
-              className="flex w-full justify-between rounded-md p-2 text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200"
-            >
-              <IconMenu text="Changelog" icon={<Edit3 className="h-4 w-4" />} />
-              {unreadChangelogs > 0 && (
-                <Badge variant="blue">{unreadChangelogs}</Badge>
-              )}
+              <IconMenu text="설정" icon={<Settings className="h-4 w-4" />} />
             </Link>
             <button
               className="w-full rounded-md p-2 text-sm transition-all duration-75 hover:bg-gray-100 active:bg-gray-200"
@@ -126,7 +90,7 @@ export default function UserDropdown() {
                 va.track("Logout");
               }}
             >
-              <IconMenu text="Logout" icon={<Logout className="h-4 w-4" />} />
+              <IconMenu text="로그아웃" icon={<Logout className="h-4 w-4" />} />
             </button>
           </div>
         }
@@ -145,9 +109,6 @@ export default function UserDropdown() {
             />
           ) : (
             <div className="h-9 w-9 animate-pulse rounded-full border border-gray-300 bg-gray-100 sm:h-10 sm:w-10" />
-          )}
-          {unreadChangelogs > 0 && (
-            <div className="absolute -bottom-0.5 -right-0.5 h-4 w-4 rounded-full border-2 border-white bg-blue-500" />
           )}
         </button>
       </Popover>

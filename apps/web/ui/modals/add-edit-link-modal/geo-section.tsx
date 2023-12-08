@@ -77,8 +77,8 @@ export default function GeoSection({
             ? {
                 disabledTooltip: (
                   <TooltipContent
-                    title="Geo targeting is only available on Dub's Pro plan. Upgrade to Pro to use this feature."
-                    cta="Upgrade to Pro"
+                    title="Geo targeting is only available on Dub's Pro plan. 프로로 업그레이드 to use this feature."
+                    cta="프로로 업그레이드"
                     {...(plan === "free"
                       ? {
                           onClick: () => setShowUpgradePlanModal(true),

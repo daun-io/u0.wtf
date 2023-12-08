@@ -39,7 +39,7 @@ export default function Intro() {
             className="font-display text-4xl font-bold text-gray-800 transition-colors sm:text-5xl"
             variants={STAGGER_CHILD_VARIANTS}
           >
-            Welcome to Dub
+            U0.WTF
           </motion.h1>
           <motion.p
             className="max-w-md text-gray-600 transition-colors sm:text-lg"

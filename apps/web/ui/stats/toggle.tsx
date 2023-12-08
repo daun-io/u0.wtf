@@ -126,7 +126,7 @@ export default function Toggle() {
                               ? `${display} stats can only be viewed on a Pro plan or higher. Upgrade now to view all-time stats.`
                               : `${display} stats can only be viewed on a project with a Pro plan or higher. Create a project or navigate to an existing project to upgrade.`
                           }
-                          cta={slug ? "Upgrade to Pro" : "Create Project"}
+                          cta={slug ? "프로로 업그레이드" : "Create Project"}
                           {...(isPublicStatsPage
                             ? {
                                 href: APP_DOMAIN,

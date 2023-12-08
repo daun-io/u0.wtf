@@ -30,7 +30,7 @@ export const POST = withAuth(async ({ req, project, headers }) => {
   });
   if (project.plan === "free" && tagsCount >= 3) {
     return new Response(
-      "You can only create 3 tags in the Free plan. Upgrade to Pro to create unlimited tags.",
+      "You can only create 3 tags in the Free plan. 프로로 업그레이드 to create unlimited tags.",
       {
         status: 403,
       },

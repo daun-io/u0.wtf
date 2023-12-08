@@ -13,7 +13,7 @@ export default function ProBanner({
   const { setShowUpgradePlanModal } = useContext(ModalContext);
   return (
     <div className="fixed bottom-5 z-10 mx-5 flex flex-col space-y-3 rounded-lg border border-gray-200 bg-white p-5 shadow-lg sm:right-5 sm:mx-auto sm:max-w-sm">
-      <h3 className="text-lg font-semibold">Upgrade to Pro</h3>
+      <h3 className="text-lg font-semibold">프로로 업그레이드</h3>
       <p className="text-sm text-gray-500">
         It looks like you're currently on our free plan. Consider upgrading to
         Pro to enjoy higher limits, extra features, and support our open-source

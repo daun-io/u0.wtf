@@ -108,7 +108,7 @@ function UpgradePlanModal({
                   variant="neutral"
                   className="text-sm font-normal normal-case"
                 >
-                  ${PLANS.find((p) => p.name === plan)!.price[period].amount}/
+                  {PLANS.find((p) => p.name === plan)!.price[period].amount}원/
                   {period.replace("ly", "")}
                 </Badge>
               </div>
@@ -195,17 +195,8 @@ function UpgradePlanModal({
                 }}
                 className="text-center text-xs text-gray-500 underline-offset-4 transition-all hover:text-gray-800 hover:underline"
               >
-                Dub {plan === "Pro" ? "Enterprise" : "Pro"}
+                U0 {plan === "Pro" ? "Enterprise" : "Pro"}
               </button>
-              <p className="text-gray-500">•</p>
-              <a
-                href={`${HOME_DOMAIN}/pricing`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-center text-xs text-gray-500 underline-offset-4 transition-all hover:text-gray-800 hover:underline"
-              >
-                Compare plans
-              </a>
             </div>
           )}
         </motion.div>

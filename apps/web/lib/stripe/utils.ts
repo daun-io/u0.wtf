@@ -38,17 +38,19 @@ export const PLANS = [
     quota: 50000,
     price: {
       monthly: {
-        amount: 9,
+        amount: 8000,
+        curreny: "krw",
         priceIds: {
-          test: "price_1LoytoAlJJEpqkPV2oPcQ63m",
-          production: "price_1LodNLAlJJEpqkPVQSrt33Lc",
+          test: "price_1OL2c9DWbs4J5X5cpqyX4JuA",
+          production: "price_1OL2bBDWbs4J5X5cp1wWoMbn",
         },
       },
       yearly: {
-        amount: 90,
+        amount: 80000,
+        curreny: "krw",
         priceIds: {
-          test: "price_1LoytoAlJJEpqkPVsWjM4tB9",
-          production: "price_1LodNLAlJJEpqkPVRxUyCQgZ",
+          test: "price_1OL2cVDWbs4J5X5cOqREZtC6",
+          production: "price_1OL2bBDWbs4J5X5c3yM4DcUt",
         },
       },
     },

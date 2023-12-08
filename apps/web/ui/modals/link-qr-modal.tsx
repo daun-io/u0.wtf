@@ -301,7 +301,7 @@ function AdvancedSettings({
                 content={
                   <TooltipContent
                     title="You need to be on the Pro plan to customize your QR Code logo."
-                    cta={slug ? "Upgrade to Pro" : "Create a project"}
+                    cta={slug ? "프로로 업그레이드" : "Create a project"}
                     {...(APP_HOSTNAMES.has(window.location.hostname)
                       ? {
                           onClick: () => {
