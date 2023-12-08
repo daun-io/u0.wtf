@@ -47,11 +47,6 @@ export default function WelcomeEmail({
               Thanks for signing up{name && `, ${name}`}!
             </Text>
             <Text className="text-sm leading-6 text-black">
-              My name is Steven, and I'm the founder of Dub - the link
-              management tool for modern marketing teams. I'm excited to have
-              you on board!
-            </Text>
-            <Text className="text-sm leading-6 text-black">
               Here are a few things you can do:
             </Text>
             <Text className="ml-1 text-sm leading-4 text-black">

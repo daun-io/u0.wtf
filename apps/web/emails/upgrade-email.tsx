@@ -53,10 +53,6 @@ export default function UpgradeEmail({
               Hey{name && ` ${name}`}!
             </Text>
             <Text className="text-sm leading-6 text-black">
-              My name is Steven, and I'm the founder of U0. I wanted to
-              personally reach out to thank you for upgrading to Dub {plan}!
-            </Text>
-            <Text className="text-sm leading-6 text-black">
               As you might already know, we are a{" "}
               <Link
                 href="https://u0.wtf/mission"

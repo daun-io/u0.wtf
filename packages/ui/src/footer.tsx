@@ -57,8 +57,8 @@ export function Footer() {
               <LogoType className="h-7 text-gray-600" />
             </Link>
             <p className="max-w-xs text-sm text-gray-500">
-              Giving modern marketing teams superpowers with short links that
-              stand out.
+              U0.WTF는 단체 카톡방, SNS 등에 링크를 공유할 때 성과를 측정하고
+              브랜드를 알릴 수 있도록 돕는 링크 축약 도구입니다.
             </p>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-4 xl:col-span-2 xl:mt-0">
@@ -69,29 +69,6 @@ export function Footer() {
                 </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.features.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={createHref(item.href)}
-                        {...(domain !== "u0.wtf" && {
-                          onClick: () => {
-                            va.track("Referred from custom domain", {
-                              domain,
-                              medium: `footer item (${item.name})`,
-                            });
-                          },
-                        })}
-                        className="text-sm text-gray-500 hover:text-gray-900"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="mt-10 md:mt-0">
-                <h3 className="text-sm font-semibold text-gray-600">Product</h3>
-                <ul role="list" className="mt-4 space-y-4">
-                  {navigation.product.map((item) => (
                     <li key={item.name}>
                       <Link
                         href={createHref(item.href)}

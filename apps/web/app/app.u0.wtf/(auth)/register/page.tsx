@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import RegisterForm from "./form";
 
 export const metadata = constructMetadata({
-  title: "Sign up to Dub",
+  title: "U0 계정 생성",
 });
 
 export default function RegisterPage() {
