@@ -49,6 +49,7 @@ export function Popover({
       </PopoverPrimitive.Trigger>
       <PopoverPrimitive.Portal>
         <PopoverPrimitive.Content
+          // @ts-ignore
           sideOffset={8}
           align={align}
           className="animate-slide-up-fade z-50 items-center rounded-md border border-gray-200 bg-white drop-shadow-lg sm:block"

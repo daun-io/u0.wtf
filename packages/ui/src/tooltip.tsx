@@ -62,6 +62,7 @@ export function Tooltip({
           {children}
         </TooltipPrimitive.Trigger>
         <TooltipPrimitive.Portal>
+          {/* @ts-ignore */}
           <TooltipPrimitive.Content
             sideOffset={8}
             side={side}
