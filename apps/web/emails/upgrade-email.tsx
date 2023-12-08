@@ -105,7 +105,7 @@ export default function UpgradeEmail({
               happy to help!
             </Text>
             <Text className="text-sm font-light leading-6 text-gray-400">
-              Steven from Dub
+              Daun from U0
             </Text>
 
             <Footer email={email} marketing />

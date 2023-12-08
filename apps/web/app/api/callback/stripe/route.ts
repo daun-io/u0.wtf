@@ -249,12 +249,6 @@ export const POST = async (req: Request) => {
             type: "cron",
             mention: true,
           }),
-          resend.emails.send({
-            from: "Steven from U0.wtf <steven@u0.co>",
-            to: projectUsers,
-            subject: "Feedback on your U0.wtf experience?",
-            text: "Hey!\n\nI noticed you recently cancelled your U0.wtf subscription – we're sorry to see you go!\n\nI'd love to hear your feedback on your experience with Dub – what could we have done better?\n\nThanks!\n\nSteven Tey\nFounder, U0.wtf",
-          }),
         ]);
       }
     } catch (error) {
