@@ -9,7 +9,7 @@ export async function generateMetadata({
   params: { domain: string };
 }) {
   const title = `${params.domain.toUpperCase()} - A U0.wtf Custom Domain`;
-  const description = `${params.domain.toUpperCase()} is a custom domain on Dub - an open-source link management tool for modern marketing teams to create, share, and track short links.`;
+  const description = `${params.domain.toUpperCase()} is a custom domain on U0 - a link management tool for modern marketing teams to create, share, and track short links.`;
 
   return constructMetadata({
     title,

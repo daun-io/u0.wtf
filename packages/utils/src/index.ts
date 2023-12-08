@@ -19,8 +19,8 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function constructMetadata({
-  title = "Dub - Link Management for Modern Marketing Teams",
-  description = "Dub is an open-source link management tool for modern marketing teams to create, share, and track short links.",
+  title = "U0 - 최고의 마케팅을 위한 링크 축약 도구",
+  description = "U0.WTF는 단체 카톡방, SNS 등에 링크를 공유할 때 성과를 측정하고 브랜드를 알릴 수 있도록 돕는 링크 축약 도구입니다.",
   image = "https://u0.wtf/_static/thumbnail.png",
   icons = "/favicon.ico",
   noIndex = false,
@@ -48,7 +48,7 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@u0dotco",
+      creator: "@daun_ai",
     },
     icons,
     metadataBase: new URL(HOME_DOMAIN),

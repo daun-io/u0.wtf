@@ -28,16 +28,7 @@ export async function GET(req: Request) {
       where: {
         slug: {
           // exclude domains that belong to us
-          notIn: [
-            "u0.wtf",
-            "stey.me",
-            "steven.yt",
-            "vercel.fyi",
-            "vercel.link",
-            "owd.li",
-            "chatg.pt",
-            "elegance.ai",
-          ],
+          notIn: ["u0.wtf"],
         },
       },
       select: {

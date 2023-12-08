@@ -22,17 +22,6 @@ export default function Intro() {
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3, type: "spring" }}
     >
-      <div
-        className={`${
-          loading ? "scale-[25%] blur-md" : "scale-100 blur-0"
-        } mt-[7vh] h-[50vh] w-screen object-cover transition-all duration-1000`}
-      >
-        <Spline
-          onLoad={onLoad}
-          style={{ opacity: opacity }}
-          scene="https://prod.spline.design/cJkq6hsiUPNRHeMf/scene.splinecode"
-        />
-      </div>
       {showText && (
         <motion.div
           variants={{

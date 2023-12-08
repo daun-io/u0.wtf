@@ -14,8 +14,8 @@ export const validateDomain = async (domain: string) => {
   }
   const validDomain =
     validDomainRegex.test(domain) &&
-    // make sure the domain doesn't contain u0.wtf/u0.wtf
-    !/^(u0\.wtf|.*\.u0\.wtf|u0\.wtf|.*\.u0\.wtf)$/i.test(domain);
+    // make sure the domain doesn't contain u0.wtf
+    !/^(u0\.wtf|.*\.u0\.wtf)$/i.test(domain);
 
   if (!validDomain) {
     return "Invalid domain";
