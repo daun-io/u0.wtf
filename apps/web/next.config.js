@@ -79,6 +79,18 @@ module.exports = {
         permanent: true,
         statusCode: 301,
       },
+      {
+        source: "/privacy",
+        destination:
+          "https://iamdaun.notion.site/U0-Privacy-Policy-13094fe86aa14163aa130fb8a4e77f77?pvs=4",
+        permanent: true,
+      },
+      {
+        source: "/terms",
+        destination:
+          "https://iamdaun.notion.site/U0-Terms-of-Service-ef7bbabd0c434f6e8b187f364a826280?pvs=4",
+        permanent: true,
+      },
     ];
   },
 };

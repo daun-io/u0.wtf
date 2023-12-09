@@ -111,7 +111,7 @@ export default function OGSection({
         >
           <div>
             <div className="flex items-center justify-between">
-              <p className="block text-sm font-medium text-gray-700">Image</p>
+              <p className="block text-sm font-medium text-gray-700">이미지</p>
               {fileError ? (
                 <p className="text-sm text-red-500">{fileError}</p>
               ) : (
@@ -252,7 +252,7 @@ export default function OGSection({
 
           <div>
             <div className="flex items-center justify-between">
-              <p className="block text-sm font-medium text-gray-700">Title</p>
+              <p className="block text-sm font-medium text-gray-700">제목</p>
               <p className="text-sm text-gray-500">{title?.length || 0}/120</p>
             </div>
             <div className="relative mt-1 flex rounded-md shadow-sm">
@@ -279,9 +279,7 @@ export default function OGSection({
 
           <div>
             <div className="flex items-center justify-between">
-              <p className="block text-sm font-medium text-gray-700">
-                Description
-              </p>
+              <p className="block text-sm font-medium text-gray-700">설명</p>
               <p className="text-sm text-gray-500">
                 {description?.length || 0}/240
               </p>

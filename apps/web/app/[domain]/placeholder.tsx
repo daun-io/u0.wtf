@@ -1,7 +1,6 @@
 "use client";
 
 import { BlurImage } from "@/ui/shared/blur-image";
-import { Logo } from "@u0/ui";
 import { STAGGER_CHILD_VARIANTS } from "@u0/utils";
 import va from "@vercel/analytics";
 import { motion } from "framer-motion";
@@ -38,7 +37,7 @@ export default function PlaceholderContent() {
           </motion.h1>
           <motion.a
             variants={STAGGER_CHILD_VARIANTS}
-            href="https://u0.wtf"
+            href="https://app.u0.wtf"
             onClick={() =>
               va.track("Referred from custom domain", {
                 domain,
