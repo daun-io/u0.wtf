@@ -1,6 +1,6 @@
 import { constructMetadata } from "@u0/utils";
 import { Divider } from "@/ui/shared/icons";
-import { Logo, MaxWidthWrapper } from "@u0/ui";
+import { Logo, LogoType, MaxWidthWrapper } from "@u0/ui";
 import { HOME_DOMAIN } from "@u0/utils";
 import Link from "next/link";
 import { ReactNode, Suspense } from "react";
@@ -21,8 +21,12 @@ export default function Layout({ children }: { children: ReactNode }) {
           <MaxWidthWrapper>
             <div className="flex h-16 items-center justify-between">
               <div className="flex items-center">
-                <Link href="/">
-                  <Logo className="h-8 w-8 transition-all duration-75 active:scale-95" />
+                <Link
+                  href="/"
+                  className="flex items-center gap-1 transition-all duration-75 active:scale-95"
+                >
+                  <Logo className="h-8 w-8" />
+                  <span className="font-mono">U0</span>
                 </Link>
                 <Divider className="h-8 w-8 text-gray-200 sm:ml-3" />
                 <ProjectSelect />
