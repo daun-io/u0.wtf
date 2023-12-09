@@ -54,8 +54,8 @@ export default function PlaceholderContent() {
           <BlurImage
             src="/_static/screen.jpg"
             alt="screenshot of u0.wtf"
-            width={1014}
-            height={1020}
+            width={1002}
+            height={759}
             className="rounded-lg border border-black/10"
           />
         </div>

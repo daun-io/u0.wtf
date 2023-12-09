@@ -319,13 +319,13 @@ function AddEditLinkModal({
             {logo}
             <h3 className="max-w-sm truncate text-lg font-medium">
               {props
-                ? `Edit ${linkConstructor({
+                ? `${linkConstructor({
                     key: props.key,
                     domain: props.domain
                       ? punycode.toUnicode(props.domain)
                       : undefined,
                     pretty: true,
-                  })}`
+                  })} 수정`
                 : "새 링크 생성"}
             </h3>
           </div>

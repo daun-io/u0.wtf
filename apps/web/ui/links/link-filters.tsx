@@ -453,9 +453,9 @@ const TagPopover = ({ tag, count }: { tag: TagProps; count: number }) => {
               className="relative py-1"
             >
               <div className="my-2 flex items-center justify-between px-3">
-                <p className="text-xs text-gray-500">Edit Tag</p>
+                <p className="text-xs text-gray-500">태그 수정</p>
                 {data !== tag && (
-                  <button className="text-xs text-gray-500">Save</button>
+                  <button className="text-xs text-gray-500">저장</button>
                 )}
               </div>
               <input

@@ -11,14 +11,14 @@ export default function DomainConfiguration({
   const subdomain = getSubdomain(domainJson.name, domainJson.apexName);
   const [recordType, setRecordType] = useState(!!subdomain ? "CNAME" : "A");
 
-  if (data.status === "Pending Verification") {
+  if (data.status === "인증 대기중") {
     const txtVerification = domainJson.verification.find(
       (x: any) => x.type === "TXT",
     );
     return (
       <div className="border-t border-gray-200">
         <DnsRecord
-          instructions={`Please set the following TXT record on <code>${domainJson.apexName}</code> to prove ownership of <code>${domainJson.name}</code>:`}
+          instructions={`<code>${domainJson.apexName}</code> TXT 레코드를 설정해 <code>${domainJson.name}</code> 도메인의 소유권을 증명하세요:`}
           records={[
             {
               type: txtVerification.type,
@@ -29,13 +29,13 @@ export default function DomainConfiguration({
               value: txtVerification.value,
             },
           ]}
-          warning="Warning: if you are using this domain for another site, setting this TXT record will transfer domain ownership away from that site and break it. Please exercise caution when setting this record."
+          warning="경고: 다른 사이트에서 이 도메인을 사용하는 경우 이 TXT 레코드를 설정하면 도메인 소유권이 해당 사이트로부터 이전되어 도메인이 손상됩니다. 이 레코드를 설정할 때는 주의하세요."
         />
       </div>
     );
   }
 
-  if (data.status === "Conflicting DNS Records") {
+  if (data.status === "DNS 레코드 충돌") {
     return (
       <div className="border-t border-gray-200 pt-5">
         <div className="flex justify-start space-x-4">
@@ -78,7 +78,7 @@ export default function DomainConfiguration({
     );
   }
 
-  if (data.status === "Unknown Error") {
+  if (data.status === "알 수 없는 오류") {
     return (
       <div className="border-t border-gray-200 pt-5">
         <p className="mb-5 text-sm">{data.response.domainJson.error.message}</p>

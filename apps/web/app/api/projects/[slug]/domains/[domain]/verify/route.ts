@@ -10,7 +10,7 @@ import { NextResponse } from "next/server";
 
 // GET /api/projects/[slug]/domains/[domain]/verify - get domain verification status
 export const GET = withAuth(async ({ domain }) => {
-  let status: DomainVerificationStatusProps = "Valid Configuration";
+  let status: DomainVerificationStatusProps = "올바르게 설정됨";
 
   const [domainJson, configJson] = await Promise.all([
     getDomainResponse(domain),
@@ -22,7 +22,7 @@ export const GET = withAuth(async ({ domain }) => {
     status = "도메인을 찾지 못함";
     return NextResponse.json({ status, response: { configJson, domainJson } });
   } else if (domainJson.error) {
-    status = "Unknown Error";
+    status = "알 수 없는 오류";
     return NextResponse.json({ status, response: { configJson, domainJson } });
   }
 
@@ -30,7 +30,7 @@ export const GET = withAuth(async ({ domain }) => {
    * Domain has DNS conflicts
    */
   if (configJson?.conflicts.length > 0) {
-    status = "Conflicting DNS Records";
+    status = "DNS 레코드 충돌";
     return NextResponse.json({ status, response: { configJson, domainJson } });
   }
 
@@ -38,14 +38,14 @@ export const GET = withAuth(async ({ domain }) => {
    * If domain is not verified, we try to verify now
    */
   if (!domainJson.verified) {
-    status = "Pending Verification";
+    status = "인증 대기중";
     const verificationJson = await verifyDomain(domain);
 
     if (verificationJson && verificationJson.verified) {
       /**
        * Domain was just verified
        */
-      status = "Valid Configuration";
+      status = "올바르게 설정됨";
     }
 
     return NextResponse.json({

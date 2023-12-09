@@ -11,11 +11,11 @@ export default function ProjectNotFound() {
           <FileX2 className="h-6 w-6 text-gray-600" />
         </div>
         <h1 className="my-3 text-xl font-semibold text-gray-700">
-          Project Not Found
+          브랜드를 찾지 못했습니다.
         </h1>
         <p className="z-10 max-w-sm text-center text-sm text-gray-600">
-          Bummer! The project you are looking for does not exist. You either
-          typed in the wrong URL or don't have access to this project.
+          찾고 계신 브랜드가 존재하지 않습니다. 잘못된 URL을 입력했거나 브랜드에
+          대한 액세스 권한이 없습니다.
         </p>
         <BlurImage
           src="/_static/illustrations/coffee-call.svg"
@@ -27,7 +27,7 @@ export default function ProjectNotFound() {
           href="/"
           className="z-10 rounded-md border border-black bg-black px-10 py-2 text-sm font-medium text-white transition-all duration-75 hover:bg-white hover:text-black"
         >
-          Back to my projects
+          대쉬보드로 돌아가기
         </Link>
       </div>
     </MaxWidthWrapper>

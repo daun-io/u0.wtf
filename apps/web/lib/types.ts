@@ -58,12 +58,12 @@ export interface UserProps {
 }
 
 export type DomainVerificationStatusProps =
-  | "Valid Configuration"
+  | "올바르게 설정됨"
   | "유효하지 않은 설정"
-  | "Conflicting DNS Records"
-  | "Pending Verification"
+  | "DNS 레코드 충돌"
+  | "인증 대기중"
   | "도메인을 찾지 못함"
-  | "Unknown Error";
+  | "알 수 없는 오류";
 
 export interface DomainProps {
   slug: string;

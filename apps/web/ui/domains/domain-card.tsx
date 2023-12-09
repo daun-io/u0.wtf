@@ -100,9 +100,9 @@ export default function DomainCard({ props }: { props: DomainProps }) {
         <div className="flex h-10 flex-col space-y-2 sm:flex-row sm:items-center sm:space-x-5 sm:space-y-0">
           <div className="flex items-center space-x-2">
             {data ? (
-              data.status === "Valid Configuration" ? (
+              data.status === "올바르게 설정됨" ? (
                 <CheckCircleFill className="h-6 w-6 text-blue-500" />
-              ) : data.status === "Pending Verification" ? (
+              ) : data.status === "인증 대기중" ? (
                 <AlertCircleFill className="h-6 w-6 text-yellow-500" />
               ) : (
                 <XCircleFill className="h-6 w-6 text-red-500" />
@@ -144,7 +144,7 @@ export default function DomainCard({ props }: { props: DomainProps }) {
             </div>
           </div>
         </div>
-        {data && data.status !== "Valid Configuration" && (
+        {data && data.status !== "올바르게 설정됨" && (
           <DomainConfiguration data={data} />
         )}
       </div>
