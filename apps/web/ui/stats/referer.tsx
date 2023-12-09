@@ -74,7 +74,7 @@ export default function Referer() {
             barList(9)
           ) : (
             <div className="flex h-[300px] items-center justify-center">
-              <p className="text-sm text-gray-600">No data available</p>
+              <p className="text-sm text-gray-600">데이터가 확인되지 않음</p>
             </div>
           )
         ) : (
