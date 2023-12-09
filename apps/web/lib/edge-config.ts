@@ -80,6 +80,15 @@ export const isReservedKey = async (key: string) => {
     reservedKeys = await get("reserved");
   } catch (e) {
     reservedKeys = [];
+    return [
+      "blog",
+      "help",
+      "pricing",
+      "changelog",
+      "metatags",
+      "terms",
+      "privacy",
+    ].includes(key);
   }
   return reservedKeys.includes(key);
 };
