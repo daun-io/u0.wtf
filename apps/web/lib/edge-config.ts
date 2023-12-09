@@ -24,7 +24,7 @@ export const isBlacklistedReferrer = async (referrer: string | null) => {
   const hostname = referrer ? getDomainWithoutWWW(referrer) : "(direct)";
   let referrers;
   try {
-    referrers = await get("referrers");
+    referrers = (await get("referrers")) || [];
   } catch (e) {
     referrers = [];
   }
@@ -34,7 +34,7 @@ export const isBlacklistedReferrer = async (referrer: string | null) => {
 export const isBlacklistedKey = async (key: string) => {
   let blacklistedKeys;
   try {
-    blacklistedKeys = await get("keys");
+    blacklistedKeys = (await get("keys")) || [];
   } catch (e) {
     blacklistedKeys = [];
     return false;
@@ -45,7 +45,7 @@ export const isBlacklistedKey = async (key: string) => {
 export const isWhitelistedEmail = async (email: string) => {
   let whitelistedEmails;
   try {
-    whitelistedEmails = await get("whitelist");
+    whitelistedEmails = (await get("whitelist")) || [];
   } catch (e) {
     whitelistedEmails = [];
   }
@@ -55,7 +55,7 @@ export const isWhitelistedEmail = async (email: string) => {
 export const isBlacklistedEmail = async (email: string) => {
   let blacklistedEmails;
   try {
-    blacklistedEmails = await get("emails");
+    blacklistedEmails = (await get("emails")) || [];
   } catch (e) {
     blacklistedEmails = [];
   }
@@ -77,7 +77,7 @@ export const isReservedKey = async (key: string) => {
   }
   let reservedKeys;
   try {
-    reservedKeys = await get("reserved");
+    reservedKeys = (await get("reserved")) || [];
   } catch (e) {
     reservedKeys = [];
     return [
@@ -96,7 +96,7 @@ export const isReservedKey = async (key: string) => {
 export const isReservedUsername = async (key: string) => {
   let reservedUsernames;
   try {
-    reservedUsernames = await get("reservedUsernames");
+    reservedUsernames = (await get("reservedUsernames")) || [];
   } catch (e) {
     reservedUsernames = [];
   }
