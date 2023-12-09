@@ -30,7 +30,7 @@ export default function NoProjectsPlaceholder() {
         href="/links"
         className="mt-3 text-sm font-medium text-gray-500 transition-all hover:text-gray-800 active:scale-95"
       >
-        Create a short link instead
+        또는 짧은 URL 만들기
       </Link>
     </div>
   );
