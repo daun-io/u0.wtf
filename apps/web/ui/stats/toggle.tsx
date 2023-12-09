@@ -15,7 +15,7 @@ import {
 } from "@u0/ui";
 import {
   APP_DOMAIN,
-  DUB_LOGO,
+  U0_LOGO,
   GOOGLE_FAVICON_URL,
   cn,
   fetcher,
@@ -75,7 +75,7 @@ export default function Toggle() {
           <div className="flex items-center space-x-2">
             <BlurImage
               alt={name || "Project Logo"}
-              src={logo || DUB_LOGO}
+              src={logo || U0_LOGO}
               className="h-6 w-6 flex-shrink-0 overflow-hidden rounded-full"
               width={48}
               height={48}

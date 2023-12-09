@@ -56,7 +56,7 @@ export function Footer() {
               <LogoType className="h-7 text-gray-600" />
             </Link>
             <p className="max-w-xs text-sm text-gray-500">
-              U0.WTF는 내 브랜드를 알리기 위한 짧은 URL 플랫폼입니다.
+              브랜드를 알리는 짧은 URL, U0.WTF
             </p>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-4 xl:col-span-2 xl:mt-0">

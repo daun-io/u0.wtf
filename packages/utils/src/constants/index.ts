@@ -99,9 +99,8 @@ export const FAVICON_FOLDER = "/_static/favicons";
 export const GOOGLE_FAVICON_URL =
   "https://www.google.com/s2/favicons?sz=64&domain_url=";
 
-export const DUB_LOGO = "https://d2vwwcvoksz7ty.cloudfront.net/logo.png";
-export const DUB_THUMBNAIL =
-  "https://d2vwwcvoksz7ty.cloudfront.net/thumbnail.png";
+export const U0_LOGO = "https://u0.wtf/_static/logo.png";
+export const DUB_THUMBNAIL = "https://u0.wtf/_static/thumbnail.jpg";
 
 export const SHOW_BACKGROUND_SEGMENTS = [
   "tools",

@@ -1,4 +1,4 @@
-import { inter, satoshi, suit } from "@/styles/fonts";
+import { pretendard, satoshi } from "@/styles/fonts";
 import { GeistMono } from "geist/font/mono";
 import "@/styles/globals.css";
 import { cn, constructMetadata } from "@u0/utils";
@@ -15,12 +15,7 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className={cn(
-        satoshi.variable,
-        inter.variable,
-        suit.variable,
-        GeistMono.variable,
-      )}
+      className={cn(satoshi.variable, pretendard.variable, GeistMono.variable)}
     >
       <body>
         <Toaster closeButton />

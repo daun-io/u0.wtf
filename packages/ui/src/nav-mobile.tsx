@@ -1,12 +1,11 @@
 "use client";
 
 import { APP_DOMAIN, cn, fetcher } from "@u0/utils";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import useSWR from "swr";
-import { FEATURES_LIST } from "./content";
 import { navItems } from "./nav";
 
 export function NavMobile() {
@@ -52,39 +51,6 @@ export function NavMobile() {
         )}
       >
         <ul className="grid divide-y divide-gray-200">
-          <li className="py-3">
-            <button
-              className="flex w-full justify-between"
-              onClick={() => setOpenFeatures(!openFeatures)}
-            >
-              <p className="font-semibold">Features</p>
-              <ChevronDown
-                className={cn(
-                  "h-5 w-5 text-gray-500 transition-all",
-                  openFeatures && "rotate-180",
-                )}
-              />
-            </button>
-            {openFeatures && (
-              <div className="grid gap-4 overflow-hidden py-4">
-                {FEATURES_LIST.map(({ slug, icon: Icon, shortTitle }) => (
-                  <Link
-                    key={slug}
-                    href={
-                      domain === "u0.wtf"
-                        ? `/${slug}`
-                        : `https://u0.wtf/${slug}`
-                    }
-                    onClick={() => setOpen(false)}
-                    className="flex w-full space-x-2"
-                  >
-                    <Icon className="h-5 w-5 text-gray-500" />
-                    <span className="text-sm">{shortTitle}</span>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </li>
           {navItems.map(({ name, slug }) => (
             <li key={slug} className="py-3">
               <Link

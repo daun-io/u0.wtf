@@ -11,7 +11,7 @@ export function GET(): NextResponse<OpenAPIV3.Document> {
       description:
         "Dub is an open-source link management tool for modern marketing teams to create, share, and track short links.",
       contact: {
-        email: "support@u0.co",
+        email: "team@empty.app",
         name: "U0.wtf Support",
         url: "https://u0.wtf/help",
       },

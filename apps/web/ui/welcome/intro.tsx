@@ -36,7 +36,7 @@ export default function Intro() {
           className="max-w-md text-gray-600 transition-colors sm:text-lg"
           variants={STAGGER_CHILD_VARIANTS}
         >
-          U0.WTF는 내 브랜드를 알리기 위한 짧은 URL 플랫폼입니다.
+          브랜드를 알리는 짧은 URL, U0.WTF
         </motion.p>
         <motion.button
           variants={STAGGER_CHILD_VARIANTS}

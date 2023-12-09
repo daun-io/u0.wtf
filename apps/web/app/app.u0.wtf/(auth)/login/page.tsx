@@ -16,7 +16,7 @@ export default function LoginPage() {
         </a>
         <h3 className="text-xl font-semibold">U0 로그인</h3>
         <p className="text-sm text-gray-500">
-          내 브랜드를 알리는 짧은 URL을 만들어보세요.
+          브랜드를 알리는 짧은 URL을 만들어보세요.
         </p>
       </div>
       <div className="flex flex-col space-y-3 bg-gray-50 px-4 py-8 sm:px-16">

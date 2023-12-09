@@ -251,7 +251,7 @@ function AddEditDomainModal({
                 도메인이 이미 사용중입니다.{" "}
                 <a
                   className="underline"
-                  href="mailto:support@u0.co?subject=My Domain Is Already In Use"
+                  href="mailto:team@empty.app?subject=My Domain Is Already In Use"
                 >
                   Contact us
                 </a>{" "}

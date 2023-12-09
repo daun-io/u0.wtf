@@ -1,4 +1,4 @@
-import { DUB_LOGO, capitalize, nFormatter } from "@u0/utils";
+import { U0_LOGO, capitalize, nFormatter } from "@u0/utils";
 import {
   Body,
   Container,
@@ -41,7 +41,7 @@ export default function UsageExceeded({
           <Container className="mx-auto my-10 max-w-[500px] rounded border border-solid border-gray-200 px-10 py-5">
             <Section className="mt-8">
               <Img
-                src={DUB_LOGO}
+                src={U0_LOGO}
                 width="40"
                 height="40"
                 alt="Dub"
