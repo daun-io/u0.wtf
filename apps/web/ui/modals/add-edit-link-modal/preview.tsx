@@ -4,6 +4,7 @@ import { getDomainWithoutWWW } from "@u0/utils";
 import { type Link as LinkProps } from "@prisma/client";
 import { useMemo } from "react";
 import { useDebounce } from "use-debounce";
+import { MessageCircle } from "lucide-react";
 
 export default function Preview({
   data,
@@ -65,6 +66,48 @@ export default function Preview({
         <h2 className="text-lg font-medium">소셜 미디어 미리보기</h2>
       </div>
       <div className="grid gap-5 p-5">
+        {/* Kakaotalk */}
+        <div>
+          <div className="relative mb-2">
+            <div
+              className="absolute inset-0 flex items-center"
+              aria-hidden="true"
+            >
+              <div className="w-full border-t border-gray-200" />
+            </div>
+            <div className="relative flex justify-center">
+              <div className="flex items-center space-x-2 bg-white px-3">
+                <MessageCircle className="h-4 w-4 fill-[#3a1a1c]" />
+                <p className="text-sm text-gray-400">카카오톡</p>
+              </div>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-md border border-gray-300">
+            {previewImage}
+            <div className="grid gap-1 p-3">
+              {title ? (
+                <h3 className="truncate text-base text-[#0f1419]">{title}</h3>
+              ) : (
+                <div className="mb-1 h-4 w-full rounded-md bg-gray-100" />
+              )}
+              {description ? (
+                <p className="line-clamp-1 text-sm text-[#536471]">
+                  {description}
+                </p>
+              ) : (
+                <div className="grid gap-2">
+                  <div className="h-4 w-full rounded-md bg-gray-100" />
+                  <div className="h-4 w-48 rounded-md bg-gray-100" />
+                </div>
+              )}
+              {hostname ? (
+                <p className="text-sm text-[#536471]/50">{hostname}</p>
+              ) : (
+                <div className="mb-1 h-4 w-24 rounded-md bg-gray-100" />
+              )}
+            </div>
+          </div>
+        </div>
         {/* Twitter */}
         <div>
           <div className="relative mb-2">
