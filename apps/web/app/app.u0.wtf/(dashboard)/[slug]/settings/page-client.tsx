@@ -52,7 +52,7 @@ export default function ProjectSettingsClient() {
         }
       />
       <Form
-        title="브랜드 Slug"
+        title="브랜드 식별자"
         description="U0에서 표기되는 브랜드마다 고유한 URL 식별자입니다."
         inputData={{
           name: "slug",
@@ -64,7 +64,7 @@ export default function ProjectSettingsClient() {
         helpText="영문 소문자, 숫자, '-' 표시만 사용 가능. 최대 48자."
         {...(plan === "enterprise" &&
           !isOwner && {
-            disabledTooltip: "브랜드 소유자만 Slug을 수정할 수 있습니다..",
+            disabledTooltip: "브랜드 소유자만 식별자를 수정할 수 있습니다..",
           })}
         handleSubmit={(data) =>
           fetch(`/api/projects/${slug}`, {

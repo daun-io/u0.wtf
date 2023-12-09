@@ -84,7 +84,7 @@ function DeleteProjectModal({
             htmlFor="project-slug"
             className="block text-sm font-medium text-gray-700"
           >
-            계속하려면 브랜드 Slug{" "}
+            계속하려면 브랜드 식별자{" "}
             <span className="font-semibold text-black">{slug}</span> 를
             입력해주세요:
           </label>

@@ -42,10 +42,10 @@ function InviteTeammateModal({
         ) : (
           <Logo />
         )}
-        <h3 className="text-lg font-medium">Invite Teammate</h3>
+        <h3 className="text-lg font-medium">팀원 초대</h3>
         <p className="text-center text-sm text-gray-500">
-          Invite a teammate to join your project. Invitations will be valid for
-          14 days.
+          팀원을 브랜드에 초대하세요. 초대는 다음 기간 동안 유효합니다. 14일간
+          유효합니다.
         </p>
       </div>
       <form
@@ -75,7 +75,7 @@ function InviteTeammateModal({
       >
         <div>
           <label htmlFor="email" className="block text-sm text-gray-700">
-            Email
+            이메일
           </label>
           <div className="relative mt-1 rounded-md shadow-sm">
             <input
@@ -92,7 +92,7 @@ function InviteTeammateModal({
             />
           </div>
         </div>
-        <Button loading={inviting} text="Send invite" />
+        <Button loading={inviting} text="초대하기" />
       </form>
     </Modal>
   );

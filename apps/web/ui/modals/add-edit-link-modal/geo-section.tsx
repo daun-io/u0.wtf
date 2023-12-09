@@ -1,11 +1,6 @@
 import useProject from "@/lib/swr/use-project";
 import { ModalContext } from "@/ui/modals/provider";
-import {
-  InfoTooltip,
-  SimpleTooltipContent,
-  Switch,
-  TooltipContent,
-} from "@u0/ui";
+import { InfoTooltip, Switch, TooltipContent } from "@u0/ui";
 import { COUNTRIES, FADE_IN_ANIMATION_SETTINGS, HOME_DOMAIN } from "@u0/utils";
 import { type Link as LinkProps } from "@prisma/client";
 import { motion } from "framer-motion";
@@ -61,7 +56,7 @@ export default function GeoSection({
           <h2 className="text-sm font-medium text-gray-900">지역 타게팅</h2>
           <InfoTooltip
             content={
-              <SimpleTooltipContent title="유저를 지역에 따라 다른 링크로 리다이렉트합니다." />
+              <TooltipContent title="유저를 지역에 따라 다른 링크로 리다이렉트합니다." />
             }
           />
         </div>

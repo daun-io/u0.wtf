@@ -59,11 +59,11 @@ export default function UploadLogo() {
               mutate("/api/projects"),
               mutate(`/api/projects/${slug}`),
             ]);
-            toast.success("Succesfully uploaded project logo!");
+            toast.success("브랜드 로고를 업데이트 했습니다.");
           } else if (res.status === 413) {
-            toast.error("File size too big (max 2MB)");
+            toast.error("파일 용량이 2MB를 초과합니다.");
           } else {
-            toast.error("Something went wrong");
+            toast.error("오류가 발생했습니다.");
           }
           setUploading(false);
         });

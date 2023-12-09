@@ -170,7 +170,7 @@ function AddProjectModalHelper({
         <div>
           <label htmlFor="slug" className="flex items-center space-x-2">
             <p className="block text-sm font-medium text-gray-700">
-              브랜드 Slug
+              브랜드 식별자
             </p>
             <InfoTooltip content="U0에서 브랜드를 식별할 수 있게 해주는 고유한 URL입니다." />
           </label>

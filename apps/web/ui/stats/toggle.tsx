@@ -123,10 +123,10 @@ export default function Toggle() {
                         <TooltipContent
                           title={
                             slug
-                              ? `${display} stats can only be viewed on a Pro plan or higher. Upgrade now to view all-time stats.`
-                              : `${display} stats can only be viewed on a project with a Pro plan or higher. Create a project or navigate to an existing project to upgrade.`
+                              ? `${display} 통계는 프로 플랜 이상에서만 볼 수 있습니다. 모든 시간 통계를 보려면 지금 업그레이드하세요.`
+                              : `${display} 통계는 프로 플랜 이상의 브랜드에서만 볼 수 있습니다. 브랜드를 생성하거나 기존 브랜드로 이동하여 업그레이드하세요.`
                           }
-                          cta={slug ? "프로로 업그레이드" : "Create Project"}
+                          cta={slug ? "프로로 업그레이드" : "브랜드 생성"}
                           {...(isPublicStatsPage
                             ? {
                                 href: APP_DOMAIN,

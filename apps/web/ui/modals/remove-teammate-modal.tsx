@@ -51,26 +51,26 @@ function RemoveTeammateModal({
         )}
         <h3 className="text-lg font-medium">
           {invite
-            ? "Revoke Invitation"
+            ? "초대 취소"
             : session?.user?.email === email
-            ? "Leave Project"
-            : "Remove Teammate"}
+            ? "프로젝트 떠나기"
+            : "팀원 제거"}
         </h3>
         <p className="text-center text-sm text-gray-500">
           {invite
-            ? "This will revoke "
+            ? "이 작업은 "
             : session?.user?.email === email
-            ? "You're about to leave "
-            : "This will remove "}
+            ? "당신은 이 프로젝트를 떠나려고 합니다. "
+            : "이 작업은 "}
           <span className="font-semibold text-black">
             {session?.user?.email === email ? projectName : name || email}
           </span>
           {invite
-            ? "'s invitation to join your project. "
+            ? "님의 브랜드 참가 초대를 취소합니다. "
             : session?.user?.email === email
-            ? ". You will lose all access to this project. "
-            : " from your project. "}
-          Are you sure you want to continue?
+            ? "모든 접근 권한을 잃게 됩니다. "
+            : "님을 프로젝트에서 제거합니다. "}
+          계속하시겠습니까?
         </p>
       </div>
 
