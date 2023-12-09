@@ -1,4 +1,5 @@
 import { BlurImage } from "@/ui/shared/blur-image";
+import { Tooltip, TooltipContent } from "@u0/ui";
 
 export default function NoLinksPlaceholder({
   AddEditLinkButton,
@@ -10,13 +11,20 @@ export default function NoLinksPlaceholder({
       <h2 className="z-10 text-xl font-semibold text-gray-700">
         아직 생성한 링크가 없습니다.
       </h2>
-      <BlurImage
-        src="/_static/illustrations/call-waiting.svg"
-        alt="No links yet"
-        width={400}
-        height={400}
-        className="pointer-events-none -my-8"
-      />
+
+      <Tooltip
+        content={<TooltipContent title="아차차... 이 링크가 아닌데..." />}
+      >
+        <div>
+          <BlurImage
+            src="/_static/illustrations/no-link.webp"
+            alt="No links yet"
+            width={400}
+            height={400}
+            className="pointer-events-none"
+          />
+        </div>
+      </Tooltip>
       <AddEditLinkButton />
     </div>
   );

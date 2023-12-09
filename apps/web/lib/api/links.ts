@@ -343,7 +343,7 @@ export async function processLink({
     } else {
       return {
         link: payload,
-        error: "Invalid domain",
+        error: "유효하지 않은 도메인입니다.",
         status: 403,
       };
     }

@@ -18,7 +18,7 @@ export const validateDomain = async (domain: string) => {
     !/^(u0\.wtf|.*\.u0\.wtf)$/i.test(domain);
 
   if (!validDomain) {
-    return "Invalid domain";
+    return "유효하지 않은 도메인입니다.";
   }
   const exists = await domainExists(domain);
   if (exists) {

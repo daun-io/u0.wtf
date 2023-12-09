@@ -14,11 +14,11 @@ export default function NoProjectsPlaceholder() {
         아직 만든 브랜드가 없습니다.
       </h2>
       <BlurImage
-        src="/_static/illustrations/shopping-call.svg"
+        src="/_static/illustrations/no-brand.webp"
         alt="No links yet"
         width={400}
         height={400}
-        className="pointer-events-none -my-8"
+        className="pointer-events-none"
       />
       <button
         onClick={() => setShowAddProjectModal(true)}
