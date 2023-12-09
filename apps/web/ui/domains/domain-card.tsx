@@ -111,7 +111,7 @@ export default function DomainCard({ props }: { props: DomainProps }) {
               <LoadingCircle className="mr-1 h-5 w-5" />
             )}
             <p className="text-sm text-gray-500">
-              {data ? data.status : "Checking Domain Status"}
+              {data ? data.status : "도메인 상태 확인중"}
             </p>
           </div>
           <div className="flex items-center space-x-2">
@@ -122,7 +122,11 @@ export default function DomainCard({ props }: { props: DomainProps }) {
             )}
             <div className="flex space-x-1">
               <p className="text-sm text-gray-500">
-                {target ? `${capitalize(type)}s to` : `No ${type} configured`}
+                {target
+                  ? `${capitalize(type)}s to`
+                  : `${
+                      type === "redirect" ? "리다이렉트" : type
+                    } 설정이 되지 않음`}
               </p>
               {target && (
                 <a
