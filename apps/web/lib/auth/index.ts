@@ -331,7 +331,7 @@ export const withAuth =
       // for generic DUB_DOMAINS links / stats
     } else {
       if (domain && !isDubDomain(domain)) {
-        return new Response("Domain not found.", {
+        return new Response("도메인을 찾지 못함.", {
           status: 404,
           headers,
         });

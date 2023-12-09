@@ -29,7 +29,7 @@ export const GET = withAuth(async ({ domain }) => {
     },
   });
   if (!data) {
-    return new Response("Domain not found", { status: 404 });
+    return new Response("도메인을 찾지 못함", { status: 404 });
   }
   return NextResponse.json({
     ...data,

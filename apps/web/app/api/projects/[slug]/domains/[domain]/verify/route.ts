@@ -18,8 +18,8 @@ export const GET = withAuth(async ({ domain }) => {
   ]);
 
   if (domainJson?.error?.code === "not_found") {
-    // domain not found on Vercel project
-    status = "Domain Not Found";
+    // 도메인을 찾지 못함 on Vercel project
+    status = "도메인을 찾지 못함";
     return NextResponse.json({ status, response: { configJson, domainJson } });
   } else if (domainJson.error) {
     status = "Unknown Error";

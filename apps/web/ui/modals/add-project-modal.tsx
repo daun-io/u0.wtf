@@ -116,7 +116,7 @@ function AddProjectModalHelper({
                 router.push(`/welcome?type=upgrade&slug=${slug}`);
               } else {
                 router.push(`/${slug}`);
-                toast.success("Successfully created project!");
+                toast.success("브랜드를 생성했습니다.");
                 setShowAddProjectModal(false);
               }
             } else if (res.status === 422) {

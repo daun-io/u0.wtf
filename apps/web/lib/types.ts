@@ -62,7 +62,7 @@ export type DomainVerificationStatusProps =
   | "유효하지 않은 설정"
   | "Conflicting DNS Records"
   | "Pending Verification"
-  | "Domain Not Found"
+  | "도메인을 찾지 못함"
   | "Unknown Error";
 
 export interface DomainProps {

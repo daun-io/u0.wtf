@@ -97,7 +97,6 @@ export default function Preview({
               ) : (
                 <div className="grid gap-2">
                   <div className="h-4 w-full rounded-md bg-gray-100" />
-                  <div className="h-4 w-48 rounded-md bg-gray-100" />
                 </div>
               )}
               {hostname ? (
