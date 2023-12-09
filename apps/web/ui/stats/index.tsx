@@ -144,7 +144,6 @@ export default function Stats({
             {slug && <TopLinks />}
             <Devices />
             <Referer />
-            {!slug && <Feedback />}
           </div>
         </div>
       </div>

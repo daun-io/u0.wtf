@@ -11,6 +11,7 @@ export const isBlacklistedDomain = async (domain: string) => {
   } catch (e) {
     blacklistedDomains = [];
     blacklistedTerms = [];
+    return false;
   }
   const domainToTest = getDomainWithoutWWW(domain) || domain;
   return (
@@ -36,6 +37,7 @@ export const isBlacklistedKey = async (key: string) => {
     blacklistedKeys = await get("keys");
   } catch (e) {
     blacklistedKeys = [];
+    return false;
   }
   return new RegExp(blacklistedKeys.join("|"), "i").test(key);
 };

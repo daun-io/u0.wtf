@@ -369,9 +369,9 @@ function AddEditLinkModal({
                         domain,
                       }),
                     );
-                    toast.success("Copied shortlink to clipboard!");
+                    toast.success("짧은 URL을 클립보드에 복사했습니다.");
                   } else {
-                    toast.success("Successfully updated shortlink!");
+                    toast.success("짧은 URL을 업데이트 했습니다.");
                   }
                   setShowAddEditLinkModal(false);
                 } else {

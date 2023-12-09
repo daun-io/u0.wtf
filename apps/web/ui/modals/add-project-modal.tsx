@@ -89,7 +89,7 @@ function AddProjectModalHelper({
         <Logo />
         <h3 className="text-lg font-medium">새 브랜드 생성</h3>
         <Tooltip
-          content={`"브랜드"는 웹사이트, 앱 또는 비즈니스에 대한 모든 짧은 링크를 저장하는 데 사용할 수 있는 공간입니다.  '팀'이라고 생각하시면 됩니다. 팀원을 브랜드에 초대하여 함께 링크를 관리할 수 있습니다."`}
+          content={`"브랜드"는 웹사이트, 앱 또는 비즈니스에 대한 모든 짧은 URL을 저장하는 데 사용할 수 있는 공간입니다.  '팀'이라고 생각하시면 됩니다. 팀원을 브랜드에 초대하여 함께 링크를 관리할 수 있습니다."`}
         >
           <p className="-translate-y-2 text-center text-xs text-gray-500 underline underline-offset-4 hover:text-gray-800">
             브랜드란?
@@ -219,7 +219,7 @@ function AddProjectModalHelper({
             <p className="block text-sm font-medium text-gray-700">
               커스텀 도메인
             </p>
-            <InfoTooltip content="내가 소유한 짧은 링크를 호스팅할 도메인입니다. 예: yourbrand.com/link" />
+            <InfoTooltip content="내가 소유한 짧은 URL을 호스팅할 도메인입니다. 예: yourbrand.com/link" />
           </label>
           <div className="relative mt-1 flex rounded-md shadow-sm">
             <input

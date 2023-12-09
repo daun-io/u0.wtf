@@ -385,7 +385,7 @@ export default function LinkCard({
               <Chart className="h-4 w-4" />
               <p className="whitespace-nowrap text-sm text-gray-500">
                 {nFormatter(clicks)}
-                <span className="ml-1 hidden sm:inline-block">clicks</span>
+                <span className="ml-1 hidden sm:inline-block">클릭</span>
               </p>
             </Link>
           </NumberTooltip>

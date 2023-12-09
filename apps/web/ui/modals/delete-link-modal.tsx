@@ -51,10 +51,10 @@ function DeleteLinkModal({
           width={20}
           height={20}
         />
-        <h3 className="text-lg font-medium">Delete {shortlink}</h3>
+        <h3 className="text-lg font-medium">{shortlink} 삭제하기</h3>
         <p className="text-sm text-gray-500">
-          Warning: Deleting this link will remove all of its stats. This action
-          cannot be undone.
+          이 링크를 삭제하면 해당 통계가 모두 제거됩니다. 이 작업은 은 되돌릴 수
+          없습니다.
         </p>
       </div>
 
@@ -76,7 +76,7 @@ function DeleteLinkModal({
                 { revalidate: true },
               );
               setShowDeleteLinkModal(false);
-              toast.success("Successfully deleted shortlink!");
+              toast.success("짧은 URL을 삭제했습니다.");
             } else {
               const { error } = await res.json();
               toast.error(error);
@@ -88,8 +88,8 @@ function DeleteLinkModal({
       >
         <div>
           <label htmlFor="verification" className="block text-sm text-gray-700">
-            To verify, type <span className="font-semibold">{shortlink}</span>{" "}
-            below
+            <span className="font-semibold">{shortlink}</span> 을 입력해 삭제를
+            확인해주세요.
           </label>
           <div className="relative mt-1 rounded-md shadow-sm">
             <input
@@ -105,7 +105,7 @@ function DeleteLinkModal({
           </div>
         </div>
 
-        <Button variant="danger" text="Confirm delete" loading={deleting} />
+        <Button variant="danger" text="링크 삭제하기" loading={deleting} />
       </form>
     </Modal>
   );

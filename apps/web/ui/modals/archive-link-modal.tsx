@@ -108,12 +108,12 @@ function ArchiveLinkModal({
           height={20}
         />
         <h3 className="text-lg font-medium">
-          {archived ? "Archive" : "Unarchive"} {shortlink}
+          {shortlink} {archived ? "보관하기" : "보관 취소"}
         </h3>
         <p className="text-sm text-gray-500">
           {archived
-            ? "Archived links will still work - they just won't show up on your main dashboard."
-            : "By unarchiving this link, it will show up on your main dashboard again."}
+            ? "보관된 링크는 여전히 동작하지만, 대쉬보드에서 숨겨집니다."
+            : "보관을 취소하면 링크를 다시 대쉬보드에서 확인할 수 있습니다."}
         </p>
       </div>
 
@@ -122,7 +122,7 @@ function ArchiveLinkModal({
           onClick={handleArchiveRequest}
           autoFocus
           loading={archiving}
-          text={`Confirm ${archived ? "archive" : "unarchive"}`}
+          text={`${archived ? "보관하기" : "보관 취소"}`}
         />
       </div>
     </Modal>
