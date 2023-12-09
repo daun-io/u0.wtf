@@ -29,10 +29,13 @@ export default function PlaceholderContent() {
       >
         <div className="mx-5 flex flex-col items-start gap-16 lg:mx-0">
           <motion.h1
-            className="flex items-center justify-center gap-2 text-left text-5xl font-bold tabular-nums text-gray-800 transition-colors sm:text-7xl"
+            className=" gap-2 text-left text-5xl font-bold tabular-nums text-gray-800 transition-colors sm:text-7xl"
             variants={STAGGER_CHILD_VARIANTS}
           >
-            브랜드를 <br />
+            <span className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+              브랜드
+            </span>
+            를 <br />
             알리는 <br /> 짧은 URL
           </motion.h1>
           <motion.a
