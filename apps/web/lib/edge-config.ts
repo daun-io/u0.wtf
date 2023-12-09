@@ -8,6 +8,9 @@ export const isBlacklistedDomain = async (domain: string) => {
       get("domains"),
       get("terms"),
     ]);
+    if (blacklistedDomains === undefined) {
+      return false;
+    }
   } catch (e) {
     blacklistedDomains = [];
     blacklistedTerms = [];
@@ -34,7 +37,10 @@ export const isBlacklistedReferrer = async (referrer: string | null) => {
 export const isBlacklistedKey = async (key: string) => {
   let blacklistedKeys;
   try {
-    blacklistedKeys = (await get("keys")) || [];
+    blacklistedKeys = await get("keys");
+    if (blacklistedKeys === undefined) {
+      return false;
+    }
   } catch (e) {
     blacklistedKeys = [];
     return false;
