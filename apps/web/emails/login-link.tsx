@@ -24,7 +24,7 @@ export default function LoginLink({
   return (
     <Html>
       <Head />
-      <Preview>Your Dub Login Link</Preview>
+      <Preview>U0 로그인 링크입니다.</Preview>
       <Tailwind>
         <Body className="mx-auto my-auto bg-white font-sans">
           <Container className="mx-auto my-10 max-w-[500px] rounded border border-solid border-gray-200 px-10 py-5">
@@ -38,24 +38,21 @@ export default function LoginLink({
               />
             </Section>
             <Heading className="mx-0 my-7 p-0 text-center text-xl font-semibold text-black">
-              Your Login Link
+              U0 로그인 링크
             </Heading>
             <Text className="text-sm leading-6 text-black">
-              Welcome to Dub!
-            </Text>
-            <Text className="text-sm leading-6 text-black">
-              Please click the magic link below to sign in to your account.
+              계정에 로그인하려면 아래의 링크를 클릭하세요.
             </Text>
             <Section className="my-8 text-center">
               <Link
                 className="rounded-full bg-black px-6 py-3 text-center text-[12px] font-semibold text-white no-underline"
                 href={url}
               >
-                Sign in
+                로그인
               </Link>
             </Section>
             <Text className="text-sm leading-6 text-black">
-              or copy and paste this URL into your browser:
+              또는 아래 URL을 브라우저에 붙여넣으셔도 좋습니다.
             </Text>
             <Text className="max-w-sm flex-wrap break-words font-medium text-purple-600 no-underline">
               {url.replace(/^https?:\/\//, "")}

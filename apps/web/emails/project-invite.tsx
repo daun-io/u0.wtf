@@ -15,10 +15,10 @@ import {
 import Footer from "./components/footer";
 
 export default function ProjectInvite({
-  email = "panicking@thedis.co",
+  email = "team@empty.app",
   url = "http://localhost:8888/api/auth/callback/email?callbackUrl=http%3A%2F%2Fapp.localhost%3A3000%2Flogin&token=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&email=youremail@gmail.com",
   projectName = "Acme",
-  projectUser = "Brendon Urie",
+  projectUser = "Alan Turing",
   projectUserEmail = "alan.turing@example.com",
 }: {
   email: string;
@@ -30,7 +30,7 @@ export default function ProjectInvite({
   return (
     <Html>
       <Head />
-      <Preview>Join {projectName} on Dub</Preview>
+      <Preview>U0 {projectName}에 합류하기</Preview>
       <Tailwind>
         <Body className="mx-auto my-auto bg-white font-sans">
           <Container className="mx-auto my-10 max-w-[500px] rounded border border-solid border-gray-200 px-10 py-5">
@@ -44,7 +44,7 @@ export default function ProjectInvite({
               />
             </Section>
             <Heading className="mx-0 my-7 p-0 text-center text-xl font-semibold text-black">
-              Join {projectName} on Dub
+              U0 {projectName}에 합류하기
             </Heading>
             {projectUser && projectUserEmail ? (
               <Text className="text-sm leading-6 text-black">
@@ -55,13 +55,12 @@ export default function ProjectInvite({
                 >
                   {projectUserEmail}
                 </Link>
-                ) has invited you to join the <strong>{projectName}</strong>{" "}
-                project on Dub!
+                )님이 U0의 <strong>{projectName}</strong> 브랜드에
+                초대하였습니다!
               </Text>
             ) : (
               <Text className="text-sm leading-6 text-black">
-                You have been invited to join the <strong>{projectName}</strong>{" "}
-                project on Dub!
+                U0의 <strong>{projectName}</strong> 브랜드에 초대받았습니다!
               </Text>
             )}
             <Section className="mb-8 text-center">
@@ -69,11 +68,11 @@ export default function ProjectInvite({
                 className="rounded-full bg-black px-6 py-3 text-center text-[12px] font-semibold text-white no-underline"
                 href={url}
               >
-                Join Project
+                브랜드 가입
               </Link>
             </Section>
             <Text className="text-sm leading-6 text-black">
-              or copy and paste this URL into your browser:
+              또는 이 URL을 브라우저에 복사 및 붙여넣기 하세요:
             </Text>
             <Text className="max-w-sm flex-wrap break-words font-medium text-purple-600 no-underline">
               {url.replace(/^https?:\/\//, "")}
