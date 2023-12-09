@@ -298,7 +298,7 @@ export async function processLink({
       if (keyBlacklisted) {
         return {
           link: payload,
-          error: "Invalid key.",
+          error: "유효하지 않은 키입니다.",
           status: 422,
         };
       }
@@ -306,7 +306,7 @@ export async function processLink({
       if (domainBlacklisted) {
         return {
           link: payload,
-          error: "Invalid url.",
+          error: "유효하지 않은 URL입니다.",
           status: 422,
         };
       }
@@ -318,7 +318,7 @@ export async function processLink({
       if (!allowedHostnames.includes(urlDomain)) {
         return {
           link: payload,
-          error: `Invalid url. You can only use ${domain} short links for URLs starting with ${allowedHostnames
+          error: `유효하지 않은 URL입니다. You can only use ${domain} short links for URLs starting with ${allowedHostnames
             .map((d) => `\`${d}\``)
             .join(", ")}.`,
           status: 422,

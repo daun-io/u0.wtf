@@ -403,7 +403,7 @@ function AddEditLinkModal({
                   </label>
                   {urlError && (
                     <p className="text-sm text-red-600" id="key-error">
-                      Invalid url.
+                      유효하지 않은 URL입니다.
                     </p>
                   )}
                 </div>

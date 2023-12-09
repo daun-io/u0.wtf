@@ -10,7 +10,7 @@ export const runtime = "edge";
 export async function GET(req: NextRequest) {
   const url = req.nextUrl.searchParams.get("url");
   if (!url || !isValidUrl(url)) {
-    return new Response("Invalid URL", { status: 400 });
+    return new Response("유효하지 않은 URL입니다", { status: 400 });
   }
 
   // Rate limit if user is not logged in
