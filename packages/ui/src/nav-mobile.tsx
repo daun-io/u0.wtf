@@ -105,7 +105,7 @@ export function NavMobile() {
                 href={APP_DOMAIN}
                 className="flex w-full font-semibold capitalize"
               >
-                Dashboard
+                대쉬보드
               </Link>
             </li>
           ) : (
@@ -115,7 +115,7 @@ export function NavMobile() {
                   href={`${APP_DOMAIN}/login`}
                   className="flex w-full font-semibold capitalize"
                 >
-                  Log in
+                  로그인
                 </Link>
               </li>
 
@@ -124,7 +124,7 @@ export function NavMobile() {
                   href={`${APP_DOMAIN}/register`}
                   className="flex w-full font-semibold capitalize"
                 >
-                  Sign Up
+                  회원가입
                 </Link>
               </li>
             </>

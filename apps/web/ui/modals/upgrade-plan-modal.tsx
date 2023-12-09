@@ -128,7 +128,7 @@ function UpgradePlanModal({
               >
                 {period === "monthly"
                   ? "무료 2개월 추가 🎁"
-                  : "Switch to monthly"}
+                  : "월간 결제로 변경"}
               </button>
             </div>
             <motion.div

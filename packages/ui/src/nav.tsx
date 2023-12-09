@@ -18,10 +18,6 @@ export const navItems = [
     slug: "customers",
   },
   {
-    name: "Changelog",
-    slug: "changelog",
-  },
-  {
     name: "Help",
     slug: "help",
   },
@@ -182,7 +178,7 @@ export function Nav() {
                 href={APP_DOMAIN}
                 className="animate-fade-in rounded-full border border-black bg-black px-4 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"
               >
-                Dashboard
+                대쉬보드
               </Link>
             ) : !isLoading ? (
               <>
