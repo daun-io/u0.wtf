@@ -83,7 +83,7 @@ function RemoveTeammateModal({
           </div>
         </div>
         <Button
-          text="Confirm"
+          text="확인"
           variant="danger"
           autoFocus
           loading={removing}

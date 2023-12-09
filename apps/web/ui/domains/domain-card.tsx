@@ -71,7 +71,7 @@ export default function DomainCard({ props }: { props: DomainProps }) {
                   ) : (
                     nFormatter(clicks)
                   )}
-                  <span className="ml-1 hidden sm:inline-block">clicks</span>
+                  <span className="ml-1 hidden sm:inline-block">클릭</span>
                 </p>
               </Link>
             </NumberTooltip>

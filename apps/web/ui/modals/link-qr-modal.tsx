@@ -150,7 +150,7 @@ export function QRCodePicker({
         ) : (
           <Logo />
         )}
-        <h3 className="text-lg font-medium">Download QR Code</h3>
+        <h3 className="text-lg font-medium">QR 코드 다운로드</h3>
       </div>
 
       <div className="flex flex-col space-y-6 bg-gray-50 py-6 text-left sm:rounded-b-2xl">
@@ -189,20 +189,20 @@ export function QRCodePicker({
           <button
             onClick={async () => {
               toast.promise(copyToClipboard, {
-                loading: "Copying QR code to clipboard...",
-                success: "Copied QR code to clipboard!",
-                error: "Failed to copy",
+                loading: "클립보드에 QR 코드 복사 중...",
+                success: "클립보드에 QR 코드가 복사되었습니다!",
+                error: "복사 실패",
               });
             }}
             className="flex items-center justify-center gap-2 rounded-md border border-black bg-black px-5 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"
           >
             {copied ? (
               <>
-                <Check className="h-4 w-4" /> <p>Copied</p>
+                <Check className="h-4 w-4" /> <p>복사됨</p>
               </>
             ) : (
               <>
-                <Clipboard className="h-4 w-4" /> <p>Copy</p>
+                <Clipboard className="h-4 w-4" /> <p>복사하기</p>
               </>
             )}
           </button>
@@ -256,7 +256,7 @@ function AdvancedSettings({
               expanded ? "rotate-90" : ""
             } transition-all`}
           />
-          <p className="text-sm text-gray-600">Advanced options</p>
+          <p className="text-sm text-gray-600">고급 설정</p>
         </button>
       </div>
       {expanded && (
@@ -270,7 +270,7 @@ function AdvancedSettings({
               htmlFor="logo-toggle"
               className="flex items-center space-x-1"
             >
-              <p className="text-sm font-medium text-gray-700">Logo</p>
+              <p className="text-sm font-medium text-gray-700">로고</p>
               {plan && plan !== "free" && (
                 <InfoTooltip
                   content={
@@ -293,14 +293,14 @@ function AdvancedSettings({
                   thumbTranslate="translate-x-6"
                 />
                 <p className="text-sm text-gray-600">
-                  Show {!slug || (!logo && "U0.wtf")} Logo
+                  {!slug || (!logo && "U0.wtf")} 로고 보이기
                 </p>
               </div>
             ) : (
               <Tooltip
                 content={
                   <TooltipContent
-                    title="You need to be on the Pro plan to customize your QR Code logo."
+                    title="QR코드 로고를 사용자 지정하려면 Pro 요금제를 사용 중이어야 합니다."
                     cta={slug ? "프로로 업그레이드" : "브랜드 생성하기"}
                     {...(APP_HOSTNAMES.has(window.location.hostname)
                       ? {
@@ -326,7 +326,7 @@ function AdvancedSettings({
                     thumbTranslate="translate-x-6"
                     disabled={true}
                   />
-                  <p className="text-sm text-gray-600">Show U0.wtf Logo</p>
+                  <p className="text-sm text-gray-600">U0.wtf 로고 보이기</p>
                 </div>
               </Tooltip>
             )}
@@ -336,7 +336,7 @@ function AdvancedSettings({
               htmlFor="color"
               className="block text-sm font-medium text-gray-700"
             >
-              Foreground Color
+              전경 색상
             </label>
             <div className="relative mt-1 flex h-9 w-48 rounded-md shadow-sm">
               <Tooltip
@@ -426,7 +426,7 @@ function QrDropdown({ download, qrData, showLogo, logo }) {
         className="flex w-full items-center justify-center gap-2 rounded-md border border-black bg-black px-5 py-1.5 text-sm text-white transition-all hover:bg-white hover:text-black"
       >
         <Download />
-        Export
+        내보내기
       </button>
     </Popover>
   );

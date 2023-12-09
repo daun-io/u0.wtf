@@ -87,7 +87,7 @@ export default function ProjectBillingClient() {
           <div className="p-10">
             <div className="flex items-center space-x-2">
               <h3 className="font-medium">총 링크 클릭</h3>
-              <InfoTooltip content="Number of billable link clicks across all your projects." />
+              <InfoTooltip content="모든 청구 가능한 링크 클릭 수." />
             </div>
             {plan === "enterprise" ? (
               <div className="mt-4 flex items-center">
@@ -139,7 +139,7 @@ export default function ProjectBillingClient() {
           <div className="p-10">
             <div className="flex items-center space-x-2">
               <h3 className="font-medium">총 링크 숫자</h3>
-              <InfoTooltip content="Number of short links in your project." />
+              <InfoTooltip content="모든 브랜드 내의 짧은 URL 숫자" />
             </div>
             <div className="mt-4 flex items-center">
               {links || links === 0 ? (

@@ -25,9 +25,9 @@ export default function UploadLogo() {
       const file = e.target.files[0];
       if (file) {
         if (file.size / 1024 / 1024 > 2) {
-          toast.error("File size too big (max 2MB)");
+          toast.error("파일 크기가 너무 큽니다 (최대 2MB)");
         } else if (file.type !== "image/png" && file.type !== "image/jpeg") {
-          toast.error("File type not supported (.png or .jpg only)");
+          toast.error("지원되지 않는 파일 형식 (.png 또는 .jpg 만 가능)");
         } else {
           const reader = new FileReader();
           reader.onload = (e) => {
@@ -104,12 +104,14 @@ export default function UploadLogo() {
                 const file = e.dataTransfer.files && e.dataTransfer.files[0];
                 if (file) {
                   if (file.size / 1024 / 1024 > 2) {
-                    toast.error("File size too big (max 2MB)");
+                    toast.error("파일 크기가 너무 큽니다 (최대 2MB)");
                   } else if (
                     file.type !== "image/png" &&
                     file.type !== "image/jpeg"
                   ) {
-                    toast.error("File type not supported (.png or .jpg only)");
+                    toast.error(
+                      "지원되지 않는 파일 형식 (.png 또는 .jpg 만 가능)",
+                    );
                   } else {
                     const reader = new FileReader();
                     reader.onload = (e) => {

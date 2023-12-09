@@ -52,11 +52,7 @@ export default function RewriteSection({
             ? {}
             : {
                 disabledTooltip: (
-                  <SimpleTooltipContent
-                    title="You can only use link cloaking on a project with a custom domain."
-                    cta="Learn more."
-                    href={`${HOME_DOMAIN}/help/article/how-to-create-link#dubsh-links-vs-custom-domain-links`}
-                  />
+                  <TooltipContent title="사용자 정의 도메인을 사용하는 경우에만 링크 감추기를 사용할 수 있습니다." />
                 ),
               })}
         />

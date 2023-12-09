@@ -544,7 +544,7 @@ function AddEditLinkModal({
                   </p>
                 ) : domain === "chatg.pt" ? (
                   <p className="mt-2 text-sm text-gray-500">
-                    You can only create up to 25 links with this domain.
+                    이 도메인의 링크는 최대 25개까지만 만들 수 있습니다.
                   </p>
                 ) : null}
               </div>

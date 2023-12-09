@@ -27,7 +27,7 @@ export default function ProjectLinksClient() {
             <h1 className="text-2xl text-gray-600">링크</h1>
             <div className="flex">
               <AddEditLinkButton />
-              <AddLinkOptions />
+              {/* <AddLinkOptions /> */}
             </div>
           </div>
         </MaxWidthWrapper>

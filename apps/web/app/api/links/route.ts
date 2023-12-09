@@ -65,7 +65,7 @@ export const POST = withAuth(
 
       if (!success) {
         return new Response(
-          "Rate limited – you can only create up to 10 links per day without an account.",
+          "계정 없이 하루에 최대 10개까지만 링크를 만들 수 있습니다.",
           { status: 429 },
         );
       }
