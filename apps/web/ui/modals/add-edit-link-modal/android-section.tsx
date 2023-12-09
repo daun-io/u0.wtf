@@ -1,4 +1,9 @@
-import { InfoTooltip, SimpleTooltipContent, Switch } from "@u0/ui";
+import {
+  InfoTooltip,
+  SimpleTooltipContent,
+  Switch,
+  TooltipContent,
+} from "@u0/ui";
 import { FADE_IN_ANIMATION_SETTINGS, HOME_DOMAIN } from "@u0/utils";
 import { type Link as LinkProps } from "@prisma/client";
 import { motion } from "framer-motion";
@@ -37,11 +42,7 @@ export default function AndroidSection({
           </h2>
           <InfoTooltip
             content={
-              <SimpleTooltipContent
-                title="Redirect your Android users to a different link."
-                cta="Learn more about device targeting."
-                href={`${HOME_DOMAIN}/help/article/how-to-create-link#device-targeting-ios--android`}
-              />
+              <TooltipContent title="안드로이드 유저를 별도 지정한 링크로 리다이렉트합니다. 플랫폼에 따른 스토어 이동에 활용할 수 있습니다." />
             }
           />
         </div>

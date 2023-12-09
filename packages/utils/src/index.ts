@@ -398,12 +398,12 @@ export const constructURLFromUTMParams = (
 };
 
 export const paramsMetadata = [
-  { display: "Referral (ref)", key: "ref", examples: "twitter, facebook" },
-  { display: "UTM Source", key: "utm_source", examples: "twitter, facebook" },
-  { display: "UTM Medium", key: "utm_medium", examples: "social, email" },
-  { display: "UTM Campaign", key: "utm_campaign", examples: "summer_sale" },
-  { display: "UTM Term", key: "utm_term", examples: "blue_shoes" },
-  { display: "UTM Content", key: "utm_content", examples: "logolink" },
+  { display: "리퍼럴 (ref)", key: "ref", examples: "twitter, facebook" },
+  { display: "UTM 소스", key: "utm_source", examples: "twitter, facebook" },
+  { display: "UTM 매체", key: "utm_medium", examples: "social, email" },
+  { display: "UTM 캠페인", key: "utm_campaign", examples: "summer_sale" },
+  { display: "UTM 텀", key: "utm_term", examples: "blue_shoes" },
+  { display: "UTM 컨텐츠", key: "utm_content", examples: "logolink" },
 ];
 
 export const getUrlWithoutUTMParams = (url: string) => {

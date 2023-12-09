@@ -61,11 +61,7 @@ export default function GeoSection({
           <h2 className="text-sm font-medium text-gray-900">지역 타게팅</h2>
           <InfoTooltip
             content={
-              <SimpleTooltipContent
-                title="Redirect your users to different links based on their location."
-                cta="Learn more about geo targeting."
-                href={`${HOME_DOMAIN}/help/article/how-to-create-link#geo-targeting`}
-              />
+              <SimpleTooltipContent title="유저를 지역에 따라 다른 링크로 리다이렉트합니다." />
             }
           />
         </div>
@@ -77,7 +73,7 @@ export default function GeoSection({
             ? {
                 disabledTooltip: (
                   <TooltipContent
-                    title="Geo targeting is only available on Dub's Pro plan. 프로로 업그레이드 to use this feature."
+                    title="지역 타게팅 기능은 프로로 업그레이드한 이후에 사용할 수 있습니다."
                     cta="프로로 업그레이드"
                     {...(plan === "free"
                       ? {
