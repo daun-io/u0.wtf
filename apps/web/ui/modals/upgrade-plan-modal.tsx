@@ -49,7 +49,7 @@ function UpgradePlanModal({
       "무제한 태그",
       "루트 도메인 리디렉션",
       "사용자 정의 QR 코드 로고",
-      "API 접근",
+      // "API 접근",
       ...(plan === "Enterprise" ? ["우선 지원"] : []),
     ];
   }, [plan]);
@@ -112,7 +112,12 @@ function UpgradePlanModal({
             <div className="mb-4 flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <h4 className="font-medium text-gray-900">
-                  {plan} {capitalize(period)}
+                  {plan === "Enterprise"
+                    ? "엔터프라이즈"
+                    : plan === "Pro"
+                    ? "프로"
+                    : "무료"}{" "}
+                  {capitalize(period) === "Yearly" ? "연간 결제" : "월간 결제"}
                 </h4>
                 <Badge
                   variant="neutral"
@@ -122,7 +127,7 @@ function UpgradePlanModal({
                     period
                   ].amount.toLocaleString()}
                   원/
-                  {period.replace("ly", "")}
+                  {period.replace("ly", "") === "month" ? "월" : "년"}
                 </Badge>
               </div>
               <Confetti

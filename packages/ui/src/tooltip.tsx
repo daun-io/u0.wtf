@@ -154,7 +154,7 @@ export function InfoTooltip({ content }: { content: ReactNode | string }) {
 
 export function NumberTooltip({
   value,
-  unit = "total clicks",
+  unit = "총 클릭",
   children,
   lastClicked,
 }: {
@@ -171,11 +171,11 @@ export function NumberTooltip({
       content={
         <div className="block max-w-xs px-4 py-2 text-center text-sm text-gray-700">
           <p className="text-sm font-semibold text-gray-700">
-            {nFormatter(value || 0, { full: true })} {unit}
+            {unit}: {nFormatter(value || 0, { full: true })}
           </p>
           {lastClicked && (
             <p className="mt-1 text-xs text-gray-500" suppressHydrationWarning>
-              Last clicked {timeAgo(lastClicked, { withAgo: true })}
+              최근 클릭 {timeAgo(lastClicked, { withAgo: true })}
             </p>
           )}
         </div>

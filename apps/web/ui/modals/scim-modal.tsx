@@ -188,7 +188,7 @@ function SCIMModal({
                         scim.directories[0].scim.endpoint as string,
                       );
                       setCopiedBaseUrl(true);
-                      toast.success("Copied to clipboard");
+                      toast.success("클립보드에 복사되었습니다");
                       setTimeout(() => setCopiedBaseUrl(false), 3000);
                     }}
                   >
@@ -231,7 +231,7 @@ function SCIMModal({
                           `${scim.directories[0].scim.secret}`,
                         );
                         setCopiedBearerToken(true);
-                        toast.success("Copied to clipboard");
+                        toast.success("클립보드에 복사되었습니다");
                         setTimeout(() => setCopiedBearerToken(false), 3000);
                       }}
                     >

@@ -19,7 +19,7 @@ export function CopyButton({
         e.stopPropagation();
         setCopied(true);
         navigator.clipboard.writeText(value).then(() => {
-          toast.success("Copied to clipboard!");
+          toast.success("클립보드에 복사되었습니다!");
         });
         setTimeout(() => setCopied(false), 3000);
       }}

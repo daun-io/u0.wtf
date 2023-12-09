@@ -285,7 +285,9 @@ const SharePopover = () => {
       {
         loading: "Updating...",
         success: `Stats page is now ${
-          data?.publicStats ? "private." : "public. Link copied to clipboard."
+          data?.publicStats
+            ? "private."
+            : "public. Link 클립보드에 복사되었습니다."
         }`,
         error: "오류가 발생했습니다",
       },
@@ -334,7 +336,7 @@ const SharePopover = () => {
                     `https://${domain}/stats/${encodeURIComponent(key)}`,
                   );
                   setCopied(true);
-                  toast.success("Copied to clipboard");
+                  toast.success("클립보드에 복사되었습니다");
                   setTimeout(() => setCopied(false), 3000);
                 }}
               >
