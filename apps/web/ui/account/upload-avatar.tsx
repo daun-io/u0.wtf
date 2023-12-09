@@ -69,9 +69,9 @@ export default function UploadAvatar() {
       className="rounded-lg border border-gray-200 bg-white"
     >
       <div className="flex flex-col space-y-3 p-5 sm:p-10">
-        <h2 className="text-xl font-medium">Your Avatar</h2>
+        <h2 className="text-xl font-medium">프로필 사진</h2>
         <p className="text-sm text-gray-500">
-          This is your avatar image on U0.
+          U0에서 사용되는 프로필 사진입니다.
         </p>
         <div>
           <label
@@ -158,12 +158,12 @@ export default function UploadAvatar() {
 
       <div className="flex items-center justify-between rounded-b-lg border-t border-gray-200 bg-gray-50 p-3 sm:px-10">
         <p className="text-sm text-gray-500">
-          Square image recommended. Accepted file types: .png, .jpg. Max file
-          size: 2MB.
+          정사각형 이미지를 추천합니다. 허용되는 파일: .png, .jpg. 최대 용량:
+          2MB
         </p>
         <div>
           <Button
-            text="Save changes"
+            text="저장하기"
             loading={uploading}
             disabled={!image || session?.user?.image === image}
           />

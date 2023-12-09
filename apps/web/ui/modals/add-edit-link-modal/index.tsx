@@ -588,14 +588,14 @@ function AddEditLinkModal({
             >
               {homepageDemo ? (
                 <Button
-                  disabledTooltip="This is a demo link. You can't edit it."
-                  text="Save changes"
+                  disabledTooltip="데모 링크는 수정할 수 없습니다."
+                  text="저장하기"
                 />
               ) : (
                 <Button
                   disabled={saveDisabled}
                   loading={saving}
-                  text={props ? "Save changes" : "Create link"}
+                  text={props ? "저장하기" : "링크 생성"}
                 />
               )}
             </div>
@@ -683,7 +683,7 @@ function AddEditLinkButton({
       }
     >
       <div className="flex cursor-not-allowed items-center space-x-3 rounded-md border border-gray-200 px-3 py-2 text-sm font-medium text-gray-300">
-        <p>Create link</p>
+        <p>링크 생성</p>
         <kbd className="hidden rounded bg-gray-100 px-2 py-0.5 text-xs font-light text-gray-300 md:inline-block">
           C
         </kbd>
@@ -694,7 +694,7 @@ function AddEditLinkButton({
       onClick={() => setShowAddEditLinkModal(true)}
       className="group flex items-center space-x-3 rounded-md border border-black bg-black px-3 py-2 text-sm font-medium text-white transition-all duration-75 hover:bg-white hover:text-black active:scale-95"
     >
-      <p>Create link</p>
+      <p>링크 생성</p>
       <kbd className="hidden rounded bg-zinc-700 px-2 py-0.5 text-xs font-light text-gray-400 transition-all duration-75 group-hover:bg-gray-100 group-hover:text-gray-500 md:inline-block">
         C
       </kbd>

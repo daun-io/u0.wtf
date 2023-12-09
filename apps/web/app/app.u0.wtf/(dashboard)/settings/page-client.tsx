@@ -12,8 +12,8 @@ export default function SettingsPageClient() {
   return (
     <>
       <Form
-        title="Your Name"
-        description="This will be your display name on U0."
+        title="이름"
+        description="U0에서 사용되는 이름입니다."
         inputData={{
           name: "name",
           defaultValue:
@@ -21,7 +21,7 @@ export default function SettingsPageClient() {
           placeholder: "Steve Jobs",
           maxLength: 32,
         }}
-        helpText="Max 32 characters."
+        helpText="최대 32글자"
         handleSubmit={(data) =>
           fetch("/api/user", {
             method: "PUT",
@@ -41,14 +41,14 @@ export default function SettingsPageClient() {
         }
       />
       <Form
-        title="Your Email"
-        description="This will be the email you use to log in to Dub and receive notifications."
+        title="이메일"
+        description="로그인 시 또는 알림을 수신하기 위해서 사용하는 이메일입니다."
         inputData={{
           name: "email",
           defaultValue: session?.user?.email || undefined,
           placeholder: "alan.turing@example.com",
         }}
-        helpText="Must be a valid email address."
+        helpText="유효한 이메일 주소를 입력해주세요."
         handleSubmit={(data) =>
           fetch("/api/user", {
             method: "PUT",

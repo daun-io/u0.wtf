@@ -7,7 +7,7 @@ export function Form({
   description,
   inputData,
   helpText,
-  buttonText = "Save Changes",
+  buttonText = "저장하기",
   disabledTooltip,
   handleSubmit,
 }: {
