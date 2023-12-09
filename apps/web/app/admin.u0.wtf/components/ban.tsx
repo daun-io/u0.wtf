@@ -53,7 +53,7 @@ export default function BanUser() {
               }
             }
             banUser(formData).then(() => {
-              toast.success("Successfully banned user");
+              toast.success("유저를 밴처리했습니다.");
               router.refresh();
             });
           }}
@@ -73,7 +73,7 @@ export default function BanUser() {
               onClick={() => {
                 setCopied(true);
                 navigator.clipboard.writeText(data.impersonateUrl);
-                toast.success("Copied to clipboard");
+                toast.success("클립보드에 복사했습니다.");
                 setTimeout(() => {
                   setCopied(false);
                 }, 3000);

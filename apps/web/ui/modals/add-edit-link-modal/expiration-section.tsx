@@ -1,4 +1,9 @@
-import { InfoTooltip, SimpleTooltipContent, Switch } from "@u0/ui";
+import {
+  InfoTooltip,
+  SimpleTooltipContent,
+  Switch,
+  TooltipContent,
+} from "@u0/ui";
 import {
   FADE_IN_ANIMATION_SETTINGS,
   HOME_DOMAIN,
@@ -39,11 +44,7 @@ export default function ExpirationSection({
           <h2 className="text-sm font-medium text-gray-900">만료일</h2>
           <InfoTooltip
             content={
-              <SimpleTooltipContent
-                title="Set an expiration date for your links – after which it won't be accessible."
-                cta="Learn more."
-                href={`${HOME_DOMAIN}/help/article/how-to-create-link#expiration-date`}
-              />
+              <TooltipContent title="링크에 만료일 설정 - 만료일 이후에는 액세스할 수 없습니다." />
             }
           />
         </div>

@@ -45,7 +45,7 @@ export default function ProjectBillingClient() {
 
   useEffect(() => {
     if (searchParams?.get("success")) {
-      toast.success("Upgrade success!");
+      toast.success("업그레이드에 성공했습니다!");
       setTimeout(() => {
         mutate(`/api/projects/${slug}`);
         // track upgrade to pro event

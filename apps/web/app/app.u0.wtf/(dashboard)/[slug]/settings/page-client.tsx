@@ -41,12 +41,12 @@ export default function ProjectSettingsClient() {
                 mutate("/api/projects"),
                 mutate(`/api/projects/${slug}`),
               ]);
-              toast.success("Successfully updated project name!");
+              toast.success("브랜드 이름을 업데이트했습니다.");
             } else if (res.status === 422) {
-              toast.error("Project slug already exists");
+              toast.error("브랜드 식별자가 이미 존재합니다.");
             } else {
               const errorMessage = await res.text();
-              toast.error(errorMessage || "Something went wrong");
+              toast.error(errorMessage || "오류가 발생했습니다.");
             }
           })
         }
@@ -78,11 +78,11 @@ export default function ProjectSettingsClient() {
               const { slug: newSlug } = await res.json();
               await mutate("/api/projects");
               router.push(`/${newSlug}/settings`);
-              toast.success("Successfully updated project slug!");
+              toast.success("브랜드 식별자를 업데이트했습니다.");
             } else if (res.status === 422) {
-              toast.error("Project slug already exists");
+              toast.error("브랜드 식별자가 이미 존재합니다.");
             } else {
-              toast.error("Something went wrong");
+              toast.error("오류가 발생했습니다.");
             }
           })
         }
