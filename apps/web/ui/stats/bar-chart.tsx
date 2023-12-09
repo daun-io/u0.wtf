@@ -74,13 +74,13 @@ export default function BarChart() {
     (e: Date) => {
       switch (interval) {
         case "1h":
-          return new Date(e).toLocaleTimeString("en-us", {
+          return new Date(e).toLocaleTimeString("ko-kr", {
             hour: "numeric",
             minute: "numeric",
           });
         case "24h":
           return new Date(e)
-            .toLocaleDateString("en-us", {
+            .toLocaleDateString("ko-kr", {
               month: "short",
               day: "numeric",
               hour: "numeric",
@@ -88,12 +88,12 @@ export default function BarChart() {
             .replace(",", " ");
         case "90d":
         case "all":
-          return new Date(e).toLocaleDateString("en-us", {
+          return new Date(e).toLocaleDateString("ko-kr", {
             month: "short",
             year: "numeric",
           });
         default:
-          return new Date(e).toLocaleDateString("en-us", {
+          return new Date(e).toLocaleDateString("ko-kr", {
             month: "short",
             day: "numeric",
           });
@@ -231,13 +231,13 @@ export default function BarChart() {
                       <span className="text-2xl font-semibold">
                         {nFormatter(tooltipData.clicks)}
                       </span>{" "}
-                      click{tooltipData.clicks === 1 ? "" : "s"}
+                      클릭
                     </h3>
                     <p className="text-xs text-gray-600">
                       {formatTimestamp(tooltipData.start)} -{" "}
                       {interval === "24h"
                         ? new Date(tooltipData.end).toLocaleTimeString(
-                            "en-us",
+                            "ko-kr",
                             {
                               hour: "numeric",
                             },
