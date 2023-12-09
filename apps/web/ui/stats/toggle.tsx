@@ -302,14 +302,14 @@ const SharePopover = () => {
       content={
         <div className="w-full divide-y divide-gray-200 text-sm md:w-60">
           <div className="p-4">
-            <p className="text-gray-500">Share stats for</p>
             <p className="truncate font-semibold text-gray-800">
               {linkConstructor({ key, domain, pretty: true })}
             </p>
+            <p className="text-gray-500">통계 공유</p>
           </div>
           <div className="p-4">
             <div className="mb-2 flex items-center justify-between">
-              <p className="font-semibold text-gray-800">Public Stats Page</p>
+              <p className="font-semibold text-gray-800">공개 통계 페이지</p>
               <Switch
                 checked={data?.publicStats}
                 fn={handleChange}
@@ -317,12 +317,12 @@ const SharePopover = () => {
               />
             </div>
             <p className="text-gray-500">
-              Making stats public will allow anyone with the link to see the
-              stats for this short link.
+              통계를 공개하면 링크를 가진 사람이라면 누구나 이 짧은 링크에 대한
+              통계를 볼 수 있습니다.
             </p>
           </div>
           <div className="p-4">
-            <p className="font-semibold text-gray-800">Share Link</p>
+            <p className="font-semibold text-gray-800">공유 링크</p>
             <div className="divide-x-200 mt-2 flex items-center justify-between divide-x overflow-hidden rounded-md border border-gray-200 bg-gray-100">
               <div className="scrollbar-hide overflow-scroll pl-2">
                 <p className="whitespace-nowrap text-gray-600">
@@ -358,7 +358,7 @@ const SharePopover = () => {
         onClick={() => setopenSharePopoverPopover(!openSharePopover)}
         className="mr-2 flex w-24 items-center justify-center space-x-2 rounded-md bg-white px-3 py-2.5 shadow transition-all duration-75 hover:shadow-md active:scale-95"
       >
-        <IconMenu text="Share" icon={<Share2 className="h-4 w-4" />} />
+        <IconMenu text="공유하기" icon={<Share2 className="h-4 w-4" />} />
       </button>
     </Popover>
   );

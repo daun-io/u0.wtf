@@ -39,7 +39,7 @@ function LinkFiltersButton({
       onClick={() => setShowLinkFiltersModal(true)}
       className="mr-5 flex flex-1 items-center justify-between space-x-2 rounded-md bg-white px-3 py-2.5 shadow transition-all duration-75 hover:shadow-md active:scale-95 lg:hidden"
     >
-      <IconMenu text="Filters" icon={<Filter className="h-4 w-4 shrink-0" />} />
+      <IconMenu text="필터" icon={<Filter className="h-4 w-4 shrink-0" />} />
       <ChevronDown
         className={`h-5 w-5 text-gray-400 ${
           true ? "rotate-180 transform" : ""
