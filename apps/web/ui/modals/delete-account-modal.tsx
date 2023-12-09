@@ -55,8 +55,8 @@ function DeleteAccountModal({
         <Avatar user={session?.user} />
         <h3 className="text-lg font-medium">계정 삭제</h3>
         <p className="text-center text-sm text-gray-500">
-          Warning: This will permanently delete your account, all your projects,
-          and all your short links.
+          계정에 귀속된 모든 브랜드가 영구적으로 삭제됩니다, 그리고 모든 짧은
+          링크가 영구적으로 삭제됩니다.
         </p>
       </div>
 
@@ -73,18 +73,16 @@ function DeleteAccountModal({
       >
         <div>
           <label htmlFor="verification" className="block text-sm text-gray-700">
-            To verify, type{" "}
-            <span className="font-semibold text-black">
-              confirm delete account
-            </span>{" "}
-            below
+            확인을 위해{" "}
+            <span className="font-semibold text-black">계정 삭제 확인</span> 을
+            입력해주세요.
           </label>
           <div className="relative mt-1 rounded-md shadow-sm">
             <input
               type="text"
               name="verification"
               id="verification"
-              pattern="confirm delete account"
+              pattern="계정 삭제 확인"
               required
               autoFocus={false}
               autoComplete="off"
@@ -93,11 +91,7 @@ function DeleteAccountModal({
           </div>
         </div>
 
-        <Button
-          text="Confirm delete account"
-          variant="danger"
-          loading={deleting}
-        />
+        <Button text="계정 삭제하기" variant="danger" loading={deleting} />
       </form>
     </Modal>
   );

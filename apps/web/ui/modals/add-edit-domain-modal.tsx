@@ -131,7 +131,7 @@ function AddEditDomainModal({
         setShowAddEditDomainModal(false);
         toast.success("Successfully deleted domain!");
       } else {
-        setDomainError("Something went wrong. Please try again.");
+        setDomainError("오류가 발생했습니다. Please try again.");
       }
       setDeleting(false);
     });

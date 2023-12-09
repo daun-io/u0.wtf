@@ -287,7 +287,7 @@ const SharePopover = () => {
         success: `Stats page is now ${
           data?.publicStats ? "private." : "public. Link copied to clipboard."
         }`,
-        error: "Something went wrong",
+        error: "오류가 발생했습니다",
       },
     );
   };

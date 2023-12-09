@@ -35,7 +35,7 @@ export default function SettingsPageClient() {
               toast.success("Successfully updated your name!");
             } else {
               const errorMessage = await res.text();
-              toast.error(errorMessage || "Something went wrong");
+              toast.error(errorMessage || "오류가 발생했습니다");
             }
           })
         }
@@ -62,7 +62,7 @@ export default function SettingsPageClient() {
               toast.success("Successfully updated your email!");
             } else {
               const errorMessage = await res.text();
-              toast.error(errorMessage || "Something went wrong");
+              toast.error(errorMessage || "오류가 발생했습니다");
             }
           })
         }

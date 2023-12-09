@@ -62,7 +62,7 @@ export default function UploadAvatar() {
             toast.success("Successfully updated your profile picture!");
           } else {
             const errorMessage = await res.text();
-            toast.error(errorMessage || "Something went wrong");
+            toast.error(errorMessage || "오류가 발생했습니다");
           }
         });
       }}
@@ -102,12 +102,14 @@ export default function UploadAvatar() {
                 const file = e.dataTransfer.files && e.dataTransfer.files[0];
                 if (file) {
                   if (file.size / 1024 / 1024 > 2) {
-                    toast.error("File size too big (max 2MB)");
+                    toast.error("파일이 너무 큽니다. (최대 2MB)");
                   } else if (
                     file.type !== "image/png" &&
                     file.type !== "image/jpeg"
                   ) {
-                    toast.error("File type not supported (.png or .jpg only)");
+                    toast.error(
+                      "지원하지 않는 파일 형식입니다. (.png 또는 .jpg만 지원)",
+                    );
                   } else {
                     const reader = new FileReader();
                     reader.onload = (e) => {

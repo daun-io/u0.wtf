@@ -1,4 +1,9 @@
-import { InfoTooltip, SimpleTooltipContent, Switch } from "@u0/ui";
+import {
+  InfoTooltip,
+  SimpleTooltipContent,
+  Switch,
+  TooltipContent,
+} from "@u0/ui";
 import { FADE_IN_ANIMATION_SETTINGS, HOME_DOMAIN } from "@u0/utils";
 import { type Link as LinkProps } from "@prisma/client";
 import { motion } from "framer-motion";
@@ -36,11 +41,7 @@ export default function CommentsSection({
           <h2 className="text-sm font-medium text-gray-900">메모</h2>
           <InfoTooltip
             content={
-              <SimpleTooltipContent
-                title="Use comments to add context to your short links – for you and your team."
-                cta="Learn more."
-                href={`${HOME_DOMAIN}/help/article/how-to-create-link#comments`}
-              />
+              <TooltipContent title="메모를 추가해 짧은 URL에 자신과 팀을 위한 컨텍스트를 추가할 수 있습니다." />
             }
           />
         </div>

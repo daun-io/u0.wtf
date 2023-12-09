@@ -220,7 +220,7 @@ const DomainsFilter = ({ domains, primaryDomain }) => {
             } else {
               setShowAddProjectModal(true);
               toast.error(
-                "You can only add a domain to a custom project. Please create a new project or navigate to an existing one.",
+                "브랜드에만 도메인을 추가할 수 있습니다. 새 브랜드를 만들거나 기존 브랜드로 이동하세요.",
               );
             }
           }}
@@ -417,7 +417,7 @@ const TagPopover = ({ tag, count }: { tag: TagProps; count: number }) => {
         await mutate(`/api/projects/${slug}/tags`);
         toast.success("Tag updated");
       } else {
-        toast.error("Something went wrong");
+        toast.error("오류가 발생했습니다");
       }
     });
   };
@@ -431,7 +431,7 @@ const TagPopover = ({ tag, count }: { tag: TagProps; count: number }) => {
         await mutate(`/api/projects/${slug}/tags`);
         toast.success("Tag deleted");
       } else {
-        toast.error("Something went wrong");
+        toast.error("오류가 발생했습니다");
       }
       setProcessing(false);
     });
