@@ -52,7 +52,7 @@ export default function CommentsSection({
             name="comments"
             minRows={3}
             className="block w-full rounded-md border-gray-300 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm"
-            placeholder="Add comments"
+            placeholder="메모 추가하기"
             value={comments || ""}
             onChange={(e) => {
               setData({ ...data, comments: e.target.value });

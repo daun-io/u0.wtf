@@ -1,5 +1,5 @@
 import { AlertCircleFill } from "@/ui/shared/icons";
-import { Button, InfoTooltip, Logo, Modal } from "@u0/ui";
+import { Button, InfoTooltip, Logo, Modal, Tooltip } from "@u0/ui";
 import { HOME_DOMAIN, generateDomainFromName } from "@u0/utils";
 import slugify from "@sindresorhus/slugify";
 import va from "@vercel/analytics";
@@ -60,7 +60,7 @@ function AddProjectModalHelper({
       fetch(`/api/domains/${debouncedDomain}/exists`).then(async (res) => {
         if (res.status === 200) {
           const exists = await res.json();
-          setDomainError(exists === 1 ? "Domain is already in use." : null);
+          setDomainError(exists === 1 ? "도메인이 이미 사용중입니다." : null);
         }
       });
     }
@@ -87,15 +87,14 @@ function AddProjectModalHelper({
     >
       <div className="flex flex-col items-center justify-center space-y-3 border-b border-gray-200 px-4 py-4 pt-8 sm:px-16">
         <Logo />
-        <h3 className="text-lg font-medium">Create a new project</h3>
-        <a
-          href={`${HOME_DOMAIN}/help/article/what-is-a-project`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="-translate-y-2 text-center text-xs text-gray-500 underline underline-offset-4 hover:text-gray-800"
+        <h3 className="text-lg font-medium">새 프로젝트 생성</h3>
+        <Tooltip
+          content={`"프로젝트"는 웹사이트, 앱 또는 비즈니스에 대한 모든 짧은 링크를 저장하는 데 사용할 수 있는 공간입니다.  '팀'이라고 생각하시면 됩니다. 팀원을 프로젝트에 초대하여 함께 링크를 관리할 수 있습니다."`}
         >
-          What is a project?
-        </a>
+          <p className="-translate-y-2 text-center text-xs text-gray-500 underline underline-offset-4 hover:text-gray-800">
+            프로젝트란?
+          </p>
+        </Tooltip>
       </div>
 
       <form
@@ -171,9 +170,9 @@ function AddProjectModalHelper({
         <div>
           <label htmlFor="slug" className="flex items-center space-x-2">
             <p className="block text-sm font-medium text-gray-700">
-              Project Slug
+              프로젝트 Slug
             </p>
-            <InfoTooltip content="This is your project's unique slug on U0." />
+            <InfoTooltip content="U0에서 프로젝트를 식별할 수 있게 해주는 고유한 URL입니다." />
           </label>
           <div className="relative mt-1 flex rounded-md shadow-sm">
             <span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-5 text-gray-500 sm:text-sm">
@@ -218,9 +217,9 @@ function AddProjectModalHelper({
         <div>
           <label htmlFor="domain" className="flex items-center space-x-2">
             <p className="block text-sm font-medium text-gray-700">
-              Shortlink Domain
+              커스텀 도메인
             </p>
-            <InfoTooltip content="This is the domain that your short links will be hosted on. E.g. yourbrand.com/link" />
+            <InfoTooltip content="내가 소유한 짧은 링크를 호스팅할 도메인입니다. 예: yourbrand.com/link" />
           </label>
           <div className="relative mt-1 flex rounded-md shadow-sm">
             <input
@@ -253,16 +252,16 @@ function AddProjectModalHelper({
             )}
           </div>
           {domainError &&
-            (domainError === "Domain is already in use." ? (
+            (domainError === "도메인이 이미 사용중입니다." ? (
               <p className="mt-2 text-sm text-red-600" id="domain-error">
-                Domain is already in use.{" "}
+                도메인이 이미 사용중입니다. 이 도메인을 프로젝트에 사용하려는
+                경우{" "}
                 <a
                   className="underline"
-                  href="mailto:support@u0.co?subject=My Domain Is Already In Use"
+                  href="mailto:team@empty.app?subject=내 도메인이 이미 사용중입니다."
                 >
-                  Contact us
+                  연락하기
                 </a>{" "}
-                if you'd like to use this domain for your project.
               </p>
             ) : (
               <p className="mt-2 text-sm text-red-600" id="domain-error">

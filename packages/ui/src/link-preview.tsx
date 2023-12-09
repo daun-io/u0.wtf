@@ -76,7 +76,7 @@ export function LinkPreview({ defaultUrl }: { defaultUrl?: string }) {
           <div className="flex h-[250px] w-full flex-col items-center justify-center space-y-4 border-b border-gray-300">
             <Photo className="h-8 w-8 text-gray-400" />
             <p className="text-sm text-gray-400">
-              Enter a link to generate a preview.
+              링크를 입력해 미리보기를 생성하세요..
             </p>
           </div>
         )}

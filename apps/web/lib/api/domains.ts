@@ -22,7 +22,7 @@ export const validateDomain = async (domain: string) => {
   }
   const exists = await domainExists(domain);
   if (exists) {
-    return "Domain is already in use.";
+    return "도메인이 이미 사용중입니다.";
   }
   return true;
 };

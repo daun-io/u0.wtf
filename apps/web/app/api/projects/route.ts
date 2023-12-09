@@ -71,7 +71,7 @@ export const POST = withAuth(async ({ req, session }) => {
     return NextResponse.json(
       {
         slugError: slugExist ? "Slug is already in use." : null,
-        domainError: domainExist ? "Domain is already in use." : null,
+        domainError: domainExist ? "도메인이 이미 사용중입니다." : null,
       },
       { status: 422 },
     );

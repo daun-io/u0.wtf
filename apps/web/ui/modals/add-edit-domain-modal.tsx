@@ -62,7 +62,7 @@ function AddEditDomainModal({
       fetch(`/api/domains/${debouncedDomain}/exists`).then(async (res) => {
         if (res.status === 200) {
           const exists = await res.json();
-          setDomainError(exists === 1 ? "Domain is already in use." : null);
+          setDomainError(exists === 1 ? "도메인이 이미 사용중입니다." : null);
         }
       });
     }
@@ -246,9 +246,9 @@ function AddEditDomainModal({
             </div>
           )}
           {domainError &&
-            (domainError === "Domain is already in use." ? (
+            (domainError === "도메인이 이미 사용중입니다." ? (
               <p className="mt-2 text-sm text-red-600" id="domain-error">
-                Domain is already in use.{" "}
+                도메인이 이미 사용중입니다.{" "}
                 <a
                   className="underline"
                   href="mailto:support@u0.co?subject=My Domain Is Already In Use"

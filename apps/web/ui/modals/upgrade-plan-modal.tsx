@@ -82,14 +82,23 @@ function UpgradePlanModal({
           className="text-lg font-medium"
           variants={STAGGER_CHILD_VARIANTS}
         >
-          {plan}로 업그레이드
+          {plan === "Enterprise"
+            ? "엔터프라이즈"
+            : plan === "Pro"
+            ? "프로"
+            : "무료"}
+          로 업그레이드
         </motion.h3>
         <motion.p
           className="text-center text-sm text-gray-500"
           variants={STAGGER_CHILD_VARIANTS}
         >
-          {plan} 플랜으로 업그레이드하면 더 높은 한도와 추가 기능을 이용할 수
-          있습니다.
+          {plan === "Enterprise"
+            ? "엔터프라이즈"
+            : plan === "Pro"
+            ? "프로"
+            : "무료"}{" "}
+          플랜으로 업그레이드하면 더 높은 한도와 추가 기능을 이용할 수 있습니다.
         </motion.p>
       </motion.div>
       <div className="bg-gray-50 px-4 py-8 text-left sm:px-16">

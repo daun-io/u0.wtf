@@ -29,13 +29,6 @@ export default function Layout({ children }: { children: ReactNode }) {
                 <UpgradeBanner />
               </div>
               <div className="flex items-center space-x-6">
-                <a
-                  href={`${HOME_DOMAIN}/help`}
-                  className="hidden text-sm text-gray-500 transition-colors hover:text-gray-700 sm:block"
-                  target="_blank"
-                >
-                  Help
-                </a>
                 <UserDropdown />
               </div>
             </div>

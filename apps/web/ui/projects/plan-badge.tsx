@@ -8,7 +8,11 @@ export default function PlanBadge({ plan }: { plan: PlanProps }) {
         plan === "enterprise" ? "violet" : plan === "pro" ? "blue" : "black"
       }
     >
-      {plan}
+      {plan === "enterprise"
+        ? "엔터프라이즈"
+        : plan === "pro"
+        ? "프로"
+        : "무료"}
     </Badge>
   );
 }
