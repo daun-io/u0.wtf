@@ -60,7 +60,7 @@ export default function ClicksSummary({
   return (
     <Html>
       <Head />
-      <Preview>Your 30-day Dub summary for {projectName}</Preview>
+      <Preview>{projectName} 브랜드의 30일 U0 요약</Preview>
       <Tailwind>
         <Body className="mx-auto my-auto bg-white font-sans">
           <Container className="mx-auto my-10 max-w-[500px] rounded border border-solid border-gray-200 px-10 py-5">
@@ -69,19 +69,18 @@ export default function ClicksSummary({
                 src={U0_LOGO}
                 width="40"
                 height="40"
-                alt="Dub"
+                alt="U0"
                 className="mx-auto my-0"
               />
             </Section>
             <Heading className="mx-0 my-7 p-0 text-center text-xl font-semibold text-black">
-              Your 30-day Dub summary for {projectName}
+              {projectName} 브랜드의 30일 U0 요약
             </Heading>
             <Text className="text-sm leading-6 text-black">
-              In the last 30 days, your Dub project,{" "}
-              <strong>{projectName}</strong> received{" "}
-              <strong>{nFormatter(totalClicks)} link clicks</strong>. You also
-              created <strong>{createdLinks} new links</strong> during that
-              time.
+              지난 30일 동안, 당신의 U0 브랜드인 <strong>{projectName}</strong>
+              은 <strong>{nFormatter(totalClicks)} 링크 클릭</strong>을
+              받았습니다. 그 기간 동안{" "}
+              <strong>{createdLinks}개의 새로운 링크</strong>를 생성했습니다.
             </Text>
             <Section>
               <Row>
@@ -98,7 +97,7 @@ export default function ClicksSummary({
                     <Link2 className="h-5 w-5 text-green-600" />
                   </div>
                   <p className="text-sm font-semibold text-black">
-                    {nFormatter(createdLinks)} new links
+                    {nFormatter(createdLinks)}개의 새로운 링크
                   </p>
                 </Column>
               </Row>
@@ -106,15 +105,15 @@ export default function ClicksSummary({
             {topLinks.length > 0 && (
               <>
                 <Text className="text-sm leading-6 text-black">
-                  Here are your top {topLinks.length} best performing links:
+                  다음은 가장 잘 수행된 링크 {topLinks.length}개입니다:
                 </Text>
                 <Section>
                   <Row className="pb-2">
                     <Column align="left" className="text-sm text-gray-500">
-                      Link
+                      링크
                     </Column>
                     <Column align="right" className="text-sm text-gray-500">
-                      Clicks
+                      클릭
                     </Column>
                   </Row>
                   {topLinks.map(({ link, clicks }, index) => (
@@ -138,9 +137,8 @@ export default function ClicksSummary({
             {createdLinks === 0 ? (
               <>
                 <Text className="text-sm leading-6 text-black">
-                  It looks like you haven't created any links in the last 30
-                  days. If there's anything that we can do to help, please reply
-                  to this email to get in touch with us.
+                  지난 30일 동안 아무런 링크도 생성하지 않은 것 같습니다. 도움이
+                  필요하다면 이 이메일에 답장하여 저희에게 연락해 주세요.
                 </Text>
 
                 <Section className="my-8 text-center">
@@ -148,21 +146,21 @@ export default function ClicksSummary({
                     className="rounded-full bg-black px-6 py-3 text-center text-[12px] font-semibold text-white no-underline"
                     href={`https://app.u0.wtf/${projectSlug}`}
                   >
-                    Start creating links
+                    링크 생성 시작
                   </Link>
                 </Section>
               </>
             ) : (
               <>
                 <Text className="mt-10 text-sm leading-6 text-black">
-                  You can view your full stats by clicking the button below.
+                  아래 버튼을 클릭하면 전체 통계를 볼 수 있습니다.
                 </Text>
                 <Section className="my-8 text-center">
                   <Link
                     className="rounded-full bg-black px-6 py-3 text-center text-[12px] font-semibold text-white no-underline"
                     href={`https://app.u0.wtf/${projectSlug}/analytics?interval=30d`}
                   >
-                    View my stats
+                    내 통계 보기
                   </Link>
                 </Section>
               </>

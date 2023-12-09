@@ -14,7 +14,7 @@ import {
 
 export default function FeedbackEmail({
   email = "alan.turing@example.com",
-  feedback = "I love Dub!",
+  feedback = "I love U0!",
 }: {
   email: string;
   feedback: string;
