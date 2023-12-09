@@ -8,19 +8,19 @@ export default function ProjectSettingsLayout({
 }) {
   const tabs = [
     {
-      name: "General",
+      name: "일반",
       segment: null,
     },
     {
-      name: "Billing",
+      name: "결제",
       segment: "billing",
     },
     {
-      name: "People",
+      name: "멤버",
       segment: "people",
     },
     {
-      name: "Security",
+      name: "보안",
       segment: "security",
     },
   ];

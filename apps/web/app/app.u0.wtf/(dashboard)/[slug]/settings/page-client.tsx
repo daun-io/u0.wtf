@@ -15,15 +15,15 @@ export default function ProjectSettingsClient() {
   return (
     <>
       <Form
-        title="Project Name"
-        description="This is the name of your project on U0."
+        title="프로젝트 이름"
+        description="U0 프로젝트의 이름입니다."
         inputData={{
           name: "name",
           defaultValue: name,
           placeholder: "My Project",
           maxLength: 32,
         }}
-        helpText="Max 32 characters."
+        helpText="최대 32 글자."
         {...(plan === "enterprise" &&
           !isOwner && {
             disabledTooltip: "Only project owners can change the project name.",
@@ -52,8 +52,8 @@ export default function ProjectSettingsClient() {
         }
       />
       <Form
-        title="Project Slug"
-        description="This is your project's unique slug on U0."
+        title="프로젝트 Slug"
+        description="U0에서 표기되는 프로젝트마다 고유한 URL 식별자입니다."
         inputData={{
           name: "slug",
           defaultValue: slug,
@@ -61,10 +61,10 @@ export default function ProjectSettingsClient() {
           pattern: "^[a-z0-9-]+$",
           maxLength: 48,
         }}
-        helpText="Only lowercase letters, numbers, and dashes. Max 48 characters."
+        helpText="영문 소문자, 숫자, '-' 표시만 사용 가능. 최대 48자."
         {...(plan === "enterprise" &&
           !isOwner && {
-            disabledTooltip: "Only project owners can change the project slug.",
+            disabledTooltip: "프로젝트 소유자만 Slug을 수정할 수 있습니다..",
           })}
         handleSubmit={(data) =>
           fetch(`/api/projects/${slug}`, {

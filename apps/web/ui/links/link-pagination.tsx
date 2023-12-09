@@ -79,14 +79,6 @@ export default function LinkPagination() {
           </button>
         )}
       </div>
-      <p className="text-sm text-gray-500">
-        Showing {(currentPage - 1) * PAGINATION_LIMIT + 1} -{" "}
-        {Math.min(currentPage * PAGINATION_LIMIT, count)} of{" "}
-        <NumberTooltip value={count} unit="links">
-          <span>{nFormatter(count)}</span>
-        </NumberTooltip>{" "}
-        links
-      </p>
     </div>
   );
 }

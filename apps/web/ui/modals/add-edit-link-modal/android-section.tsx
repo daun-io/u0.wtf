@@ -33,7 +33,7 @@ export default function AndroidSection({
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-between space-x-2">
           <h2 className="text-sm font-medium text-gray-900">
-            Android Targeting
+            안드로이드 타게팅
           </h2>
           <InfoTooltip
             content={

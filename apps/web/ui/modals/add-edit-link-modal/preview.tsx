@@ -62,7 +62,7 @@ export default function Preview({
   return (
     <div>
       <div className="z-10 flex items-center justify-center border-b border-gray-200 bg-white px-5 py-10 sm:sticky sm:top-0">
-        <h2 className="text-lg font-medium">Social Previews</h2>
+        <h2 className="text-lg font-medium">소셜 미디어 미리보기</h2>
       </div>
       <div className="grid gap-5 p-5">
         {/* Twitter */}
@@ -77,7 +77,7 @@ export default function Preview({
             <div className="relative flex justify-center">
               <div className="flex items-center space-x-2 bg-white px-3">
                 <Twitter className="h-4 w-4 text-[#1DA1F2]" />
-                <p className="text-sm text-gray-400">Twitter</p>
+                <p className="text-sm text-gray-400">트위터 또는 X</p>
               </div>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function Preview({
             <div className="relative flex justify-center">
               <div className="flex items-center space-x-2 bg-white px-3">
                 <Facebook className="h-4 w-4" />
-                <p className="text-sm text-gray-400">Facebook</p>
+                <p className="text-sm text-gray-400">페이스북</p>
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@ export default function Preview({
             <div className="relative flex justify-center">
               <div className="flex items-center space-x-2 bg-white px-3">
                 <LinkedIn className="h-4 w-4" />
-                <p className="text-sm text-gray-400">LinkedIn</p>
+                <p className="text-sm text-gray-400">링크드인</p>
               </div>
             </div>
           </div>

@@ -6,15 +6,15 @@ import { useMemo, useState } from "react";
 
 const sortOptions = [
   {
-    display: "Date Added",
+    display: "추가된 날짜",
     slug: "createdAt",
   },
   {
-    display: "Number of Clicks",
+    display: "클릭 수",
     slug: "clicks",
   },
   {
-    display: "Last Clicked",
+    display: "최근 클릭",
     slug: "lastClicked",
   },
 ];
@@ -65,7 +65,7 @@ export default function LinkSort() {
         className="flex w-48 items-center justify-between space-x-2 rounded-md bg-white px-3 py-2.5 shadow transition-all duration-75 hover:shadow-md active:scale-95"
       >
         <IconMenu
-          text={sort ? selectedSort.display : "Sort by"}
+          text={sort ? selectedSort.display : "정렬"}
           icon={
             sort ? (
               <SortDesc className="h-4 w-4" />

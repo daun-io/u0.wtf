@@ -84,7 +84,7 @@ export default function ProjectCard({
         <div className="flex items-center space-x-1 text-gray-500">
           <Globe className="h-4 w-4" />
           <h2 className="whitespace-nowrap text-sm">
-            {nFormatter(domains.length)} domain{domains.length > 1 && "s"}
+            도메인 {nFormatter(domains.length)}개
           </h2>
         </div>
         <div className="flex items-center space-x-1 text-gray-500">
@@ -92,7 +92,7 @@ export default function ProjectCard({
           {count || count === 0 ? (
             <NumberTooltip value={count} unit="links">
               <h2 className="whitespace-nowrap text-sm">
-                {nFormatter(count)} link{count != 1 && "s"}
+                링크 {nFormatter(count)}개
               </h2>
             </NumberTooltip>
           ) : (
@@ -103,7 +103,7 @@ export default function ProjectCard({
           <BarChart2 className="h-4 w-4" />
           <NumberTooltip value={usage}>
             <h2 className="whitespace-nowrap text-sm">
-              {nFormatter(usage)} click{usage != 1 && "s"}
+              {nFormatter(usage)} 클릭
             </h2>
           </NumberTooltip>
         </div>

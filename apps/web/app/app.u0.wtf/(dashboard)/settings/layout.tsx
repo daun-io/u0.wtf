@@ -8,11 +8,11 @@ export default function PersonalSettingsLayout({
 }) {
   const tabs = [
     {
-      name: "General",
+      name: "일반",
       segment: null,
     },
     {
-      name: "API Keys",
+      name: "API 키",
       segment: "tokens",
     },
   ];

@@ -78,7 +78,7 @@ export default function TagsSection({
     const isEmpty = useCommandState((state) => state.filtered.count === 0);
     return (
       <Command.Input
-        placeholder="Choose a tag"
+        placeholder="태그 설정"
         // hack to focus on the input when the dropdown opens
         autoFocus={openCommandList}
         // when focus on the input. only show the dropdown if there are tags and the tagValue is not empty
@@ -154,7 +154,7 @@ export default function TagsSection({
           >
             {tags?.length === 0 && inputValue.length === 0 && (
               <p className="px-4 py-2.5 text-sm text-gray-900">
-                Start typing to create tag...
+                추가할 태그를 입력...
               </p>
             )}
             <Command.Empty>

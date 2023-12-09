@@ -10,7 +10,7 @@ export default function CreateProjectButton() {
       onClick={() => setShowAddProjectModal(true)}
       className="rounded-md border border-black bg-black px-5 py-2 text-sm font-medium text-white transition-all duration-75 hover:bg-white hover:text-black active:scale-95"
     >
-      Create project
+      프로젝트 생성
     </button>
   );
 }

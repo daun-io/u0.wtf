@@ -145,7 +145,7 @@ function AddProjectModalHelper({
         <div>
           <label htmlFor="name" className="flex items-center space-x-2">
             <p className="block text-sm font-medium text-gray-700">
-              Project Name
+              프로젝트 이름
             </p>
             <InfoTooltip content="This is the name of your project on U0." />
           </label>
@@ -274,7 +274,7 @@ function AddProjectModalHelper({
         <Button
           disabled={slugError || domainError ? true : false}
           loading={saving}
-          text="Create project"
+          text="프로젝트 생성"
         />
       </form>
     </Modal>

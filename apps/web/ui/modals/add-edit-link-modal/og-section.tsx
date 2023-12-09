@@ -85,7 +85,7 @@ export default function OGSection({
       <div className="flex items-center justify-between">
         <div className="flex items-center justify-between space-x-2">
           <h2 className="text-sm font-medium text-gray-900">
-            Custom Social Media Cards
+            커스텀 소셜 미디어 카드
           </h2>
           <InfoTooltip
             content={

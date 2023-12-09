@@ -33,17 +33,17 @@ function CompleteSetupModal({
   const tasks = useMemo(() => {
     return [
       {
-        display: "Configure your custom domain",
+        display: "커스텀 도메인 설정하기",
         cta: `/${slug}/domains`,
         checked: verified,
       },
       {
-        display: "Create or import your links",
+        display: "링크 생성하기",
         cta: `/${slug}`,
         checked: count > 0,
       },
       {
-        display: "Invite your teammates",
+        display: "팀원 초대하기",
         cta: `/${slug}/settings/people`,
         checked: (users && users.length > 1) || (invites && invites.length > 0),
       },
@@ -57,10 +57,9 @@ function CompleteSetupModal({
     >
       <div className="flex flex-col items-center justify-center space-y-3 border-b border-gray-200 px-4 py-4 pt-8 sm:px-16">
         <Logo />
-        <h3 className="text-lg font-medium">You're almost there!</h3>
+        <h3 className="text-lg font-medium">거의 다 됐어요!</h3>
         <p className="text-center text-sm text-gray-500">
-          Complete the following steps and start sharing your branded short
-          links.
+          아래 단계를 완료하고 짧은 브랜드 URL을 생성해보세요.
         </p>
       </div>
       <div className="flex flex-col space-y-6 bg-gray-50 px-4 py-8 text-left sm:px-12">

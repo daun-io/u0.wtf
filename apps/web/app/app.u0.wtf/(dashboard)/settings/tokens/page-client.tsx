@@ -25,16 +25,16 @@ export default function TokensPageClient() {
     <>
       <TokenCreatedModal />
       <Form
-        title="Create New API Key"
-        description="Enter a unique name for your API key to differentiate it from other keys."
+        title="새 API 키 생성"
+        description="다른 키와 구분할 수 있도록 API 키의 고유 이름을 입력하세요."
         inputData={{
           name: "name",
           defaultValue: "",
-          placeholder: "Jetpack API Key",
+          placeholder: "프로덕션 키",
           maxLength: 140,
         }}
-        helpText="<a href='https://u0.wtf/docs' target='_blank'>Learn more about Dub's API.</a>"
-        buttonText="Submit"
+        helpText="<a href='https://u0.wtf/docs' target='_blank'>API에 대해 더 알아보기</a>"
+        buttonText="제출"
         handleSubmit={(data) =>
           fetch("/api/user/tokens", {
             method: "POST",
@@ -58,24 +58,24 @@ export default function TokensPageClient() {
       />
       <div className="rounded-lg border border-gray-200 bg-white">
         <div className="flex flex-col space-y-3 p-5 sm:p-10">
-          <h2 className="text-xl font-medium">Your API Keys</h2>
+          <h2 className="text-xl font-medium">내 API 키</h2>
           <p className="text-sm text-gray-500">
-            These API keys allow other apps to access your account. Use it with
-            caution – do not share your API key with others, or expose it in the
-            browser or other client-side code
+            이 API 키를 사용하면 다른 앱에서 내 계정에 액세스할 수 있습니다.
+            주의 - 다른 사람과 API 키를 공유하거나 브라우저 또는 클라이언트 측
+            코드에 브라우저 또는 기타 클라이언트 측 코드에 노출하지 마세요.
           </p>
         </div>
         {isLoading || !tokens ? (
           <div className="flex flex-col items-center justify-center space-y-4 pb-20 pt-10">
             <LoadingSpinner className="h-6 w-6 text-gray-500" />
-            <p className="text-sm text-gray-500">Fetching API keys...</p>
+            <p className="text-sm text-gray-500">API 키 불러오는 중...</p>
           </div>
         ) : tokens.length > 0 ? (
           <div>
             <div className="grid grid-cols-5 border-b border-gray-200 px-5 py-2 text-sm font-medium text-gray-500 sm:px-10">
-              <div className="col-span-3">Name</div>
-              <div>Key</div>
-              <div className="text-center">Last used</div>
+              <div className="col-span-3">이름</div>
+              <div>키</div>
+              <div className="text-center">최근 사용</div>
             </div>
             <div className="divide-y divide-gray-200">
               {tokens.map((token) => (
@@ -87,7 +87,7 @@ export default function TokensPageClient() {
           <div className="flex flex-col items-center justify-center space-y-4 pb-20 pt-10">
             <FolderOpen className="h-6 w-6 text-gray-500" />
             <p className="text-sm text-gray-500">
-              No API keys found. Create one above.
+              아직 생성한 API 키가 없습니다.
             </p>
           </div>
         )}

@@ -407,7 +407,7 @@ export default function LinkCard({
                   >
                     <div className="flex w-full cursor-not-allowed items-center justify-between p-2 text-left text-sm font-medium text-gray-300 transition-all duration-75">
                       <IconMenu
-                        text="Edit"
+                        text="수정하기"
                         icon={<Edit3 className="h-4 w-4" />}
                       />
                       <kbd className="hidden rounded bg-gray-100 px-2 py-0.5 text-xs font-light text-gray-300 transition-all duration-75 sm:inline-block">
@@ -424,7 +424,7 @@ export default function LinkCard({
                     className="group flex w-full items-center justify-between rounded-md p-2 text-left text-sm font-medium text-gray-500 transition-all duration-75 hover:bg-gray-100"
                   >
                     <IconMenu
-                      text="Edit"
+                      text="수정하기"
                       icon={<Edit3 className="h-4 w-4" />}
                     />
                     <kbd className="hidden rounded bg-gray-100 px-2 py-0.5 text-xs font-light text-gray-500 transition-all duration-75 group-hover:bg-gray-200 sm:inline-block">
@@ -447,7 +447,7 @@ export default function LinkCard({
                   >
                     <div className="flex w-full cursor-not-allowed items-center justify-between p-2 text-left text-sm font-medium text-gray-300 transition-all duration-75">
                       <IconMenu
-                        text="Duplicate"
+                        text="복제하기"
                         icon={<CopyPlus className="h-4 w-4" />}
                       />
                       <kbd className="hidden rounded bg-gray-100 px-2 py-0.5 text-xs font-light text-gray-300 transition-all duration-75 sm:inline-block">
@@ -464,7 +464,7 @@ export default function LinkCard({
                     className="group flex w-full items-center justify-between rounded-md p-2 text-left text-sm font-medium text-gray-500 transition-all duration-75 hover:bg-gray-100"
                   >
                     <IconMenu
-                      text="Duplicate"
+                      text="복제하기"
                       icon={<CopyPlus className="h-4 w-4" />}
                     />
                     <kbd className="hidden rounded bg-gray-100 px-2 py-0.5 text-xs font-light text-gray-500 transition-all duration-75 group-hover:bg-gray-200 sm:inline-block">
@@ -480,7 +480,7 @@ export default function LinkCard({
                   className="group flex w-full items-center justify-between rounded-md p-2 text-left text-sm font-medium text-gray-500 transition-all duration-75 hover:bg-gray-100"
                 >
                   <IconMenu
-                    text="QR Code"
+                    text="QR 코드"
                     icon={<QrCode className="h-4 w-4" />}
                   />
                   <kbd className="hidden rounded bg-gray-100 px-2 py-0.5 text-xs font-light text-gray-500 transition-all duration-75 group-hover:bg-gray-200 sm:inline-block">
@@ -495,7 +495,7 @@ export default function LinkCard({
                   className="group flex w-full items-center justify-between rounded-md p-2 text-left text-sm font-medium text-gray-500 transition-all duration-75 hover:bg-gray-100"
                 >
                   <IconMenu
-                    text={archived ? "Unarchive" : "Archive"}
+                    text={archived ? "보관 취소" : "보관하기"}
                     icon={<Archive className="h-4 w-4" />}
                   />
                   <kbd className="hidden rounded bg-gray-100 px-2 py-0.5 text-xs font-light text-gray-500 transition-all duration-75 group-hover:bg-gray-200 sm:inline-block">
@@ -510,7 +510,7 @@ export default function LinkCard({
                   className="group flex w-full items-center justify-between rounded-md p-2 text-left text-sm font-medium text-red-600 transition-all duration-75 hover:bg-red-600 hover:text-white"
                 >
                   <IconMenu
-                    text="Delete"
+                    text="삭제하기"
                     icon={<Delete className="h-4 w-4" />}
                   />
                   <kbd className="hidden rounded bg-red-100 px-2 py-0.5 text-xs font-light text-red-600 transition-all duration-75 group-hover:bg-red-500 group-hover:text-white sm:inline-block">
@@ -530,7 +530,7 @@ export default function LinkCard({
               }}
               className="rounded-md px-1 py-2 transition-all duration-75 hover:bg-gray-100 active:bg-gray-200"
             >
-              <span className="sr-only">Edit</span>
+              <span className="sr-only">수정하기</span>
               <ThreeDots className="h-5 w-5 text-gray-500" />
             </button>
           </Popover>

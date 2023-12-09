@@ -326,7 +326,7 @@ function AddEditLinkModal({
                       : undefined,
                     pretty: true,
                   })}`
-                : "Create a new link"}
+                : "새 링크 생성"}
             </h3>
           </div>
 
@@ -399,7 +399,7 @@ function AddEditLinkModal({
                     htmlFor={`url-${randomIdx}`}
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Destination URL
+                    목적지 URL
                   </label>
                   {urlError && (
                     <p className="text-sm text-red-600" id="key-error">
@@ -448,7 +448,7 @@ function AddEditLinkModal({
                     htmlFor={`key-${randomIdx}`}
                     className="block text-sm font-medium text-gray-700"
                   >
-                    Short Link
+                    짧은 URL
                   </label>
                   {props && lockKey ? (
                     <button
@@ -475,7 +475,7 @@ function AddEditLinkModal({
                       ) : (
                         <Random className="h-3 w-3" />
                       )}
-                      <p>{generatingKey ? "Generating" : "Randomize"}</p>
+                      <p>{generatingKey ? "생성중" : "무작위 생성"}</p>
                     </button>
                   )}
                 </div>
@@ -560,7 +560,7 @@ function AddEditLinkModal({
               </div>
               <div className="relative flex justify-center">
                 <span className="bg-gray-50 px-2 text-sm text-gray-500">
-                  Optional
+                  추가 설정
                 </span>
               </div>
             </div>

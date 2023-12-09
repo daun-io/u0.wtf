@@ -44,7 +44,7 @@ export default function PlaceholderContent() {
           }
           className="rounded-full bg-gray-800 px-10 py-2 font-medium text-white transition-colors hover:bg-black"
         >
-          무료로 브랜드 URL 만들기
+          무료로 짧은 브랜드 URL 만들기
         </motion.a>
       </motion.div>
     </motion.div>

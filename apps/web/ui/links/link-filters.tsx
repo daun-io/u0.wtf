@@ -543,7 +543,7 @@ const MyLinksFilter = () => {
   return (
     <div className="flex items-center justify-between py-6">
       <label className="text-sm font-medium text-gray-600">
-        Show my links only
+        내 링크만 표시
       </label>
       <Switch
         fn={() =>
