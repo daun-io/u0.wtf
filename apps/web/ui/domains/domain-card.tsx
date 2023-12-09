@@ -77,13 +77,13 @@ export default function DomainCard({ props }: { props: DomainProps }) {
             </NumberTooltip>
             {primary && (
               <span className="rounded-full bg-blue-500 px-3 py-0.5 text-xs text-white">
-                Primary Domain
+                주 사용 도메인
               </span>
             )}
           </div>
           <div className="flex space-x-3">
             <Button
-              text="Refresh"
+              text="새로고침"
               variant="secondary"
               loading={isValidating}
               onClick={() => {
@@ -91,7 +91,7 @@ export default function DomainCard({ props }: { props: DomainProps }) {
               }}
             />
             <Button
-              text="Edit"
+              text="수정하기"
               variant="secondary"
               onClick={() => setShowAddEditDomainModal(true)}
             />

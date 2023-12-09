@@ -15,7 +15,7 @@ export async function POST(req: Request) {
   });
 
   if (!redirect_url) {
-    return new Response("No redirect URL found.", {
+    return new Response("리다이렉트 URL을 찾지 못했습니다.", {
       status: 400,
     });
   }

@@ -212,7 +212,7 @@ function SAMLModal({
               </div>
             ))}
           <Button
-            text="Save changes"
+            text="저장하기"
             disabled={!selectedProvider}
             loading={submitting}
           />

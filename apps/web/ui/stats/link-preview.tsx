@@ -159,7 +159,7 @@ export default function LinkPreviewTooltip({
               </a>
             ) : (
               <p className="xs:block hidden max-w-[240px] truncate text-sm font-medium text-gray-700 underline-offset-2 hover:underline">
-                No redirect configured
+                리다이렉트 설정 없음
               </p>
             )}
           </div>

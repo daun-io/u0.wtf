@@ -135,7 +135,7 @@ function ProjectList({
 
   return (
     <div className="relative mt-1 max-h-72 w-full space-y-0.5 overflow-auto rounded-md bg-white p-2 text-base sm:w-60 sm:text-sm sm:shadow-lg">
-      <div className="p-2 text-xs text-gray-500">Personal Account</div>
+      <div className="p-2 text-xs text-gray-500">개인 계정</div>
       <Link
         key="personal"
         className={`relative flex w-full items-center space-x-2 rounded-md px-2 py-1.5 hover:bg-gray-100 active:bg-gray-200 ${
@@ -158,7 +158,7 @@ function ProjectList({
           </span>
         ) : null}
       </Link>
-      <div className="p-2 text-xs text-gray-500">Custom Projects</div>
+      <div className="p-2 text-xs text-gray-500">프로젝트</div>
       {projects.map(({ id, name, slug, logo, primaryDomain }) => (
         <Link
           key={slug}
@@ -196,8 +196,8 @@ function ProjectList({
         }}
         className="flex w-full cursor-pointer items-center space-x-2 rounded-md p-2 transition-all duration-75 hover:bg-gray-100"
       >
-        <PlusCircle className="h-6 w-6 text-gray-500" />
-        <span className="block truncate">Add a new project</span>
+        <PlusCircle className="h-6 w-6 text-gray-400" />
+        <span className="block truncate">새 프로젝트 추가</span>
       </button>
     </div>
   );

@@ -41,8 +41,8 @@ export default function DomainConfiguration({
         <div className="flex justify-start space-x-4">
           <div className="ease border-b-2 border-black pb-1 text-sm text-black transition-all duration-150">
             {configJson?.conflicts.some((x) => x.type === "A")
-              ? "A Record (recommended)"
-              : "CNAME Record (recommended)"}
+              ? "A 레코드 (추천)"
+              : "CNAME 레코드 (추천)"}
           </div>
         </div>
         <DnsRecord
@@ -97,7 +97,7 @@ export default function DomainConfiguration({
               : "border-white text-gray-400"
           } ease border-b-2 pb-1 text-sm transition-all duration-150`}
         >
-          A Record{!subdomain && " (recommended)"}
+          A 레코드{!subdomain && " (추천)"}
         </button>
         <button
           onClick={() => setRecordType("CNAME")}
@@ -107,17 +107,16 @@ export default function DomainConfiguration({
               : "border-white text-gray-400"
           } ease border-b-2 pb-1 text-sm transition-all duration-150`}
         >
-          CNAME Record{subdomain && " (recommended)"}
+          CNAME 레코드{subdomain && " (추천)"}
         </button>
       </div>
 
       <DnsRecord
-        instructions={`To configure your ${
-          recordType === "A" ? "apex domain" : "subdomain"
-        } <code>${
+        instructions={`${
+          recordType === "A" ? "최상위 도메인" : "하위 도메인"
+        }을 설정하기 위해서는 (<code>${
           recordType === "A" ? domainJson.apexName : domainJson.name
-        }</code>, set the following ${recordType} record on your DNS provider to
-              continue:`}
+        }</code>), 다음 ${recordType} 레코드를 DNS 제공자에서 추가해주세요:`}
         records={[
           {
             type: recordType,
@@ -155,7 +154,7 @@ const DnsRecord = ({
       <MarkdownText text={instructions} />
       <div className="flex items-center justify-start space-x-10 rounded-md bg-gray-50 p-2">
         <div>
-          <p className="text-sm font-bold">Type</p>
+          <p className="text-sm font-bold">유형</p>
           {records.map((record) => (
             <p key={record.type} className="mt-2 font-mono text-sm">
               {record.type}
@@ -163,7 +162,7 @@ const DnsRecord = ({
           ))}
         </div>
         <div>
-          <p className="text-sm font-bold">Name</p>
+          <p className="text-sm font-bold">이름</p>
           {records.map((record) => (
             <p key={record.name} className="mt-2 font-mono text-sm">
               {record.name}
@@ -171,7 +170,7 @@ const DnsRecord = ({
           ))}
         </div>
         <div>
-          <p className="text-sm font-bold">Value</p>
+          <p className="text-sm font-bold">값</p>
           {records.map((record) => (
             <p key={record.value} className="mt-2 font-mono text-sm">
               {record.value}
@@ -193,7 +192,7 @@ const DnsRecord = ({
         <MarkdownText
           text={
             warning ||
-            "Note: for TTL, if <code>86400</code> is not available, set the highest value possible. Also, domain propagation can take anywhere between 1 hour to 12 hours."
+            "참고: TTL의 경우 <code>86400</code>이 사용 불가능하면 가능한 가장 높은 값을 설정하세요. 또한, 도메인 전파는 1시간에서 12시간까지 걸릴 수 있습니다."
           }
         />
       )}

@@ -59,7 +59,7 @@ export interface UserProps {
 
 export type DomainVerificationStatusProps =
   | "Valid Configuration"
-  | "Invalid Configuration"
+  | "유효하지 않은 설정"
   | "Conflicting DNS Records"
   | "Pending Verification"
   | "Domain Not Found"

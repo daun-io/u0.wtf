@@ -66,7 +66,7 @@ export const GET = withAuth(async ({ domain }) => {
       },
     });
   } else {
-    status = "Invalid Configuration";
+    status = "유효하지 않은 설정";
     prismaResponse = await prisma.domain.update({
       where: {
         slug: domain,

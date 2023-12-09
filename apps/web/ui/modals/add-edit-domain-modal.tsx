@@ -353,7 +353,7 @@ function AddEditDomainModal({
         <div className="flex items-center justify-between bg-gray-50">
           <div className="flex items-center space-x-2">
             <h2 className="text-sm font-medium text-gray-900">
-              Primary Domain
+              주 사용 도메인
             </h2>
             <InfoTooltip content="The default domain used in the link creation modal. You can only have one primary domain at a time." />
           </div>
@@ -366,7 +366,7 @@ function AddEditDomainModal({
 
         <div className="grid gap-2">
           <Button
-            text={props ? "Save changes" : "Add domain"}
+            text={props ? "저장하기" : "도메인 추가"}
             disabled={saveDisabled}
             loading={saving}
           />
@@ -404,7 +404,7 @@ function AddEditDomainButton({
       onClick={() => setShowAddEditDomainModal(true)}
       className="rounded-md border border-black bg-black px-5 py-2 text-sm font-medium text-white transition-all duration-75 hover:bg-white hover:text-black active:scale-95"
     >
-      Add Domain
+      도메인 추가
     </button>
   );
 }

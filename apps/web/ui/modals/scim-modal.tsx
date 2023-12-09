@@ -258,7 +258,7 @@ function SCIMModal({
             </div>
           )}
           <Button
-            text="Save changes"
+            text="저장하기"
             loading={submitting}
             disabled={!currentProvider || currentProvider.scim === provider}
           />

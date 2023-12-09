@@ -141,7 +141,7 @@ function ImportBitlyModal({
               {groups.map(({ guid, bsds, tags }) => (
                 <div key={guid} className="flex flex-col space-y-2">
                   <div className="flex items-center justify-between">
-                    <p className="text-sm font-medium text-gray-700">Domains</p>
+                    <p className="text-sm font-medium text-gray-700">도메인</p>
                     <Tooltip content="Your Bitly group ID">
                       <p className="cursor-default text-xs uppercase text-gray-400 transition-colors hover:text-gray-700">
                         {guid}

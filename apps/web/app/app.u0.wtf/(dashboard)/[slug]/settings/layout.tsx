@@ -19,10 +19,6 @@ export default function ProjectSettingsLayout({
       name: "멤버",
       segment: "people",
     },
-    {
-      name: "보안",
-      segment: "security",
-    },
   ];
 
   return <SettingsLayout tabs={tabs}>{children}</SettingsLayout>;

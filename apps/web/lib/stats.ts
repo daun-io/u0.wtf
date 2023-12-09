@@ -4,27 +4,27 @@ export type IntervalProps = "1h" | "24h" | "7d" | "30d" | "90d" | "all";
 
 export const INTERVALS = [
   {
-    display: "Last hour",
+    display: "최근 1시간",
     value: "1h",
   },
   {
-    display: "Last 24 hours",
+    display: "최근 24시간",
     value: "24h",
   },
   {
-    display: "Last 7 days",
+    display: "최근 7일",
     value: "7d",
   },
   {
-    display: "Last 30 days",
+    display: "최근 30일",
     value: "30d",
   },
   {
-    display: "Last 3 months",
+    display: "최근 3개월",
     value: "90d",
   },
   {
-    display: "All Time",
+    display: "전체 기간",
     value: "all",
   },
 ];

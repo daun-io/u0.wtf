@@ -68,7 +68,7 @@ export default function BarList({
           >
             <div key={idx} className="group flex items-center justify-between">
               <div className="relative z-10 flex w-full max-w-[calc(100%-2rem)] items-center">
-                {tab === "Top Links" ? (
+                {tab === "인기 링크" ? (
                   <Tooltip content={<LinkPreviewTooltip link={title} />}>
                     {lineItem}
                   </Tooltip>

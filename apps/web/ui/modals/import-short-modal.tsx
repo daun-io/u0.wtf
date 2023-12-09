@@ -137,7 +137,7 @@ function ImportShortModal({
             className="flex flex-col space-y-4"
           >
             <div className="flex flex-col space-y-2">
-              <p className="text-sm font-medium text-gray-700">Domains</p>
+              <p className="text-sm font-medium text-gray-700">도메인</p>
               {domains.map(({ id, domain, links }) => (
                 <div className="flex items-center justify-between space-x-2 rounded-md border border-gray-200 bg-white px-4 py-2">
                   <div>

@@ -33,7 +33,7 @@ export default function Clicks() {
             <Chart className="mb-1 h-6 w-6 text-gray-600" />
           </div>
           <p className="text-sm font-medium uppercase text-gray-600">
-            Total Clicks
+            총 클릭 수
           </p>
         </div>
         <div className="flex flex-wrap items-center justify-end gap-2">
@@ -48,7 +48,7 @@ export default function Clicks() {
                 }}
                 className="flex items-center space-x-1 rounded-md bg-gray-50 px-2 py-1 text-sm text-gray-500 transition-all duration-75 hover:bg-gray-100 active:scale-[0.98] sm:px-3"
               >
-                <p>Link</p>
+                <p>링크</p>
                 <strong className="text-gray-800">
                   {linkConstructor({ domain, key, pretty: true })}
                 </strong>

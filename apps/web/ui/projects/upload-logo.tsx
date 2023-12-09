@@ -71,9 +71,9 @@ export default function UploadLogo() {
       className="rounded-lg border border-gray-200 bg-white"
     >
       <div className="flex flex-col space-y-3 p-5 sm:p-10">
-        <h2 className="text-xl font-medium">Project Logo</h2>
+        <h2 className="text-xl font-medium">프로젝트 로고</h2>
         <p className="text-sm text-gray-500">
-          This is your project's logo on Dub
+          U0 프로젝트의 로고를 설정할 수 있습니다.
         </p>
         <div>
           <label
@@ -160,12 +160,12 @@ export default function UploadLogo() {
 
       <div className="flex items-center justify-between rounded-b-lg border-t border-gray-200 bg-gray-50 p-3 sm:px-10">
         <p className="text-sm text-gray-500">
-          Square image recommended. Accepted file types: .png, .jpg. Max file
-          size: 2MB.
+          정사각형 이미지를 추천합니다. 허용되는 파일: .png, .jpg. 최대 용량:
+          2MB
         </p>
         <div>
           <Button
-            text="Save changes"
+            text="저장하기"
             loading={uploading}
             disabled={!image || logo === image}
           />

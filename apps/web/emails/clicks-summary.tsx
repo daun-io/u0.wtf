@@ -90,7 +90,7 @@ export default function ClicksSummary({
                     <MousePointerClick className="h-5 w-5 text-blue-600" />
                   </div>
                   <p className="text-sm font-semibold text-black">
-                    {nFormatter(totalClicks)} clicks
+                    {nFormatter(totalClicks)} 클릭
                   </p>
                 </Column>
                 <Column align="center">

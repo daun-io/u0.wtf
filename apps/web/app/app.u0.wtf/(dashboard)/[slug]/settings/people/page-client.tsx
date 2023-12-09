@@ -14,17 +14,15 @@ import { useSession } from "next-auth/react";
 import { useState } from "react";
 import { useInviteTeammateModal } from "@/ui/modals/invite-teammate-modal";
 
-const tabs: Array<"Members" | "Invitations"> = ["Members", "Invitations"];
+const tabs: Array<"멤버" | "초대중"> = ["멤버", "초대중"];
 
 export default function ProjectPeopleClient() {
   const { setShowInviteTeammateModal, InviteTeammateModal } =
     useInviteTeammateModal();
 
-  const [currentTab, setCurrentTab] = useState<"Members" | "Invitations">(
-    "Members",
-  );
+  const [currentTab, setCurrentTab] = useState<"멤버" | "초대중">("멤버");
 
-  const { users } = useUsers({ invites: currentTab === "Invitations" });
+  const { users } = useUsers({ invites: currentTab === "초대중" });
 
   return (
     <>
@@ -32,16 +30,16 @@ export default function ProjectPeopleClient() {
       <div className="rounded-lg border border-gray-200 bg-white">
         <div className="flex flex-col items-center justify-between space-y-3 p-5 sm:flex-row sm:space-y-0 sm:p-10">
           <div className="flex flex-col space-y-3">
-            <h2 className="text-xl font-medium">People</h2>
+            <h2 className="text-xl font-medium">멤버</h2>
             <p className="text-sm text-gray-500">
-              Teammates that have access to this project.
+              프로젝트에 접근할 수 있는 팀원들을 관리합니다.
             </p>
           </div>
           <button
             onClick={() => setShowInviteTeammateModal(true)}
             className="h-9 w-full rounded-md border border-black bg-black px-6 text-sm text-white transition-all duration-150 ease-in-out hover:bg-white hover:text-black focus:outline-none sm:w-auto"
           >
-            Invite
+            초대하기
           </button>
         </div>
         <div className="flex space-x-3 border-b border-gray-200 px-3 sm:px-7">
@@ -75,12 +73,12 @@ export default function ProjectPeopleClient() {
               <div className="flex flex-col items-center justify-center py-10">
                 <BlurImage
                   src="/_static/illustrations/video-park.svg"
-                  alt="No invitations sent"
+                  alt="초대한 멤버 없음"
                   width={300}
                   height={300}
                   className="pointer-events-none -my-8"
                 />
-                <p className="text-sm text-gray-500">No invitations sent</p>
+                <p className="text-sm text-gray-500">초대한 멤버가 없습니다.</p>
               </div>
             )
           ) : (
@@ -97,7 +95,7 @@ const UserCard = ({
   currentTab,
 }: {
   user: UserProps;
-  currentTab: "Members" | "Invitations";
+  currentTab: "멤버" | "초대중";
 }) => {
   const [openPopover, setOpenPopover] = useState(false);
 
@@ -113,13 +111,13 @@ const UserCard = ({
   });
 
   const { RemoveTeammateModal, setShowRemoveTeammateModal } =
-    useRemoveTeammateModal({ user, invite: currentTab === "Invitations" });
+    useRemoveTeammateModal({ user, invite: currentTab === "초대중" });
 
   const { data: session } = useSession();
 
   // invites expire after 14 days of being sent
   const expiredInvite =
-    currentTab === "Invitations" &&
+    currentTab === "초대중" &&
     createdAt &&
     Date.now() - new Date(createdAt).getTime() > 14 * 24 * 60 * 60 * 1000;
 
@@ -143,7 +141,7 @@ const UserCard = ({
           {expiredInvite && <Badge variant="gray">Expired</Badge>}
         </div>
         <div className="flex items-center space-x-3">
-          {currentTab === "Members" ? (
+          {currentTab === "멤버" ? (
             session?.user?.email === email ? (
               <p className="text-xs capitalize text-gray-500">{role}</p>
             ) : (
@@ -163,8 +161,8 @@ const UserCard = ({
                   setShowEditRoleModal(true);
                 }}
               >
-                <option value="owner">Owner</option>
-                <option value="member">Member</option>
+                <option value="owner">소유자</option>
+                <option value="member">멤버</option>
               </select>
             )
           ) : (
@@ -186,10 +184,10 @@ const UserCard = ({
                   <IconMenu
                     text={
                       session?.user?.email === email
-                        ? "Leave project"
-                        : currentTab === "Members"
-                        ? "Remove teammate"
-                        : "Revoke invite"
+                        ? "프로젝트 나가기"
+                        : currentTab === "멤버"
+                        ? "팀원 삭제"
+                        : "초대 취소"
                     }
                     icon={<UserMinus className="h-4 w-4" />}
                   />
@@ -208,7 +206,7 @@ const UserCard = ({
               }}
               className="rounded-md px-1 py-2 transition-all duration-75 hover:bg-gray-100 active:bg-gray-200"
             >
-              <span className="sr-only">Edit</span>
+              <span className="sr-only">수정하기</span>
               <ThreeDots className="h-5 w-5 text-gray-500" />
             </button>
           </Popover>

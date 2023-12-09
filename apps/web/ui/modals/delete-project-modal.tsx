@@ -56,15 +56,15 @@ function DeleteProjectModal({
       <div className="flex flex-col items-center justify-center space-y-3 border-b border-gray-200 px-4 py-4 pt-8 sm:px-16">
         <BlurImage
           src={logo || `https://avatar.vercel.sh/${id}`}
-          alt={id || "Delete Project"}
+          alt={id || "프로젝트 삭제"}
           className="h-10 w-10 rounded-full border border-gray-200"
           width={20}
           height={20}
         />
-        <h3 className="text-lg font-medium">Delete Project</h3>
+        <h3 className="text-lg font-medium">프로젝트 삭제</h3>
         <p className="text-center text-sm text-gray-500">
-          Warning: This will permanently delete your project, custom domain, and
-          all associated links and their respective stats.
+          프로젝트, 사용자 정의 도메인 및 관련된 모든 링크와 해당 통계를 영구
+          삭제합니다. 이 작업은 되돌릴 수 없습니다.
         </p>
       </div>
 
@@ -84,9 +84,9 @@ function DeleteProjectModal({
             htmlFor="project-slug"
             className="block text-sm font-medium text-gray-700"
           >
-            Enter the project slug{" "}
-            <span className="font-semibold text-black">{slug}</span> to
-            continue:
+            계속하려면 프로젝트 Slug{" "}
+            <span className="font-semibold text-black">{slug}</span> 를
+            입력해주세요:
           </label>
           <div className="relative mt-1 rounded-md shadow-sm">
             <input
@@ -110,18 +110,16 @@ function DeleteProjectModal({
 
         <div>
           <label htmlFor="verification" className="block text-sm text-gray-700">
-            To verify, type{" "}
-            <span className="font-semibold text-black">
-              confirm delete project
-            </span>{" "}
-            below
+            확인을 위해{" "}
+            <span className="font-semibold text-black">프로젝트 삭제</span>를
+            입력해주세요.
           </label>
           <div className="relative mt-1 rounded-md shadow-sm">
             <input
               type="text"
               name="verification"
               id="verification"
-              pattern="confirm delete project"
+              pattern="프로젝트 삭제"
               required
               autoFocus={false}
               autoComplete="off"
@@ -138,7 +136,7 @@ function DeleteProjectModal({
         </div>
 
         <Button
-          text="Confirm delete project"
+          text="프로젝트를 삭제합니다."
           variant="danger"
           loading={deleting}
           {...(plan === "enterprise" &&

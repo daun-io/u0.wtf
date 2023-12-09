@@ -82,13 +82,14 @@ function UpgradePlanModal({
           className="text-lg font-medium"
           variants={STAGGER_CHILD_VARIANTS}
         >
-          Upgrade to {plan}
+          {plan}로 업그레이드
         </motion.h3>
         <motion.p
           className="text-center text-sm text-gray-500"
           variants={STAGGER_CHILD_VARIANTS}
         >
-          Enjoy higher limits and extra features with our {plan} plan.
+          {plan} 플랜으로 업그레이드하면 더 높은 한도와 추가 기능을 이용할 수
+          있습니다.
         </motion.p>
       </motion.div>
       <div className="bg-gray-50 px-4 py-8 text-left sm:px-16">
@@ -108,7 +109,10 @@ function UpgradePlanModal({
                   variant="neutral"
                   className="text-sm font-normal normal-case"
                 >
-                  {PLANS.find((p) => p.name === plan)!.price[period].amount}원/
+                  {PLANS.find((p) => p.name === plan)!.price[
+                    period
+                  ].amount.toLocaleString()}
+                  원/
                   {period.replace("ly", "")}
                 </Badge>
               </div>
@@ -123,7 +127,7 @@ function UpgradePlanModal({
                 className="text-xs text-gray-500 underline underline-offset-4 transition-colors hover:text-gray-800"
               >
                 {period === "monthly"
-                  ? "Get 2 months free 🎁"
+                  ? "무료 2개월 추가 🎁"
                   : "Switch to monthly"}
               </button>
             </div>
@@ -152,7 +156,7 @@ function UpgradePlanModal({
             </motion.div>
           </div>
           <Button
-            text={`Upgrade to ${plan} ${capitalize(period)}`}
+            text={`${plan} ${capitalize(period)}로 업그레이드하기`}
             loading={clicked}
             onClick={() => {
               setClicked(true);

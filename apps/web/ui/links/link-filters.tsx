@@ -315,7 +315,7 @@ const TagsFilter = ({
           <ChevronRight
             className={`${collapsed ? "" : "rotate-90"} h-5 w-5 transition-all`}
           />
-          <h4 className="font-medium text-gray-900">Tags</h4>
+          <h4 className="font-medium text-gray-900">태그</h4>
         </button>
       </div>
       <AnimatePresence initial={false}>
@@ -325,7 +325,9 @@ const TagsFilter = ({
             {...SWIPE_REVEAL_ANIMATION_SETTINGS}
           >
             {tags?.length === 0 ? ( // if the project has no tags
-              <p className="text-center text-sm text-gray-500">No tags yet.</p>
+              <p className="text-center text-sm text-gray-500">
+                태그가 없습니다.
+              </p>
             ) : (
               <>
                 <div className="relative mb-1">
@@ -342,7 +344,7 @@ const TagsFilter = ({
                 </div>
                 {options.length === 0 && (
                   <p className="mt-1 text-center text-sm text-gray-500">
-                    No tags match your search.
+                    일치하는 태그가 없습니다.
                   </p>
                 )}
               </>
@@ -383,7 +385,7 @@ const TagsFilter = ({
                 onClick={() => setShowMore(!showMore)}
                 className="rounded-md border border-gray-300 p-1 text-center text-sm"
               >
-                Show {showMore ? "less" : "more"}
+                {showMore ? "덜" : "더"}보기
               </button>
             )}
           </motion.div>

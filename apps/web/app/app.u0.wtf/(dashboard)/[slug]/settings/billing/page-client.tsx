@@ -28,11 +28,11 @@ export default function ProjectBillingClient() {
   const [billingStart, billingEnd] = useMemo(() => {
     if (billingCycleStart) {
       const { firstDay, lastDay } = getFirstAndLastDay(billingCycleStart);
-      const start = firstDay.toLocaleDateString("en-us", {
+      const start = firstDay.toLocaleDateString("ko-kr", {
         month: "short",
         day: "numeric",
       });
-      const end = lastDay.toLocaleDateString("en-us", {
+      const end = lastDay.toLocaleDateString("ko-kr", {
         month: "short",
         day: "numeric",
       });
@@ -60,21 +60,20 @@ export default function ProjectBillingClient() {
     <>
       <div className="rounded-lg border border-gray-200 bg-white">
         <div className="flex flex-col space-y-3 p-10">
-          <h2 className="text-xl font-medium">Plan &amp; Usage</h2>
+          <h2 className="text-xl font-medium">요금제 &amp; 사용량</h2>
           <p className="text-sm text-gray-500">
-            You are currently on the{" "}
             {plan ? (
               <PlanBadge plan={plan} />
             ) : (
               <span className="rounded-full bg-gray-200 px-2 py-0.5 text-xs text-gray-200">
-                load
+                로드 중
               </span>
             )}{" "}
-            plan.
+            플랜을 사용 중입니다.
             {billingStart && billingEnd && (
               <>
                 {" "}
-                Current billing cycle:{" "}
+                현재 결제 주기:{" "}
                 <span className="font-medium text-black">
                   {billingStart} - {billingEnd}
                 </span>
@@ -87,7 +86,7 @@ export default function ProjectBillingClient() {
         <div className="grid grid-cols-1 divide-y divide-gray-200 sm:grid-cols-2 sm:divide-x sm:divide-y-0">
           <div className="p-10">
             <div className="flex items-center space-x-2">
-              <h3 className="font-medium">Total Link Clicks</h3>
+              <h3 className="font-medium">총 링크 클릭</h3>
               <InfoTooltip content="Number of billable link clicks across all your projects." />
             </div>
             {plan === "enterprise" ? (
@@ -111,7 +110,7 @@ export default function ProjectBillingClient() {
                     <NumberTooltip value={usage}>
                       <span>{nFormatter(usage)} </span>
                     </NumberTooltip>
-                    / {nFormatter(usageLimit)} clicks (
+                    / {nFormatter(usageLimit)} 클릭 (
                     {((usage / usageLimit) * 100).toFixed(1)}%)
                   </p>
                 ) : (
@@ -139,7 +138,7 @@ export default function ProjectBillingClient() {
           </div>
           <div className="p-10">
             <div className="flex items-center space-x-2">
-              <h3 className="font-medium">Number of Links</h3>
+              <h3 className="font-medium">총 링크 숫자</h3>
               <InfoTooltip content="Number of short links in your project." />
             </div>
             <div className="mt-4 flex items-center">
@@ -162,10 +161,10 @@ export default function ProjectBillingClient() {
           {plan ? (
             <p className="text-sm text-gray-500">
               {plan === "enterprise"
-                ? "On the Enterprise plan, the sky's the limit! Thank you for your support."
-                : `For higher limits, upgrade to the ${
-                    plan === "free" ? "Pro" : "Enterprise"
-                  } plan.`}
+                ? "엔터프라이즈 플랜에서는 제한이 없습니다! 지원해 주셔서 감사합니다."
+                : `더 많은 사용량을 위해 ${
+                    plan === "free" ? "프로" : "엔터프라이즈"
+                  } 플랜으로 업그레이드하세요.`}
             </p>
           ) : (
             <div className="h-3 w-28 animate-pulse rounded-full bg-gray-200" />
@@ -174,7 +173,7 @@ export default function ProjectBillingClient() {
             {plan ? (
               plan === "free" ? (
                 <Button
-                  text="Upgrade"
+                  text="업그레이드"
                   onClick={() => setShowUpgradePlanModal(true)}
                   variant="success"
                 />
