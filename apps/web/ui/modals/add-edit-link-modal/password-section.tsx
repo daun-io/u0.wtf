@@ -1,5 +1,10 @@
 import { Eye, EyeOff } from "@/ui/shared/icons";
-import { InfoTooltip, SimpleTooltipContent, Switch } from "@u0/ui";
+import {
+  InfoTooltip,
+  SimpleTooltipContent,
+  Switch,
+  TooltipContent,
+} from "@u0/ui";
 import { FADE_IN_ANIMATION_SETTINGS, HOME_DOMAIN } from "@u0/utils";
 import { type Link as LinkProps } from "@prisma/client";
 import { motion } from "framer-motion";
@@ -38,11 +43,7 @@ export default function PasswordSection({
           <h2 className="text-sm font-medium text-gray-900">비밀번호 잠금</h2>
           <InfoTooltip
             content={
-              <SimpleTooltipContent
-                title="Restrict access to your short links by encrypting it with a password."
-                cta="Learn more."
-                href={`${HOME_DOMAIN}/help/article/password-protected-links`}
-              />
+              <TooltipContent title="비밀번호로 암호화하여 짧은 URL에 대한 액세스를 제한하세요." />
             }
           />
         </div>

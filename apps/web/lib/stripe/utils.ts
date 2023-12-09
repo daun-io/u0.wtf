@@ -61,17 +61,19 @@ export const PLANS = [
     quota: 1000000000, // arbitrary large number to represent unlimited – might need to change this in the future
     price: {
       monthly: {
-        amount: 49,
+        amount: 49000,
+        curreny: "krw",
         priceIds: {
           test: "price_1LoyrCAlJJEpqkPVZ32BV3wm",
-          production: "price_1LodLoAlJJEpqkPV9rD0rlNL",
+          production: "price_1OLPsEDWbs4J5X5cYOqgUDkQ",
         },
       },
       yearly: {
-        amount: 490,
+        amount: 490000,
+        curreny: "krw",
         priceIds: {
           test: "price_1LoyrCAlJJEpqkPVgIlNG23q",
-          production: "price_1LodLoAlJJEpqkPVJdwv5zrG",
+          production: "price_1OLPsnDWbs4J5X5cSmL68KlC",
         },
       },
     },

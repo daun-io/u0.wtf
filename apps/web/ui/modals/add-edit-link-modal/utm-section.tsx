@@ -1,4 +1,9 @@
-import { InfoTooltip, SimpleTooltipContent, Switch } from "@u0/ui";
+import {
+  InfoTooltip,
+  SimpleTooltipContent,
+  Switch,
+  TooltipContent,
+} from "@u0/ui";
 import {
   FADE_IN_ANIMATION_SETTINGS,
   HOME_DOMAIN,
@@ -62,11 +67,7 @@ export default function UTMSection({
           <h2 className="text-sm font-medium text-gray-900">UTM 빌더</h2>
           <InfoTooltip
             content={
-              <SimpleTooltipContent
-                title="Add UTM parameters to your short links for conversion tracking."
-                cta="Learn more."
-                href={`${HOME_DOMAIN}/help/article/how-to-create-link#utm-builder`}
-              />
+              <TooltipContent title="전환 추적을 위해 짧은 링크에 UTM 매개변수를 추가하세요." />
             }
           />
         </div>

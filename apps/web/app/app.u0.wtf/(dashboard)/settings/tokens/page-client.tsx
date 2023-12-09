@@ -110,7 +110,7 @@ const TokenRow = (token: Token) => {
           <div className="flex flex-col space-y-px">
             <p className="font-semibold text-gray-700">{token.name}</p>
             <p className="text-sm text-gray-500" suppressHydrationWarning>
-              Created {timeAgo(token.createdAt, { withAgo: true })}
+              생성: {timeAgo(token.createdAt, { withAgo: true })}
             </p>
           </div>
         </div>

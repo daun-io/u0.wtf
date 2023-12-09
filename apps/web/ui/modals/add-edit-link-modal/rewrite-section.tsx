@@ -1,4 +1,9 @@
-import { InfoTooltip, SimpleTooltipContent, Switch } from "@u0/ui";
+import {
+  InfoTooltip,
+  SimpleTooltipContent,
+  Switch,
+  TooltipContent,
+} from "@u0/ui";
 import { HOME_DOMAIN } from "@u0/utils";
 import { type Link as LinkProps } from "@prisma/client";
 import { useParams } from "next/navigation";
@@ -35,11 +40,7 @@ export default function RewriteSection({
           <h2 className="text-sm font-medium text-gray-900">링크 감추기</h2>
           <InfoTooltip
             content={
-              <SimpleTooltipContent
-                title="Mask your destination URL so your users only see the short link in the browser address bar."
-                cta="Learn more."
-                href={`${HOME_DOMAIN}/help/article/how-to-create-link#link-cloaking`}
-              />
+              <TooltipContent title="사용자의 브라우저 주소창에 짧은 링크만 표시되도록 하고 대상 URL을 가립니다." />
             }
           />
         </div>
