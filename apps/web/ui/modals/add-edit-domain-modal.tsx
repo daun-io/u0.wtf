@@ -200,7 +200,7 @@ function AddEditDomainModal({
                 type="button"
                 onClick={() => {
                   window.confirm(
-                    "Warning: Changing your project's domain will break all existing short links and reset their analytics. Are you sure you want to continue?",
+                    "브랜드의 도메인을 변경하면 기존의 모든 짧은 URL이 끊어지고 분석이 초기화됩니다. 계속 진행하시겠습니까?",
                   ) && setLockDomain(false);
                 }}
               >
@@ -376,12 +376,12 @@ function AddEditDomainModal({
             (props.primary ? (
               <Button
                 disabledTooltip="You can't delete your primary domain."
-                text="Delete domain"
+                text="도메인 삭제하기"
               />
             ) : (
               <Button
                 variant="danger"
-                text="Delete domain"
+                text="도메인 삭제하기"
                 onClick={() => {
                   window.confirm(
                     "Warning: Deleting your project's domain will delete all existing short links using the domain. Are you sure you want to continue?",
