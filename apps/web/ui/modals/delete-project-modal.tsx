@@ -72,8 +72,8 @@ function DeleteProjectModal({
         onSubmit={async (e) => {
           e.preventDefault();
           toast.promise(deleteProject(), {
-            loading: "Deleting project...",
-            success: "Project deleted successfully!",
+            loading: "브랜드 삭제중...",
+            success: "브랜드가 삭제되었습니다.",
             error: (err) => err,
           });
         }}

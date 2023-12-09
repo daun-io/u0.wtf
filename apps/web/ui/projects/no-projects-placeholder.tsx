@@ -11,7 +11,7 @@ export default function NoProjectsPlaceholder() {
   return (
     <div className="col-span-3 flex flex-col items-center justify-center rounded-md border border-gray-200 bg-white py-12">
       <h2 className="z-10 text-xl font-semibold text-gray-700">
-        You don't have any projects yet!
+        아직 만든 브랜드가 없습니다.
       </h2>
       <BlurImage
         src="/_static/illustrations/shopping-call.svg"
@@ -24,7 +24,7 @@ export default function NoProjectsPlaceholder() {
         onClick={() => setShowAddProjectModal(true)}
         className="rounded-md border border-black bg-black px-10 py-2 text-sm font-medium text-white transition-all duration-75 hover:bg-white hover:text-black active:scale-95"
       >
-        Create a project
+        브랜드 생성하기
       </button>
       <Link
         href="/links"
