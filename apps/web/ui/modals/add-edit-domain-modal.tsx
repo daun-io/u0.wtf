@@ -154,7 +154,9 @@ function AddEditDomainModal({
         ) : (
           <Logo />
         )}
-        <h1 className="text-lg font-medium">{props ? "Edit" : "Add"} Domain</h1>
+        <h1 className="text-lg font-medium">
+          도메인 {props ? "수정하기" : "추가하기"}
+        </h1>
       </div>
 
       <form
@@ -190,7 +192,7 @@ function AddEditDomainModal({
         <div>
           <div className="flex items-center justify-between">
             <label htmlFor="domain">
-              <h2 className="text-sm font-medium text-gray-700">Domain</h2>
+              <h2 className="text-sm font-medium text-gray-700">도메인</h2>
             </label>
             {props && lockDomain && (
               <button
@@ -203,7 +205,7 @@ function AddEditDomainModal({
                 }}
               >
                 <Lock className="h-3 w-3" />
-                <p>Unlock</p>
+                <p>잠금 해제</p>
               </button>
             )}
           </div>
@@ -266,7 +268,7 @@ function AddEditDomainModal({
 
         <div>
           <label htmlFor="target" className="flex items-center space-x-2">
-            <h2 className="text-sm font-medium text-gray-900">Landing Page</h2>
+            <h2 className="text-sm font-medium text-gray-900">랜딩 페이지</h2>
             <InfoTooltip content="The page your users will get redirected to when they visit your domain." />
           </label>
           {plan !== "free" ? (
@@ -331,9 +333,9 @@ function AddEditDomainModal({
         <div>
           <label htmlFor="placeholder" className="flex items-center space-x-2">
             <h2 className="text-sm font-medium text-gray-900">
-              Input Placeholder URL
+              입력 플레이스홀더 URL
             </h2>
-            <InfoTooltip content="Provide context to your teammates in the link creation modal by showing them an example of a link to be shortened." />
+            <InfoTooltip content="링크 작성 화면에서 팀원에게 단축할 링크의 예를 보여줌으로써 맥락을 전달할 수 있습니다." />
           </label>
           <div className="relative mt-1 rounded-md shadow-sm">
             <input
