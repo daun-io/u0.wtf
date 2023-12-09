@@ -17,7 +17,7 @@ export default function UserDropdown() {
   const [openingSupport, setOpeningSupport] = useState(false);
 
   useEffect(() => {
-    Crisp.configure("2c09b1ee-14c2-46d1-bf72-1dbb998a19e0", {
+    Crisp.configure("5bb141ff-762d-47fb-98d1-c49c248a4d5b", {
       autoload: false,
     });
   }, []);

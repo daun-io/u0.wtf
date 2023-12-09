@@ -40,17 +40,17 @@ function UpgradePlanModal({
   const [period, setPeriod] = useState<"monthly" | "yearly">("yearly");
   const features = useMemo(() => {
     return [
-      `Track ${
-        plan === "Enterprise" ? "unlimited" : "50x more"
-      } link clicks per month`,
-      "Unlimited custom domains",
-      "Unlimited team members",
-      "Unlimited link history",
-      "Unlimited tags",
-      "Redirect your root domain",
-      "Custom QR Code logo",
-      "API Access",
-      ...(plan === "Enterprise" ? ["SSO/SAML", "Priority support"] : []),
+      `매월 ${
+        plan === "Enterprise" ? "무제한" : "50배 더 많은"
+      } 링크 클릭 추적`,
+      "무제한 사용자 정의 도메인",
+      "무제한 팀 멤버",
+      "무제한 링크 이력",
+      "무제한 태그",
+      "루트 도메인 리디렉션",
+      "사용자 정의 QR 코드 로고",
+      "API 접근",
+      ...(plan === "Enterprise" ? ["우선 지원"] : []),
     ];
   }, [plan]);
   const [clicked, setClicked] = useState(false);
