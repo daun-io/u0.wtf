@@ -11,10 +11,6 @@ export default function PersonalSettingsLayout({
       name: "일반",
       segment: null,
     },
-    {
-      name: "API 키",
-      segment: "tokens",
-    },
   ];
 
   return <SettingsLayout tabs={tabs}>{children}</SettingsLayout>;

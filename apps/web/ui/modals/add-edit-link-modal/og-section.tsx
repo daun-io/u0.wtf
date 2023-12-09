@@ -223,12 +223,12 @@ export default function OGSection({
                   } h-7 w-7 text-gray-500 transition-all duration-75 group-hover:scale-110 group-active:scale-95`}
                 />
                 <p className="mt-2 text-center text-sm text-gray-500">
-                  Drag and drop or click to upload.
+                  끌어다 놓거나 클릭하여 업로드합니다.
                 </p>
                 <p className="mt-2 text-center text-sm text-gray-500">
-                  Recommended: 1200 x 630 pixels (max 5MB)
+                  추천: 1200 x 630 픽셀 (최대 5MB)
                 </p>
-                <span className="sr-only">OG image upload</span>
+                <span className="sr-only">OG 이미지 업로드</span>
               </div>
               {image && (
                 <img
@@ -267,7 +267,7 @@ export default function OGSection({
                 minRows={3}
                 maxLength={120}
                 className="block w-full rounded-md border-gray-300 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm"
-                placeholder="Dub - Open Source Bitly Alternative"
+                placeholder="U0 - 브랜드를 알리는 짧은 URL"
                 value={title || ""}
                 onChange={(e) => {
                   setData({ ...data, title: e.target.value });
@@ -296,7 +296,7 @@ export default function OGSection({
                 minRows={3}
                 maxLength={240}
                 className="block w-full rounded-md border-gray-300 text-gray-900 placeholder-gray-300 focus:border-gray-500 focus:outline-none focus:ring-gray-500 sm:text-sm"
-                placeholder="Dub is open-source link management tool for modern marketing teams to create, share, and track short links."
+                placeholder="커스텀 도메인, 소셜 미디어 카드, 애널리틱스, 개인화까지 갖춘 현대적인 짧은 URL U0"
                 value={description || ""}
                 onChange={(e) => {
                   setData({

@@ -165,7 +165,13 @@ function UpgradePlanModal({
             </motion.div>
           </div>
           <Button
-            text={`${plan} ${capitalize(period)}로 업그레이드하기`}
+            text={`${
+              plan === "Enterprise"
+                ? "엔터프라이즈"
+                : plan === "Pro"
+                ? "프로"
+                : "무료"
+            }로 업그레이드하기`}
             loading={clicked}
             onClick={() => {
               setClicked(true);
@@ -208,7 +214,7 @@ function UpgradePlanModal({
                 }}
                 className="text-center text-xs text-gray-500 underline-offset-4 transition-all hover:text-gray-800 hover:underline"
               >
-                U0 {plan === "Pro" ? "Enterprise" : "Pro"}
+                U0 {plan === "Pro" ? "엔터프라이즈" : "프로"}
               </button>
             </div>
           )}
