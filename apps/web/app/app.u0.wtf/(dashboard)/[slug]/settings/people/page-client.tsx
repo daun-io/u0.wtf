@@ -32,7 +32,7 @@ export default function ProjectPeopleClient() {
           <div className="flex flex-col space-y-3">
             <h2 className="text-xl font-medium">멤버</h2>
             <p className="text-sm text-gray-500">
-              프로젝트에 접근할 수 있는 팀원들을 관리합니다.
+              브랜드에 접근할 수 있는 팀원들을 관리합니다.
             </p>
           </div>
           <button
@@ -184,7 +184,7 @@ const UserCard = ({
                   <IconMenu
                     text={
                       session?.user?.email === email
-                        ? "프로젝트 나가기"
+                        ? "브랜드 나가기"
                         : currentTab === "멤버"
                         ? "팀원 삭제"
                         : "초대 취소"

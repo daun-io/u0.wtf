@@ -15,8 +15,8 @@ export default function ProjectSettingsClient() {
   return (
     <>
       <Form
-        title="프로젝트 이름"
-        description="U0 프로젝트의 이름입니다."
+        title="브랜드 이름"
+        description="U0에서 사용할 브랜드의 이름입니다."
         inputData={{
           name: "name",
           defaultValue: name,
@@ -52,8 +52,8 @@ export default function ProjectSettingsClient() {
         }
       />
       <Form
-        title="프로젝트 Slug"
-        description="U0에서 표기되는 프로젝트마다 고유한 URL 식별자입니다."
+        title="브랜드 Slug"
+        description="U0에서 표기되는 브랜드마다 고유한 URL 식별자입니다."
         inputData={{
           name: "slug",
           defaultValue: slug,
@@ -64,7 +64,7 @@ export default function ProjectSettingsClient() {
         helpText="영문 소문자, 숫자, '-' 표시만 사용 가능. 최대 48자."
         {...(plan === "enterprise" &&
           !isOwner && {
-            disabledTooltip: "프로젝트 소유자만 Slug을 수정할 수 있습니다..",
+            disabledTooltip: "브랜드 소유자만 Slug을 수정할 수 있습니다..",
           })}
         handleSubmit={(data) =>
           fetch(`/api/projects/${slug}`, {

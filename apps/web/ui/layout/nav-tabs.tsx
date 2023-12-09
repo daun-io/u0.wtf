@@ -30,7 +30,7 @@ export default function NavTabs() {
       return [{ name: "← Back to all links", href: "/links" }];
     }
     return [
-      { name: "프로젝트", href: "/" },
+      { name: "브랜드", href: "/" },
       { name: "링크", href: "/links" },
       { name: "설정", href: "/settings" },
     ];

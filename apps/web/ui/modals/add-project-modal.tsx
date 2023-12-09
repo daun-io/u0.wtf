@@ -87,12 +87,12 @@ function AddProjectModalHelper({
     >
       <div className="flex flex-col items-center justify-center space-y-3 border-b border-gray-200 px-4 py-4 pt-8 sm:px-16">
         <Logo />
-        <h3 className="text-lg font-medium">새 프로젝트 생성</h3>
+        <h3 className="text-lg font-medium">새 브랜드 생성</h3>
         <Tooltip
-          content={`"프로젝트"는 웹사이트, 앱 또는 비즈니스에 대한 모든 짧은 링크를 저장하는 데 사용할 수 있는 공간입니다.  '팀'이라고 생각하시면 됩니다. 팀원을 프로젝트에 초대하여 함께 링크를 관리할 수 있습니다."`}
+          content={`"브랜드"는 웹사이트, 앱 또는 비즈니스에 대한 모든 짧은 링크를 저장하는 데 사용할 수 있는 공간입니다.  '팀'이라고 생각하시면 됩니다. 팀원을 브랜드에 초대하여 함께 링크를 관리할 수 있습니다."`}
         >
           <p className="-translate-y-2 text-center text-xs text-gray-500 underline underline-offset-4 hover:text-gray-800">
-            프로젝트란?
+            브랜드란?
           </p>
         </Tooltip>
       </div>
@@ -144,9 +144,9 @@ function AddProjectModalHelper({
         <div>
           <label htmlFor="name" className="flex items-center space-x-2">
             <p className="block text-sm font-medium text-gray-700">
-              프로젝트 이름
+              브랜드 이름
             </p>
-            <InfoTooltip content="This is the name of your project on U0." />
+            <InfoTooltip content="U0에서 사용할 브랜드의 이름입니다." />
           </label>
           <div className="mt-1 flex rounded-md shadow-sm">
             <input
@@ -170,9 +170,9 @@ function AddProjectModalHelper({
         <div>
           <label htmlFor="slug" className="flex items-center space-x-2">
             <p className="block text-sm font-medium text-gray-700">
-              프로젝트 Slug
+              브랜드 Slug
             </p>
-            <InfoTooltip content="U0에서 프로젝트를 식별할 수 있게 해주는 고유한 URL입니다." />
+            <InfoTooltip content="U0에서 브랜드를 식별할 수 있게 해주는 고유한 URL입니다." />
           </label>
           <div className="relative mt-1 flex rounded-md shadow-sm">
             <span className="inline-flex items-center rounded-l-md border border-r-0 border-gray-300 bg-gray-50 px-5 text-gray-500 sm:text-sm">
@@ -254,8 +254,7 @@ function AddProjectModalHelper({
           {domainError &&
             (domainError === "도메인이 이미 사용중입니다." ? (
               <p className="mt-2 text-sm text-red-600" id="domain-error">
-                도메인이 이미 사용중입니다. 이 도메인을 프로젝트에 사용하려는
-                경우{" "}
+                도메인이 이미 사용중입니다. 이 도메인을 브랜드에 사용하려는 경우{" "}
                 <a
                   className="underline"
                   href="mailto:team@empty.app?subject=내 도메인이 이미 사용중입니다."
@@ -273,7 +272,7 @@ function AddProjectModalHelper({
         <Button
           disabled={slugError || domainError ? true : false}
           loading={saving}
-          text="프로젝트 생성"
+          text="브랜드 생성"
         />
       </form>
     </Modal>

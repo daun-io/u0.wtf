@@ -71,9 +71,9 @@ export default function UploadLogo() {
       className="rounded-lg border border-gray-200 bg-white"
     >
       <div className="flex flex-col space-y-3 p-5 sm:p-10">
-        <h2 className="text-xl font-medium">프로젝트 로고</h2>
+        <h2 className="text-xl font-medium">브랜드 로고</h2>
         <p className="text-sm text-gray-500">
-          U0 프로젝트의 로고를 설정할 수 있습니다.
+          U0 브랜드의 로고를 설정할 수 있습니다.
         </p>
         <div>
           <label

@@ -158,7 +158,7 @@ function ProjectList({
           </span>
         ) : null}
       </Link>
-      <div className="p-2 text-xs text-gray-500">프로젝트</div>
+      <div className="p-2 text-xs text-gray-500">브랜드</div>
       {projects.map(({ id, name, slug, logo, primaryDomain }) => (
         <Link
           key={slug}
@@ -197,7 +197,7 @@ function ProjectList({
         className="flex w-full cursor-pointer items-center space-x-2 rounded-md p-2 transition-all duration-75 hover:bg-gray-100"
       >
         <PlusCircle className="h-6 w-6 text-gray-400" />
-        <span className="block truncate">새 프로젝트 추가</span>
+        <span className="block truncate">새 브랜드 추가</span>
       </button>
     </div>
   );

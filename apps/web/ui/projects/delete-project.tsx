@@ -18,9 +18,9 @@ export default function DeleteProject() {
     >
       <DeleteProjectModal />
       <div className="flex flex-col space-y-3 p-5 sm:p-10">
-        <h2 className="text-xl font-medium">프로젝트 삭제</h2>
+        <h2 className="text-xl font-medium">브랜드 삭제</h2>
         <p className="text-sm text-gray-500">
-          프로젝트, 사용자 정의 도메인 및 관련된 모든 링크와 해당 통계를 영구
+          브랜드, 사용자 정의 도메인 및 관련된 모든 링크와 해당 통계를 영구
           삭제합니다. 이 작업은 되돌릴 수 없습니다.
         </p>
       </div>
@@ -33,7 +33,7 @@ export default function DeleteProject() {
       <div className="flex items-center justify-end px-5 py-4 sm:px-10">
         <div>
           <Button
-            text="프로젝트 삭제"
+            text="브랜드 삭제"
             variant="danger"
             onClick={() => setShowDeleteProjectModal(true)}
             {...(plan === "enterprise" &&

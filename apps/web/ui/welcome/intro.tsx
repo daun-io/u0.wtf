@@ -36,8 +36,7 @@ export default function Intro() {
           className="max-w-md text-gray-600 transition-colors sm:text-lg"
           variants={STAGGER_CHILD_VARIANTS}
         >
-          U0.WTF는 URL 공유 성과를 측정하고 브랜드를 알릴 수 있도록 돕는 축약
-          도구입니다.
+          U0.WTF는 내 브랜드를 알리기 위한 짧은 URL 플랫폼입니다.
         </motion.p>
         <motion.button
           variants={STAGGER_CHILD_VARIANTS}

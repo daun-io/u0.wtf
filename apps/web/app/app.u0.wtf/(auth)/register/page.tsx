@@ -16,7 +16,7 @@ export default function RegisterPage() {
         </a>
         <h3 className="text-xl font-semibold">U0 계정 생성</h3>
         <p className="text-sm text-gray-500">
-          무료로 가입해 축약 URL을 생성해보세요.
+          무료로 짧은 브랜드 URL을 생성해보세요.
         </p>
       </div>
       <div className="flex flex-col space-y-3 bg-gray-50 px-4 py-8 sm:px-16">

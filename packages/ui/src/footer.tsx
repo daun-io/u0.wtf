@@ -23,7 +23,6 @@ const navigation = {
   legal: [
     { name: "Privacy", href: "/privacy" },
     { name: "Terms", href: "/terms" },
-    { name: "Abuse", href: "/abuse" },
   ],
   tools: ALL_TOOLS.map(({ name, slug }) => ({
     name,
@@ -57,8 +56,7 @@ export function Footer() {
               <LogoType className="h-7 text-gray-600" />
             </Link>
             <p className="max-w-xs text-sm text-gray-500">
-              U0.WTF는 URL 공유 성과를 측정하고 브랜드를 알릴 수 있도록 돕는
-              축약 도구입니다.
+              U0.WTF는 내 브랜드를 알리기 위한 짧은 URL 플랫폼입니다.
             </p>
           </div>
           <div className="mt-16 grid grid-cols-2 gap-4 xl:col-span-2 xl:mt-0">
