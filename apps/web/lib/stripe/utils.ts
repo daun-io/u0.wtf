@@ -35,7 +35,7 @@ export const PLANS = [
   {
     name: "Pro",
     slug: "pro",
-    quota: 50000,
+    quota: 100000,
     price: {
       monthly: {
         amount: 8000,

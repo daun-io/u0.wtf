@@ -41,7 +41,7 @@ function UpgradePlanModal({
   const features = useMemo(() => {
     return [
       `매월 ${
-        plan === "Enterprise" ? "무제한" : "50배 더 많은"
+        plan === "Enterprise" ? "무제한" : "100배 더 많은"
       } 링크 클릭 추적`,
       "무제한 사용자 정의 도메인",
       "무제한 팀 멤버",
