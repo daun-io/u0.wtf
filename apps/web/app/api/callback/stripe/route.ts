@@ -92,7 +92,7 @@ export const POST = async (req: Request) => {
             limiter.schedule(() =>
               sendEmail({
                 email: user.email as string,
-                subject: `Thank you for upgrading to Dub ${plan.name}!`,
+                subject: `U0 ${plan.name} 플랜을 구매해주셔서 감사합니다!`,
                 react: UpgradeEmail({
                   name: user.name,
                   email: user.email as string,
@@ -167,7 +167,7 @@ export const POST = async (req: Request) => {
               limiter.schedule(() =>
                 sendEmail({
                   email: user.email as string,
-                  subject: `Thank you for upgrading to Dub ${plan.name}!`,
+                  subject: `U0 ${plan.name} 플랜을 구매해주셔서 감사합니다!`,
                   react: UpgradeEmail({
                     name: user.name,
                     email: user.email as string,

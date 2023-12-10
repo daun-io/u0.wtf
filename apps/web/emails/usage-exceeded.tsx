@@ -35,7 +35,7 @@ export default function UsageExceeded({
   return (
     <Html>
       <Head />
-      <Preview>사용량 한도에 도달했어요.</Preview>
+      <Preview>U0 사용량 한도에 도달했어요.</Preview>
       <Tailwind>
         <Body className="mx-auto my-auto bg-white font-sans">
           <Container className="mx-auto my-10 max-w-[500px] rounded border border-solid border-gray-200 px-10 py-5">

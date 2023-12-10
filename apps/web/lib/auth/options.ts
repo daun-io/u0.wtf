@@ -126,7 +126,7 @@ export const authOptions: NextAuthOptions = {
               },
             ),
             sendEmail({
-              subject: "Welcome to U0.wtf!",
+              subject: "U0에 가입해주셔서 감사합니다.",
               email,
               react: WelcomeEmail({
                 email,

@@ -146,7 +146,7 @@ export const handleDomainUpdates = async ({
       emails.map((email) =>
         limiter.schedule(() =>
           sendEmail({
-            subject: `Your domain ${domain} has been deleted`,
+            subject: `${domain} 도메인이 삭제되었습니다.`,
             email,
             react: DomainDeleted({
               email,
@@ -212,7 +212,7 @@ const sendDomainInvalidEmail = async ({
     emails.map((email) =>
       limiter.schedule(() =>
         sendEmail({
-          subject: `Your domain ${domain} needs to be configured`,
+          subject: `${domain} 도메인의 설정이 필요합니다.`,
           email,
           react: InvalidDomain({
             email,
