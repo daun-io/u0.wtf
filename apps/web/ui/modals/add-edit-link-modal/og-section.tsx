@@ -5,6 +5,7 @@ import {
   Popover,
   SimpleTooltipContent,
   Switch,
+  TooltipContent,
   Unsplash,
 } from "@u0/ui";
 import { FADE_IN_ANIMATION_SETTINGS, HOME_DOMAIN } from "@u0/utils";
@@ -89,11 +90,7 @@ export default function OGSection({
           </h2>
           <InfoTooltip
             content={
-              <SimpleTooltipContent
-                title="Customize how your links look when shared on social media."
-                cta="Learn more."
-                href={`${HOME_DOMAIN}/help/article/how-to-create-link#custom-social-media-cards`}
-              />
+              <TooltipContent title="소셜 미디어에서 공유할 때 링크가 표시되는 방식을 사용자 지정합니다." />
             }
           />
         </div>
