@@ -29,7 +29,7 @@ export default function PlaceholderContent() {
       >
         <div className="mx-5 flex flex-col items-start gap-16 lg:mx-0">
           <motion.h1
-            className=" gap-2 text-left text-5xl font-bold tabular-nums text-gray-800 transition-colors sm:text-7xl"
+            className=" gap-2 text-left text-5xl font-bold tabular-nums text-black transition-colors sm:text-7xl"
             variants={STAGGER_CHILD_VARIANTS}
           >
             <span className="bg-gradient-to-r from-gray-500 via-gray-700 to-black bg-clip-text text-transparent">
@@ -38,6 +38,13 @@ export default function PlaceholderContent() {
             를 <br />
             알리는 <br /> 짧은 URL
           </motion.h1>
+          <motion.p
+            className="gap-2 text-left text-lg font-medium tabular-nums tracking-tight text-gray-500 transition-colors sm:text-2xl"
+            variants={STAGGER_CHILD_VARIANTS}
+          >
+            우리 브랜드만의 커스텀 도메인으로 짧은 URL을 생성하고 <br />
+            모든 링크와 브랜드의 성과를 한 곳에서 관리해보세요.
+          </motion.p>
           <motion.a
             variants={STAGGER_CHILD_VARIANTS}
             href="https://app.u0.wtf"
