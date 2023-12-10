@@ -8,7 +8,7 @@ export async function generateMetadata({
 }: {
   params: { domain: string };
 }) {
-  const title = `${params.domain.toUpperCase()} - 브랜드를 알리는 짧은 URL, U0`;
+  const title = `${params.domain.toUpperCase()} - 브랜드를 알리는 짧은 URL`;
   const description = `${params.domain.toUpperCase()} 커스텀 도메인, 소셜 미디어 카드, 애널리틱스, 개인화까지 갖춘 현대적인 짧은 URL`;
 
   return constructMetadata({

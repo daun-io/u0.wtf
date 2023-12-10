@@ -23,6 +23,7 @@ const navigation = {
   legal: [
     { name: "Privacy", href: "/privacy" },
     { name: "Terms", href: "/terms" },
+    { name: "License", href: "/license" },
   ],
   tools: ALL_TOOLS.map(({ name, slug }) => ({
     name,

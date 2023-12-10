@@ -91,6 +91,11 @@ module.exports = {
           "https://iamdaun.notion.site/U0-Terms-of-Service-ef7bbabd0c434f6e8b187f364a826280?pvs=4",
         permanent: true,
       },
+      {
+        source: "/license",
+        destination: "https://github.com/daun-io/u0.wtf/blob/main/LICENSE.md",
+        permanent: true,
+      },
     ];
   },
 };
