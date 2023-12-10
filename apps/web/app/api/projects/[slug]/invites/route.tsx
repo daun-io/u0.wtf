@@ -30,7 +30,7 @@ export const POST = withAuth(
       },
     });
     if (alreadyInTeam) {
-      return new Response("User already exists in this project.", {
+      return new Response("유저가 이미 이 브랜드에 속해 있습니다.", {
         status: 400,
       });
     }
@@ -47,12 +47,9 @@ export const POST = withAuth(
         },
       });
       if (users + invites >= 3) {
-        return new Response(
-          "You've reached the maximum number of users for the free plan.",
-          {
-            status: 400,
-          },
-        );
+        return new Response("무료 요금제의 최대 사용자 수에 도달했습니다.", {
+          status: 400,
+        });
       }
     }
 
@@ -62,7 +59,7 @@ export const POST = withAuth(
         project,
         session,
       });
-      return NextResponse.json({ message: "Invite sent" });
+      return NextResponse.json({ message: "멤버를 초대했습니다." });
     } catch (error) {
       return new Response(error.message, {
         status: 400,
