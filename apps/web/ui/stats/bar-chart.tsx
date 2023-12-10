@@ -205,7 +205,24 @@ export default function BarChart() {
                     const left = barX + barWidth / 2 - 81;
                     showTooltip({
                       tooltipData: {
-                        start,
+                        start: start
+                          ? start
+                          : new Date(
+                              new Date(
+                                data[idx + 1]?.start ?? new Date(),
+                              ).getTime() -
+                                (interval === "1h"
+                                  ? 3600000
+                                  : interval === "24h"
+                                  ? 86400000
+                                  : interval === "7d"
+                                  ? 604800000
+                                  : interval === "30d"
+                                  ? 2592000000
+                                  : interval === "90d"
+                                  ? 7776000000
+                                  : 0),
+                            ),
                         end: data[idx + 1]?.start ?? new Date(),
                         clicks,
                         link: "https://google.com",

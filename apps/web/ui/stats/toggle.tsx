@@ -358,7 +358,7 @@ const SharePopover = () => {
         onClick={() => setopenSharePopoverPopover(!openSharePopover)}
         className="mr-2 flex w-24 items-center justify-center space-x-2 rounded-md bg-white px-3 py-2.5 shadow transition-all duration-75 hover:shadow-md active:scale-95"
       >
-        <IconMenu text="공유하기" icon={<Share2 className="h-4 w-4" />} />
+        <IconMenu text="공유" icon={<Share2 className="h-4 w-4" />} />
       </button>
     </Popover>
   );
