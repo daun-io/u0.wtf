@@ -119,6 +119,11 @@ export default function BarChart() {
   });
 
   let tooltipTimeout: number | undefined;
+
+  if (!data?.some((d) => d.clicks > 0)) {
+    return null;
+  }
+
   return (
     <figure
       className={`
