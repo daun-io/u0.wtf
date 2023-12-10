@@ -64,8 +64,8 @@ function DeleteAccountModal({
         onSubmit={async (e) => {
           e.preventDefault();
           toast.promise(deleteAccount(), {
-            loading: "Deleting account...",
-            success: "Account deleted successfully!",
+            loading: "계정 삭제 중...",
+            success: "계정이 성공적으로 삭제되었습니다!",
             error: (err) => err,
           });
         }}
