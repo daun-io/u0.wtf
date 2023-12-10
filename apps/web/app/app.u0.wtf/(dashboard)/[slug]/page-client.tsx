@@ -52,7 +52,7 @@ const AddLinkOptions = () => {
               <Tooltip
                 content={
                   <TooltipContent
-                    title="Your project has exceeded its usage limit. We're still collecting data on your existing links, but you need to upgrade to edit them."
+                    title="프로젝트의 사용 한도를 초과했습니다. 기존 링크에 대한 데이터를 계속 수집하고 있지만 수정하려면 업그레이드해야 합니다."
                     cta="프로로 업그레이드"
                     onClick={() => {
                       setOpenPopover(false);
@@ -98,7 +98,7 @@ const AddLinkOptions = () => {
               <Tooltip
                 content={
                   <TooltipContent
-                    title="Your project has exceeded its usage limit. We're still collecting data on your existing links, but you need to upgrade to edit them."
+                    title="프로젝트의 사용 한도를 초과했습니다. 기존 링크에 대한 데이터를 계속 수집하고 있지만 수정하려면 업그레이드해야 합니다."
                     cta="프로로 업그레이드"
                     onClick={() => {
                       setOpenPopover(false);

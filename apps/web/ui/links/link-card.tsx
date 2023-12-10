@@ -352,11 +352,7 @@ export default function LinkCard({
               {rewrite && (
                 <Tooltip
                   content={
-                    <SimpleTooltipContent
-                      title="This link is cloaked. Your users will only see the short link in the browser address bar."
-                      cta="Learn more."
-                      href={`${HOME_DOMAIN}/help/article/how-to-create-link#link-cloaking`}
-                    />
+                    <TooltipContent title="이 링크는 숨겨져 있습니다. 사용자는 브라우저 주소 표시줄에 짧은 링크만 볼 수 있습니다." />
                   }
                 >
                   <EyeOff className="xs:block hidden h-4 w-4 text-gray-500" />

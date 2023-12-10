@@ -49,16 +49,16 @@ export default function ProjectCard({
                     domains={domains}
                     title={
                       domains.length > 1
-                        ? "Here are all the domains for this project."
+                        ? "이 브랜드의 모든 도메인이 여기에 있습니다."
                         : primaryDomain?.verified
-                        ? "Your domain is verified. You can start adding links."
+                        ? "도메인이 확인되었습니다. 링크 추가를 시작할 수 있습니다."
                         : "링크를 추가하기 위해서 도메인을 인증해주세요.."
                     }
                     cta={
                       domains.length > 1
-                        ? "Manage Domains"
+                        ? "도메인 관리하기"
                         : primaryDomain?.verified
-                        ? "Manage Domain"
+                        ? "도메인 관리하기"
                         : "도메인 인증하기"
                     }
                     href={`/${slug}/domains`}

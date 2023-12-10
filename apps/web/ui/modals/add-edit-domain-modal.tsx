@@ -101,13 +101,13 @@ function AddEditDomainModal({
       return {
         method: "PUT",
         url: `/api/projects/${slug}/domains/${domain}`,
-        successMessage: "Successfully updated domain!",
+        successMessage: "도메인을 수정했습니다.",
       };
     } else {
       return {
         method: "POST",
         url: `/api/projects/${slug}/domains`,
-        successMessage: "Successfully added domain!",
+        successMessage: "도메인을 추가했습니다.",
       };
     }
   }, [props]);
@@ -129,9 +129,9 @@ function AddEditDomainModal({
           ),
         ]);
         setShowAddEditDomainModal(false);
-        toast.success("Successfully deleted domain!");
+        toast.success("도메인이 삭제되었습니다.");
       } else {
-        setDomainError("오류가 발생했습니다. Please try again.");
+        setDomainError("오류가 발생했습니다. 다시 시도해주세요.");
       }
       setDeleting(false);
     });
@@ -269,7 +269,7 @@ function AddEditDomainModal({
         <div>
           <label htmlFor="target" className="flex items-center space-x-2">
             <h2 className="text-sm font-medium text-gray-900">랜딩 페이지</h2>
-            <InfoTooltip content="The page your users will get redirected to when they visit your domain." />
+            <InfoTooltip content="사용자가 도메인 루트 경로를 방문할 때 리다이렉트할 페이지입니다." />
           </label>
           {plan !== "free" ? (
             <div className="relative mt-1 rounded-md shadow-sm">
@@ -357,7 +357,7 @@ function AddEditDomainModal({
             <h2 className="text-sm font-medium text-gray-900">
               주 사용 도메인
             </h2>
-            <InfoTooltip content="The default domain used in the link creation modal. You can only have one primary domain at a time." />
+            <InfoTooltip content="링크 생성에 사용되는 기본 도메인입니다. 한 번에 하나의 기본 도메인만 사용할 수 있습니다." />
           </div>
           <Switch
             fn={() => setData((prev) => ({ ...prev, primary: !primary }))}
