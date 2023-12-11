@@ -15,9 +15,9 @@ export default function ProBanner({
     <div className="fixed bottom-5 z-10 mx-5 flex flex-col space-y-3 rounded-lg border border-gray-200 bg-white p-5 shadow-lg sm:right-5 sm:mx-auto sm:max-w-sm">
       <h3 className="text-lg font-semibold">프로로 업그레이드</h3>
       <p className="text-sm text-gray-500">
-        It looks like you're currently on our free plan. Consider upgrading to
-        Pro to enjoy higher limits, extra features, and support our open-source
-        company.
+        현재 무료 요금제를 사용 중인 것 같습니다. 업그레이드를 고려해보세요.
+        Pro로 업그레이드하여 더 높은 한도, 추가 기능, 우선순위 지원을
+        받아보세요.
       </p>
       <div className="flex space-x-5">
         <button
@@ -28,7 +28,7 @@ export default function ProBanner({
           }}
           className="w-full rounded-md border border-gray-300 p-2 text-center text-sm font-medium text-gray-500 transition-all hover:border-gray-700 hover:text-gray-600"
         >
-          Don't show again
+          다시 표시하지 않기
         </button>
         <button
           onClick={() => {
@@ -37,7 +37,7 @@ export default function ProBanner({
           }}
           className="w-full rounded-md border border-black bg-black p-2 text-center text-sm font-medium text-white transition-all hover:bg-white hover:text-black"
         >
-          Upgrade
+          업그레이드
         </button>
       </div>
     </div>
