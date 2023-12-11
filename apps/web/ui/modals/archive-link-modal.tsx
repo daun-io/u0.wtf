@@ -77,7 +77,7 @@ function ArchiveLinkModal({
     setShowArchiveLinkModal(false);
     toastWithUndo({
       id: "link-archive-undo-toast",
-      message: `Successfully ${archived ? "archived" : "unarchived"} link!`,
+      message: `링크를 성공적으로 ${archived ? "보관" : "보관 취소"}했습니다!`,
       undo: undoAction,
       duration: 5000,
     });
@@ -85,11 +85,11 @@ function ArchiveLinkModal({
 
   const undoAction = () => {
     toast.promise(sendArchiveRequest(!archived, props.id, slug), {
-      loading: "Undo in progress...",
-      error: "Failed to roll back changes. An error occurred.",
+      loading: "실행 취소 진행 중...",
+      error: "변경 사항을 되돌리지 못했습니다. 오류가 발생했습니다.",
       success: () => {
         revalidateLinks();
-        return "Undo successful! Changes reverted.";
+        return "실행 취소 성공! 변경 사항이 되돌려졌습니다.";
       },
     });
   };
