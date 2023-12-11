@@ -19,7 +19,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function constructMetadata({
-  title = "U0 - 최고의 마케팅을 위한 링크 축약 도구",
+  title = "U0 - 브랜드를 알리는 짧은 URL",
   description = "U0.WTF는 단체 카톡방, SNS 등에 링크를 공유할 때 성과를 측정하고 브랜드를 알릴 수 있도록 돕는 링크 축약 도구입니다.",
   image = "https://u0.wtf/_static/og.png",
   icons = "/favicon.ico",
