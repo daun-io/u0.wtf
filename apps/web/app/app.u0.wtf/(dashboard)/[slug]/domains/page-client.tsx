@@ -25,12 +25,7 @@ export default function ProjectDomainsClient() {
               <h1 className="text-2xl text-gray-600">도메인</h1>
               <InfoTooltip
                 content={
-                  <TooltipContent
-                    title="Learn more about how to add, configure, and verify custom domains on U0."
-                    href={`${HOME_DOMAIN}/help/article/how-to-add-custom-domain`}
-                    target="_blank"
-                    cta="Learn more"
-                  />
+                  <TooltipContent title="가지고 있는 도메인을 U0에 등록하면 커스텀 도메인 기능을 사용할 수 있습니다." />
                 }
               />
             </div>
