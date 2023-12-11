@@ -4,9 +4,9 @@ import prisma from "@/lib/prisma";
 import PasswordForm from "./form";
 import { notFound, redirect } from "next/navigation";
 
-const title = "Password Required";
+const title = "비밀번호가 필요합니다.";
 const description =
-  "This link is password protected. Please enter the password to view it.";
+  "이 링크는 비밀번호로 보호되어 있습니다. 확인하려면 비밀번호를 입력하십시오.";
 const image = "https://u0.wtf/_static/password-protected.png";
 
 export async function generateMetadata({

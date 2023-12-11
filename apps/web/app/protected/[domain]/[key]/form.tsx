@@ -30,7 +30,7 @@ export default function PasswordForm() {
     >
       <div>
         <label htmlFor="password" className="block text-xs text-gray-600">
-          PASSWORD
+          비밀번호
         </label>
         <div className="relative mt-1 rounded-md shadow-sm">
           <input type="hidden" name="domain" value={domain} />
