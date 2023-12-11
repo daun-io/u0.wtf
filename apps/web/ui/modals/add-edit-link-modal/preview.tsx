@@ -90,14 +90,10 @@ export default function Preview({
               ) : (
                 <div className="mb-1 h-4 w-full rounded-md bg-gray-100" />
               )}
-              {description ? (
+              {title && title.length <= 60 && description && (
                 <p className="line-clamp-1 text-sm text-[#536471]">
                   {description}
                 </p>
-              ) : (
-                <div className="grid gap-2">
-                  <div className="h-4 w-full rounded-md bg-gray-100" />
-                </div>
               )}
               {hostname ? (
                 <p className="text-sm text-[#536471]/50">{hostname}</p>
