@@ -53,7 +53,7 @@ function DeleteLinkModal({
         />
         <h3 className="text-lg font-medium">{shortlink} 삭제하기</h3>
         <p className="text-sm text-gray-500">
-          이 링크를 삭제하면 해당 통계가 모두 제거됩니다. 이 작업은 은 되돌릴 수
+          이 링크를 삭제하면 해당 통계가 모두 제거됩니다. 이 작업은 되돌릴 수
           없습니다.
         </p>
       </div>
