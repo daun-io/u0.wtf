@@ -209,7 +209,7 @@ function UpgradePlanModal({
               href={`/${slug}`}
               className="text-center text-xs text-gray-500 underline underline-offset-4 transition-colors hover:text-gray-800"
             >
-              Skip for now
+              나중에
             </Link>
           ) : (
             <div className="flex items-center justify-center space-x-2">

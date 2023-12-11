@@ -39,7 +39,7 @@ export default function Interim() {
       >
         나만의 도메인이 있으신가요? 무료로 짧은 URL을 만들어 보세요.
         <br className="hidden sm:block" />
-        도메인이 없나요?
+        도메인이 없나요?{" "}
         <a
           className="text-gray-500 underline transition-colors hover:text-gray-700"
           target="_blank"
