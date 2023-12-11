@@ -16,7 +16,7 @@ export default function ProBanner({
       <h3 className="text-lg font-semibold">프로로 업그레이드</h3>
       <p className="text-sm text-gray-500">
         현재 무료 요금제를 사용 중인 것 같습니다. 업그레이드를 고려해보세요.
-        Pro로 업그레이드하여 더 높은 한도, 추가 기능, 우선순위 지원을
+        프로로 업그레이드하여 더 높은 한도, 추가 기능, 우선순위 지원을
         받아보세요.
       </p>
       <div className="flex space-x-5">
