@@ -219,7 +219,7 @@ function AddProjectModalHelper({
             <p className="block text-sm font-medium text-gray-700">
               커스텀 도메인
             </p>
-            <InfoTooltip content="내가 소유한 짧은 URL을 호스팅할 도메인입니다. 예: yourbrand.com/link" />
+            <InfoTooltip content="홈페이지나 서비스를 위해 사용되는 도메인이 아닌 도메인을 사용해주세요. (예: 서비스용 도메인 example.com, 짧은 URL 도메인 exa.mp)" />
           </label>
           <div className="relative mt-1 flex rounded-md shadow-sm">
             <input
