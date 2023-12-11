@@ -1,7 +1,8 @@
 import { BlurImage } from "@/ui/shared/blur-image";
-import { Logo } from "@u0/ui";
+import { Logo, Tooltip } from "@u0/ui";
 import { STAGGER_CHILD_VARIANTS } from "@u0/utils";
 import { motion } from "framer-motion";
+import { Info } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 export default function Interim() {
@@ -37,7 +38,10 @@ export default function Interim() {
         className="text-gray-600 transition-colors sm:text-lg"
         variants={STAGGER_CHILD_VARIANTS}
       >
-        나만의 도메인이 있으신가요? 무료로 짧은 URL을 만들어 보세요.
+        <Tooltip content="홈페이지나 서비스를 위해 사용되는 도메인이 아닌 도메인을 사용해주세요. (예: 서비스용 도메인 example.com, 짧은 URL 도메인 exa.mp)">
+          <strong className="cursor-default">나만의 남는 도메인</strong>
+        </Tooltip>
+        이 있으신가요? 무료로 짧은 URL을 만들어 보세요.
         <br className="hidden sm:block" />
         도메인이 없나요?{" "}
         <a
@@ -65,7 +69,12 @@ export default function Interim() {
             height={200}
             className="pointer-events-none my-4 w-48 rounded-xl ring ring-black/5 grayscale group-hover:grayscale-0"
           />
-          <p>도메인이 있습니다.</p>
+          <p>
+            <Tooltip content="홈페이지나 서비스를 위해 사용되는 도메인이 아닌 도메인을 사용해주세요. (예: 서비스용 도메인 example.com, 짧은 URL 도메인 exa.mp)">
+              <strong>남는</strong>
+            </Tooltip>{" "}
+            도메인이 있습니다.
+          </p>
         </button>
         <button
           onClick={() => router.push("/welcome?type=link")}
@@ -78,7 +87,9 @@ export default function Interim() {
             height={200}
             className="pointer-events-none my-4 w-48 rounded-xl ring ring-black/5 grayscale group-hover:grayscale-0"
           />
-          <p>도메인이 없습니다.</p>
+          <p>
+            <strong>남는</strong> 도메인이 없습니다.
+          </p>
         </button>
       </motion.div>
     </motion.div>
