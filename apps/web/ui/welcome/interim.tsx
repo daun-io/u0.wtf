@@ -3,6 +3,7 @@ import { Logo, Tooltip } from "@u0/ui";
 import { STAGGER_CHILD_VARIANTS } from "@u0/utils";
 import { motion } from "framer-motion";
 import { Info } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Interim() {
@@ -92,6 +93,14 @@ export default function Interim() {
           </p>
         </button>
       </motion.div>
+      <Link
+        className="text-gray-500 underline transition-colors hover:text-gray-700"
+        target="_blank"
+        rel="noreferrer"
+        href="/"
+      >
+        또는 대쉬보드로 이동
+      </Link>
     </motion.div>
   );
 }
