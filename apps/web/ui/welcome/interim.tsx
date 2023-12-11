@@ -56,27 +56,27 @@ export default function Interim() {
       >
         <button
           onClick={() => router.push("/welcome?type=project")}
-          className="flex flex-col items-center justify-center overflow-hidden p-5 transition-colors hover:bg-gray-50 md:p-10"
+          className="group flex flex-col items-center justify-center overflow-hidden p-5 text-gray-700 transition-colors hover:bg-gray-50 md:p-10"
         >
           <BlurImage
-            src="/_static/illustrations/shopping-call.svg"
-            alt="No links yet"
-            width={250}
-            height={250}
-            className="pointer-events-none -mb-3 -mt-8 w-48 sm:w-60"
+            src="/_static/illustrations/have-domain.webp"
+            alt="I have domain"
+            width={200}
+            height={200}
+            className="pointer-events-none my-4 w-48 rounded-xl ring ring-black/5 grayscale group-hover:grayscale-0"
           />
           <p>도메인이 있습니다.</p>
         </button>
         <button
           onClick={() => router.push("/welcome?type=link")}
-          className="flex flex-col items-center justify-center overflow-hidden p-5 transition-colors hover:bg-gray-50 md:p-10"
+          className="group flex flex-col items-center justify-center overflow-hidden p-5 text-gray-700 transition-colors hover:bg-gray-50 md:p-10"
         >
           <BlurImage
-            src="/_static/illustrations/call-waiting.svg"
-            alt="No links yet"
-            width={250}
-            height={250}
-            className="pointer-events-none -mb-3 -mt-8 w-48 sm:w-60"
+            src="/_static/illustrations/no-domain.webp"
+            alt="I don't have domain"
+            width={200}
+            height={200}
+            className="pointer-events-none my-4 w-48 rounded-xl ring ring-black/5 grayscale group-hover:grayscale-0"
           />
           <p>도메인이 없습니다.</p>
         </button>
