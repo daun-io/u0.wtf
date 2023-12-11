@@ -164,10 +164,10 @@ export default function TagsSection({
                   onClick={() => createTag(inputValue)}
                   className="aria-selected:bg-gray-100 aria-selected:text-gray-900 flex w-full cursor-pointer items-center rounded-md bg-gray-100 px-4 py-2 text-sm text-gray-900 hover:text-gray-900"
                 >
-                  Create tag{" "}
                   <span className="ml-1.5 rounded-md bg-gray-200 px-2 py-0.5 text-gray-800">
                     {inputValue}
                   </span>
+                  태그 추가
                 </button>
               )}
             </Command.Empty>
