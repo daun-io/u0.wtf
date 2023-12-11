@@ -283,11 +283,11 @@ const SharePopover = () => {
         resolve();
       }),
       {
-        loading: "Updating...",
-        success: `Stats page is now ${
+        loading: "업데이트 중...",
+        success: `${
           data?.publicStats
-            ? "private."
-            : "public. Link 클립보드에 복사되었습니다."
+            ? "통계 페이지가 이제 비공개입니다."
+            : "통계 페이지가 이제 공개입니다. 링크가 클립보드에 복사되었습니다."
         }`,
         error: "오류가 발생했습니다",
       },
