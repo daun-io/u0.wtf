@@ -10,7 +10,7 @@ export default function Intro() {
 
   return (
     <motion.div
-      className="z-10"
+      className="z-10 my-40"
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3, type: "spring" }}
     >
@@ -27,16 +27,16 @@ export default function Intro() {
         className="mx-5 flex flex-col items-center space-y-10 text-center sm:mx-auto"
       >
         <motion.h1
-          className="font-display text-4xl font-bold text-gray-800 transition-colors sm:text-5xl"
+          className="font-mono text-4xl font-bold text-gray-800 transition-colors sm:text-5xl"
           variants={STAGGER_CHILD_VARIANTS}
         >
-          U0.WTF
+          U0
         </motion.h1>
         <motion.p
           className="max-w-md text-gray-600 transition-colors sm:text-lg"
           variants={STAGGER_CHILD_VARIANTS}
         >
-          브랜드를 알리는 짧은 URL, U0.WTF
+          브랜드를 알리는 짧은 URL
         </motion.p>
         <motion.button
           variants={STAGGER_CHILD_VARIANTS}
