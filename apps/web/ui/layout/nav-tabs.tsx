@@ -27,7 +27,7 @@ export default function NavTabs() {
       ];
     }
     if (pathname === "/analytics") {
-      return [{ name: "← Back to all links", href: "/links" }];
+      return [{ name: "← 내 링크", href: "/links" }];
     }
     return [
       { name: "브랜드", href: "/" },
