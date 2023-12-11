@@ -1,3 +1,11 @@
 # U0.wtf
 
-U0 is an open-source link management tool for modern marketing teams to create, share, and track short links based on dub.
+U0.wtf는 브랜드를 알리고 싶은 메이커, 마케터분들을 위한 짧은 URL 플랫폼입니다.
+
+## 제품 기능
+
+- 링크 및 브랜드 성과 애널리틱스
+- 브랜드를 알리는 커스텀 도메인
+- 클릭 전환율을 높이는 커스텀 소셜 미디어 썸네일 이미지
+- QR 코드 생성기
+- 링크 개인화 (\*iOS, Android 타게팅, 비밀번호 설정, 링크 감추기 등)
