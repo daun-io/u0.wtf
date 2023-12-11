@@ -147,6 +147,15 @@ export default function DomainCard({ props }: { props: DomainProps }) {
         {data && data.status !== "올바르게 설정됨" && (
           <DomainConfiguration data={data} />
         )}
+        <a
+          href={`https://domains.ray.st/?q=${domain}`}
+          target="_blank"
+          rel="noreferrer"
+          className="flex items-center justify-end gap-1 text-xs font-medium text-gray-500 hover:opacity-50"
+        >
+          구매할 도메인 검색
+          <ExternalLink className="h-4 w-4" />
+        </a>
       </div>
     </>
   );
