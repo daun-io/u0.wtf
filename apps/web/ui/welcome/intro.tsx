@@ -10,7 +10,7 @@ export default function Intro() {
 
   return (
     <motion.div
-      className="z-10 my-40"
+      className="z-10 my-auto"
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.3, type: "spring" }}
     >
