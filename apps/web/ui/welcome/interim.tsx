@@ -59,24 +59,24 @@ export default function Interim() {
         variants={STAGGER_CHILD_VARIANTS}
         className="grid w-full grid-cols-1 divide-y divide-gray-100 overflow-hidden rounded-md border border-gray-200 bg-white md:grid-cols-2 md:divide-x"
       >
-        <button
-          onClick={() => router.push("/welcome?type=project")}
-          className="group flex flex-col items-center justify-center overflow-hidden p-5 text-gray-700 transition-colors hover:bg-gray-50 md:p-10"
-        >
-          <BlurImage
-            src="/_static/illustrations/have-domain.webp"
-            alt="I have domain"
-            width={200}
-            height={200}
-            className="pointer-events-none my-4 w-48 rounded-xl ring ring-black/5 grayscale group-hover:grayscale-0"
-          />
-          <p>
-            <Tooltip content="홈페이지나 서비스를 위해 사용되는 도메인이 아닌 도메인을 사용해주세요. (예: 서비스용 도메인 example.com, 짧은 URL 도메인 exa.mp)">
+        <Tooltip content="홈페이지나 서비스를 위해 사용되는 도메인이 아닌 도메인을 사용해주세요. (예: 서비스용 도메인 example.com, 짧은 URL 도메인 exa.mp)">
+          <button
+            onClick={() => router.push("/welcome?type=project")}
+            className="group flex flex-col items-center justify-center overflow-hidden p-5 text-gray-700 transition-colors hover:bg-gray-50 md:p-10"
+          >
+            <BlurImage
+              src="/_static/illustrations/have-domain.webp"
+              alt="I have domain"
+              width={200}
+              height={200}
+              className="pointer-events-none my-4 w-48 rounded-xl ring ring-black/5 grayscale group-hover:grayscale-0"
+            />
+            <p>
               <strong>남는</strong>
-            </Tooltip>{" "}
-            도메인이 있습니다.
-          </p>
-        </button>
+              도메인이 있습니다.
+            </p>
+          </button>
+        </Tooltip>
         <button
           onClick={() => router.push("/welcome?type=link")}
           className="group flex flex-col items-center justify-center overflow-hidden p-5 text-gray-700 transition-colors hover:bg-gray-50 md:p-10"
