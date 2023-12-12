@@ -96,6 +96,11 @@ module.exports = {
         destination: "https://github.com/daun-io/u0.wtf/blob/main/LICENSE.md",
         permanent: true,
       },
+      {
+        source: "/empty",
+        destination: "https://empty.app",
+        permanent: true,
+      },
     ];
   },
 };
