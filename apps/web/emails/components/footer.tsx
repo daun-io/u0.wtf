@@ -14,11 +14,8 @@ export default function Footer({
         <Text className="text-[12px] leading-6 text-gray-500">
           이 이메일은 <span className="text-black">{email}</span>님께 보내진
           것입니다. 이 이메일을 기대하지 않았다면 무시하실 수 있습니다. 앞으로
-          이런 이메일을 받고 싶지 않다면,
-          <a href="{{{RESEND_UNSUBSCRIBE_URL}}}" className="text-gray-600">
-            여기에서 구독 해지
-          </a>
-          하실 수 있습니다.
+          이런 이메일을 받고 싶지 않다면, 계정 설정을 통해서 이메일을 변경하거나
+          계정을 삭제하실 수 있습니다.
         </Text>
       ) : (
         <Text className="text-[12px] leading-6 text-gray-500">
