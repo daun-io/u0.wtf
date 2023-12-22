@@ -4,7 +4,7 @@ import { stripe } from "@/lib/stripe";
 import { getPlanFromPriceId, isUpgrade } from "@/lib/stripe/utils";
 import { redis } from "@/lib/upstash";
 import { log } from "@u0/utils";
-import { resend, sendEmail } from "emails";
+import { sendEmail } from "emails";
 import UpgradeEmail from "emails/upgrade-email";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
