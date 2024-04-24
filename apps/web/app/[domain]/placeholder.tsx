@@ -45,8 +45,7 @@ export default function PlaceholderContent() {
             className="gap-2 text-lg font-medium tabular-nums tracking-tight text-gray-500 transition-colors sm:text-2xl"
             variants={STAGGER_CHILD_VARIANTS}
           >
-            우리 브랜드만의 커스텀 도메인으로 짧은 URL을 생성하고 <br />
-            모든 링크와 브랜드의 성과를 한 곳에서 관리해보세요.
+            u0.wtf가 7월 1일 서비스를 종료합니다.
           </motion.p>
           <motion.a
             variants={STAGGER_CHILD_VARIANTS}
